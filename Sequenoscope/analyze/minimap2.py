@@ -2,6 +2,7 @@ from analyze import run_command
 
 Input = "seq1.fastq"
 ref = "ref.fasta"
+
 class Illumina_Sequencing_data: 
     def __init__(self, fastq_file, ref_file):
         self.fastq_file = fastq_file
@@ -16,9 +17,9 @@ class Illumina_Sequencing_data:
         samtools_sort = "samtools view -S -b -F 4 output.sam | samtools sort -T 15 --reference {} -o mapped.bam".format(self.ref_file)
         run_command(samtools_sort)
 
-Illumina_Sequencing_data(Input,ref)
-Illumina_Sequencing_data.align()
-Illumina_Sequencing_data.sort()
+Object = Illumina_Sequencing_data(Input,ref)
+object.align()
+object.sort()
 
 class ONT_Sequencing_Data:
     pass
