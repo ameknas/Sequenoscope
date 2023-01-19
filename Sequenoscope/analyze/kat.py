@@ -30,7 +30,7 @@ class kat_analysis:
         (self.stdout, self.stderr) = run_command(kat_sect_cmd)
         return self.check_files(out_file_sect)
 
-    def kat_filter_hash(self):
+    def kat_filter(self):
         ref_fasta = self.ref_path
         out_file_hash = os.path.join(self.out_path, "kat_generated_hash.kmer")
         hash_build_command = "kat filter kmer -o {} {}".format(out_file_hash, ref_fasta)
@@ -46,11 +46,17 @@ class kat_analysis:
         input_fastq = self.input_seq.out_files
         out_file_hist = os.path.join(self.out_path, "hist_file.hist")
         kat_hist_cmd = "kat hist -o {} {}".format(out_file_hist, input_fastq)
-        (self.stdout, self.stderr) = run_command (kat_hist_cmd)
+        (self.stdout, self.stderr) = run_command(kat_hist_cmd)
         return self.check_files(out_file_hist)
 
     def check_files(self, output_file):
-       return os.path.isfile(output_file) and os.path.getsize(output_file) > 0
+        if not os.path.isfile(output_file):
+            return False
+        elif os.path.getsize(output_file) == 0:
+            return False
+        else:
+            return True
+
 
 
 sample1 = Sequence("Illumina", ["reads1.fasta", "reads2.fasta"])
