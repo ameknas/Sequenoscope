@@ -1,0 +1,4 @@
+  File "/mnt/c/Users/ameknas/Desktop/Sequenoscope/Sequenoscope/sequenoscope/analyze/test.py", line 3
+    print (hello this is a test)
+           ^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
