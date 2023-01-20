@@ -20,7 +20,7 @@ class kat_analysis:
     input_path = None
     ref_path = None
     out_path = None
-    result_files = {"sect":{"img":"", "tsv":""}, "filter":[], "hist":[]}
+    result_files = {"sect":{"cvg":"", "tsv":""}, "filter":{"jf27":"", "filtered_fastq":""}, "hist":{"hist":""}}
     error_messages = None
     status = False
     threads = 1
@@ -52,7 +52,7 @@ class kat_analysis:
         """
         input_fastq = self.input_path.out_files
         ref_fasta = self.ref_path
-        out_file_sect = os.path.join(self.out_path, "output.tsv")
+        out_file_sect = os.path.join(self.out_path, "output")
         kat_sect_cmd = "kat sect -t {} -o {} {} {}".format(self.threads, out_file_sect, ref_fasta, input_fastq)
         (self.stdout, self.stderr) = run_command(kat_sect_cmd)
         self.status = self.check_files([out_file_sect])
