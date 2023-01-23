@@ -1,5 +1,17 @@
 {
     "python.analysis.extraPaths": [
         "./sequenoscope"
+    ],
+    "python.testing.pytestArgs": [
+        "sequenoscope"
+    ],
+    "python.testing.unittestEnabled": true,
+    "python.testing.pytestEnabled": false,
+    "python.testing.unittestArgs": [
+        "-v",
+        "-s",
+        "./sequenoscope",
+        "-p",
+        "*test.py"
     ]
 }

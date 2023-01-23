@@ -76,9 +76,9 @@ class kat_analysis:
         """
         ref_fasta = self.ref_path
         out_file_hash = os.path.join(self.out_path, "kat_generated_hash")
-        jf27_file = os.path.join(out_file_hash, ".jf27")
+        jf_file = os.path.join(self.out_path, "kat_generated_hash.jf{}".format(self.kmersize))
 
-        self.result_files["filter"]["jf27"] = jf27_file
+        self.result_files["filter"]["jf27"] = jf_file
 
         hash_build_command = "kat filter kmer -o {} {}".format(out_file_hash, ref_fasta)
         run_command(hash_build_command)
@@ -91,7 +91,7 @@ class kat_analysis:
 
         filter_from_hash_cmd = "kat filter seq -t {} -o {} --seq {} {}".format(self.threads, out_file_filter, input_fastq, out_file_hash)
         (self.stdout, self.stderr) = run_command(filter_from_hash_cmd)
-        self.status = self.check_files([jf27_file, filtered_fastq_file])
+        self.status = self.check_files([jf_file, filtered_fastq_file])
         if self.status == False:
             self.error_messages = "one or more files was not created or was empty, check error message/n{}".format(self.stderr)
 
@@ -109,7 +109,7 @@ class kat_analysis:
         hist_generated_file = os.path.join(out_file_hist, ".txt")
 
         self.result_files["hist"]["hist_file"] = hist_generated_file
-        
+
         kat_hist_cmd = "kat hist -t {} -o {} {}".format(self.threads, out_file_hist, input_fastq)
         (self.stdout, self.stderr) = run_command(kat_hist_cmd)
         self.status = self.check_files([hist_generated_file])
@@ -136,6 +136,15 @@ class kat_analysis:
             elif os.path.getsize(f) == 0:
                 return False
         return True
+
+    def run_all(self):
+        if not self.kat_sect():
+            return
+        if not self.kat_filter():
+            return
+        if not self.kat_hist():
+            return
+        
 
 
 
