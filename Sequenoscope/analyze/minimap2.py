@@ -1,28 +1,94 @@
-from analyze import run_command
+from analyze.__init__ import run_command
+from analyze.__init__ import Sequence
+import os
 
-Input = "seq1.fastq"
-ref = "ref.fasta"
+class Minimap2Runner:
+    read_set = None
+    out_dir = None
+    out_prefix = None
+    ref_database = None
+    threads = 1
+    kmer_size = 15
+    status = False
+    error_messages = None
+    result_files =  {"sam_output_file":""}
+    paired = False
 
-class Illumina_Sequencing_data: 
-    def __init__(self, fastq_file, ref_file):
-        self.fastq_file = fastq_file
-        self.ref_file = ref_file
-        pass
+    def __init__(self, read_set, out_dir, ref_database, out_prefix=None, threads=1, kmer_size=15):
+        """
+        Initalize the class with read_set, out_dir, ref_database, and out_prefix
 
-    def align(self):
-        minimap_align_command = "minimap2 -ax sr {} {} > output.sam".format(self.ref_file, self.fastq_file)
-        run_command(minimap_align_command)
+        Arguments:
+            read_set: sequence object
+                an object that contains the list of sequence files for analysis
+            out_dir: str
+                a string to the path where the output files will be stored
+            ref_database: str
+                a string to the path of reference sequence file
+            out_prefix: str
+                a designation of what the output files will be named
+            threads: int
+                an integer representing the number of threads utilized for the operation, default is 1
+            kmersize: int
+                an integer representing the kmer size utilized for the kat filter method, default is 15
+        """
+        self.read_set = read_set
+        self.out_dir = out_dir
+        self.out_prefix = out_prefix
+        self.ref_database = ref_database
+        self.threads = threads
+        self.kmer_size = kmer_size
+        self.paired = self.read_set.is_paired
+        if self.out_prefix == None:
+            raise ValueError("Please specify a name for the output file")
 
-    def sort(self):
-        samtools_sort = "samtools view -S -b -F 4 output.sam | samtools sort -T 15 --reference {} -o mapped.bam".format(self.ref_file)
-        run_command(samtools_sort)
+    def run_minimap2(self):
+        """
+        Run the minimap2 program with the designated paramters selected during the initalization of the class.
 
-Object = Illumina_Sequencing_data(Input,ref)
-object.align()
-object.sort()
+        Returns:
+            bool:
+                returns True if the generated output file is found and not empty, False otherwise
+        """
+        sam_file = os.path.join(self.out_dir,"{}.sam".format(self.out_prefix))
+        
+        self.result_files["sam_output_file"] = sam_file
 
-class ONT_Sequencing_Data:
-    pass
+        cmd = ["minimap2", "-ax", "-t", "{}".format(self.threads), "-k", "{}".format(self.kmer_size), self.ref_database, 
+        self.read_set.out_files, ">", sam_file]
+        
+        if self.paired:
+            cmd.insert(2, "sr")
+        else:
+            cmd.insert(2, "map-ont")
 
-class PacificBio_Sequencing_Data:
-    pass
+        cmd_string = " ".join(cmd)
+
+        (self.stdout, self.stderr) = run_command(cmd_string)
+        self.status = self.check_files([sam_file])
+        if self.status == False:
+            self.error_messages = "one or more files was not created or was empty, check error message\n{}".format(self.stderr)
+            raise ValueError(str(self.error_messages))
+    
+    def check_files(self, files_to_check):
+        """
+        check if the output file exists and is not empty
+
+        Arguments:
+            files_to_check: list
+                list of file paths
+
+        Returns:
+            bool:
+                returns True if the generated output file is found and not empty, False otherwise
+        """
+        if isinstance (files_to_check, str):
+            files_to_check = [files_to_check]
+        for f in files_to_check:
+            if not os.path.isfile(f):
+                return False
+            elif os.path.getsize(f) == 0:
+                return False
+        return True
+        
+    
