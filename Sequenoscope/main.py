@@ -1,3 +1,2 @@
 #!/usr/bin/env python
-from analyze.kat import kat_analysis
-from analyze.fastP import FastPRunner
+from analyze import kat, fastP, minimap2

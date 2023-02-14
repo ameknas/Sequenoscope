@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 from analyze.__init__ import run_command
 from analyze.__init__ import Sequence
 import os
