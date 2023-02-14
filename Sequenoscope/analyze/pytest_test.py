@@ -68,7 +68,7 @@ def test_make_test():
 #     pass
 
 def test_run_minimap2(): 
-    enriched_sample = Sequence(technology, [path_enriched_test_file])
+    enriched_sample = Sequence(technology, [path_enriched_test_file, path_enriched_test_file])
     minimap2_run = Minimap2Runner(enriched_sample, path_output, path_ref_file, "test_output")
     minimap2_run.run_minimap2()
     assert minimap2_run.status == True
