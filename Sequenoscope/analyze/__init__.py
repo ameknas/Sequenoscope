@@ -49,6 +49,9 @@ class Sequence:
 class Parser:
     file = None
     file_type = None
+    tsv_file = None
+    json_file = None
+    csv_file = None
     
     def __init__(self, file, file_type):
         self.file = file
@@ -57,12 +60,17 @@ class Parser:
             self.parse_tsv()
         if file_type == "json":
             self.parse_json()
+        if file_type == "csv":
+            self.parse_csv()
         pass
 
     def parse_tsv(self):
-        return pd.read_csv(self.file, sep='\t', header=0, index_col=0)
+        self.tsv_file = pd.read_csv(self.file, sep='\t', header=0, index_col=0)
 
     def parse_json(self):
-        return json.load(open(self.file))
+        self.json_file = json.load(open(self.file))
+
+    def parse_csv(self):
+        self.csv_file = pd.read_csv(self.file)
 
 
