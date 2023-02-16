@@ -4,6 +4,7 @@ from analyze.kat import KatRunner
 from analyze.fastP import FastPRunner
 from analyze.minimap2 import Minimap2Runner
 from analyze.processing import SamBamProcessor, ASReportProcessor
+from analyze.seqtk import SeqtkRunner
 
 
 path_ref_file = "/mnt/c/Users/ameknas/Desktop/Sequenoscope/Sequenoscope/sequenoscope/analyze/test_sequences/lambda_genome_reference.fasta"
@@ -20,6 +21,9 @@ json_test_file = "/mnt/c/Users/ameknas/Desktop/Sequenoscope/Sequenoscope/sequeno
 sam_test_file = "/mnt/c/Users/ameknas/Desktop/Sequenoscope/Sequenoscope/sequenoscope/analyze/test_sequences/test_output.sam"
 bam_test_file = "/mnt/c/Users/ameknas/Desktop/Sequenoscope/Sequenoscope/sequenoscope/analyze/test_sequences/test_output.bam"
 AS_report_test_file = "/mnt/c/Users/ameknas/Desktop/Sequenoscope/Sequenoscope/sequenoscope/analyze/test_sequences/adaptive_sampling_report.csv"
+UB_csv_test_file = "/mnt/c/Users/ameknas/Desktop/Sequenoscope/Sequenoscope/sequenoscope/analyze/test_sequences/test_output_unblocked_ids.csv"
+SR_csv_test_file = "/mnt/c/Users/ameknas/Desktop/Sequenoscope/Sequenoscope/sequenoscope/analyze/test_sequences/test_output_stop_receiving.csv"
+ND_csv_test_file = "/mnt/c/Users/ameknas/Desktop/Sequenoscope/Sequenoscope/sequenoscope/analyze/test_sequences/test_output_no_decision.csv"
 
 
 def test_make_test():
@@ -67,30 +71,30 @@ def test_make_test():
 #     assert fastp_run.status == True
 #     pass
 
-# def test_run_minimap2(): 
-#     enriched_sample = Sequence(technology, [path_enriched_test_file, path_enriched_test_file])
-#     minimap2_run = Minimap2Runner(enriched_sample, path_output, path_ref_file, "test_output")
-#     minimap2_run.run_minimap2()
-#     assert minimap2_run.status == True
-#     pass
+def test_run_minimap2(): 
+    enriched_sample = Sequence(technology, [path_enriched_test_file, path_enriched_test_file])
+    minimap2_run = Minimap2Runner(enriched_sample, path_output, path_ref_file, "test_output")
+    minimap2_run.run_minimap2()
+    assert minimap2_run.status == True
+    pass
 
-# def test_run_samtools_bam(): 
-#     samtools_run = SamBamProcessor(sam_test_file, path_output, path_ref_file, "test_output")
-#     samtools_run.run_samtools_bam(exclude=True)
-#     assert samtools_run.status == True
-#     pass
+def test_run_samtools_bam(): 
+    samtools_run = SamBamProcessor(sam_test_file, path_output, path_ref_file, "test_output")
+    samtools_run.run_samtools_bam(exclude=True)
+    assert samtools_run.status == True
+    pass
 
-# def test_run_samtools_fastq(): 
-#     samtools_run = SamBamProcessor(bam_test_file, path_output, path_ref_file, "test_output")
-#     samtools_run.run_samtools_fastq()
-#     assert samtools_run.status == True
-#     pass
+def test_run_samtools_fastq(): 
+    samtools_run = SamBamProcessor(bam_test_file, path_output, path_ref_file, "test_output")
+    samtools_run.run_samtools_fastq()
+    assert samtools_run.status == True
+    pass
 
-# def test_run_bedtools(): 
-#     bedtools_run = SamBamProcessor(bam_test_file, path_output, path_ref_file, "test_output")
-#     bedtools_run.run_bedtools(nonzero=True)
-#     assert bedtools_run.status == True
-#     pass
+def test_run_bedtools(): 
+    bedtools_run = SamBamProcessor(bam_test_file, path_output, path_ref_file, "test_output")
+    bedtools_run.run_bedtools(nonzero=True)
+    assert bedtools_run.status == True
+    pass
 
 def test_run_generate_unblocked():
     parsed_file = Parser(AS_report_test_file, "csv")
@@ -111,6 +115,27 @@ def test_run_generate_no_decision():
     no_decision_run = ASReportProcessor(parsed_file, path_output, "test_output")
     no_decision_run.generate_no_decision()
     assert no_decision_run.status == True
+    pass
+
+def test_run_seqtk_unblocked():
+    enriched_sample = Sequence(technology, [path_enriched_test_file])
+    seqtk_UB_subet_run = SeqtkRunner(enriched_sample, UB_csv_test_file, path_output, "test_output")
+    seqtk_UB_subet_run.subset_unblocked()
+    assert seqtk_UB_subet_run.status == True
+    pass
+
+def test_run_seqtk_stop_receiving():
+    enriched_sample = Sequence(technology, [path_enriched_test_file])
+    seqtk_SR_subet_run = SeqtkRunner(enriched_sample, SR_csv_test_file, path_output, "test_output")
+    seqtk_SR_subet_run.subset_stop_receiving()
+    assert seqtk_SR_subet_run.status == True
+    pass
+
+def test_run_seqtk_no_decision():
+    enriched_sample = Sequence(technology, [path_enriched_test_file])
+    seqtk_ND_subet_run = SeqtkRunner(enriched_sample, ND_csv_test_file, path_output, "test_output")
+    seqtk_ND_subet_run.subset_no_decision()
+    assert seqtk_ND_subet_run.status == True
     pass
 
 

@@ -154,12 +154,31 @@ class ASReportProcessor:
     result_files = {"unblocked_ids":"", "stop_receiving_ids":"", "no_decision":""}
 
     def __init__(self, parsed_report_object, out_dir, out_prefix):
+        """
+        Initalize the class with parsed_report_object, out_dir, and out_prefix
+
+        Arguments:
+            parsed_report_object: parser object
+                an object that contains the parsed adaptive sampling report for analysis
+            ref_database: str
+                a string to the path of reference sequence file
+            out_prefix: str
+                a designation of what the output files will be named
+        """
         self.parsed_report_object = parsed_report_object.csv_file
         self.out_dir = out_dir
         self.out_prefix = out_prefix
         pass
 
     def generate_unblocked(self):
+        """
+        generate a csv file of unblocked reads based on the designation of the read in the adaptive sampling
+        report
+
+        Returns:
+            bool:
+                returns True if the generated output file is found and not empty, False otherwise
+        """
         unblocked_ids_csv = os.path.join(self.out_dir,"{}_unblocked_ids.csv".format(self.out_prefix))
 
         self.result_files["unblocked_ids"] = unblocked_ids_csv
@@ -176,6 +195,14 @@ class ASReportProcessor:
             raise ValueError(str(self.error_messages))
 
     def generate_stop_receiving(self):
+        """
+        generate a csv file of stop_receiving reads based on the designation of the read in the adaptive sampling
+        report
+
+        Returns:
+            bool:
+                returns True if the generated output file is found and not empty, False otherwise
+        """
         stop_receiving_csv = os.path.join(self.out_dir,"{}_stop_receiving.csv".format(self.out_prefix))
 
         self.result_files["stop_receiving_ids"] = stop_receiving_csv
@@ -192,6 +219,15 @@ class ASReportProcessor:
             raise ValueError(str(self.error_messages))
 
     def generate_no_decision(self):
+        """
+        generate a csv file of no_decision reads based on the designation of the read in the adaptive sampling
+        report. if the reads are repeated and later designated as stop_receiving or unblocked, the duplicated
+        reads are removed from the final csv file.
+
+        Returns:
+            bool:
+                returns True if the generated output file is found and not empty, False otherwise
+        """
         no_decision_csv = os.path.join(self.out_dir,"{}_no_decision.csv".format(self.out_prefix))
 
         self.result_files["no_decision"] = no_decision_csv
