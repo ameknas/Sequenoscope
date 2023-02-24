@@ -1,6 +1,5 @@
 #!/usr/bin/env python
-from analyze.__init__ import run_command, Parser
-from analyze.__init__ import Sequence
+from analyze.__init__ import run_command
 import os
 
 class SeqtkRunner:
