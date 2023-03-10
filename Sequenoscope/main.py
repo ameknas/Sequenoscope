@@ -64,7 +64,7 @@ seq_summary_process.generate_read_ids()
 
 ## producing fastq via seqtk
 
-sequencing_sample = Sequence("ONT", list_of_seq=[input_fastq])
+sequencing_sample = Sequence("ONT", input_fastq)
 seqtk_subset = SeqtkRunner(sequencing_sample, "read_id_list.csv", out_directory, "filtered_fastq")
 seqtk_subset.subset_fastq()
 

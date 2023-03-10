@@ -1,7 +1,5 @@
 #!/usr/bin/env python
 import os
-import pandas as pd
-from filter_ONT.__init__ import run_command, Parser
 
 class SeqSummaryProcesser:
     parsed_report_object = None
@@ -32,7 +30,7 @@ class SeqSummaryProcesser:
 
         Arguments:
             parsed_report_object: parser object
-                an object that contains the parsed adaptive sampling report for analysis
+                an object that contains the parsed sequencing summary report for analysis
             out_prefix: str
                 a designation of what the output files will be named
             out_dir: str
@@ -61,7 +59,7 @@ class SeqSummaryProcesser:
             max_len = len
                 a designation that indicates the maximum length of a sequence for the reads in an ONT run
         """
-        self.parsed_report_object = parsed_report_object.seq_summary_file
+        self.parsed_report_object = parsed_report_object.parsed_file
         self.out_dir = out_dir
         self.out_prefix = out_prefix
         self.classification = self.classes[classification]

@@ -3,6 +3,7 @@
         "./sequenoscope",
         "./sequenoscope",
         "./sequenoscope",
+        "./sequenoscope",
         "./sequenoscope"
     ],
     "python.testing.pytestArgs": [
