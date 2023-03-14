@@ -10,6 +10,7 @@ invalid_seq_file = "/mnt/c/Users/ameknas/Desktop/Sequenoscope/Sequenoscope/seque
 path_enriched_test_file = "/mnt/c/Users/ameknas/Desktop/Sequenoscope/Sequenoscope/sequenoscope/analyze/test_sequences/Test_br1_sal_lam_enriched.fastq"
 test_csv = "/mnt/c/Users/ameknas/Desktop/Sequenoscope/Sequenoscope/sequenoscope/analyze/test_sequences/test_output_unblocked_ids.csv"
 
+seq_summary_fastq = "/mnt/c/Users/ameknas/Desktop/Sequenoscope/Sequenoscope/sequenoscope/analyze/test_sequences/barcode01_fastq_pass.fastq"
 
 def test_seq_summary_parser():
     parsed_object = GeneralSeqParser(seq_summary_file, "seq_summary")

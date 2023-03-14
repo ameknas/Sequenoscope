@@ -17,5 +17,6 @@
         "./sequenoscope",
         "-p",
         "*test.py"
-    ]
+    ],
+    "python.analysis.typeCheckingMode": "off"
 }

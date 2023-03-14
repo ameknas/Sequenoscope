@@ -1,12 +1,14 @@
 #!/usr/bin/env python
 import argparse as ap
 from version import __version__
-from utils import GeneralSeqParser, Sequence
-from filter_ONT import SeqSummaryProcesser, SeqtkRunner
+from utils.parser import GeneralSeqParser 
+from utils.sequence_class import Sequence
+from filter_ONT.seq_summary_processing import SeqSummaryProcesser
+from filter_ONT.seqtk import SeqtkRunner
 
 def parse_args():
     parser = ap.ArgumentParser(prog="sequenoscope",
-                               usage="sequenoscope filter_ONT --input_fastq <file.fq> --input_summary <seq_summary.txt> -o <out.fastq> [options]", 
+                               usage="sequenoscope filter_ONT --input_fastq <file.fq> --input_summary <seq_summary.txt> -o <out.fastq> [options]\nFor help use: sequenoscope filter_ONT -h or sequenoscope filter_ONT --help", 
                                 description="%(prog)s version {}: a tool for analyzing and processing sequencing data.".format(__version__), 
                                 formatter_class= ap.RawTextHelpFormatter)
 
@@ -14,7 +16,8 @@ def parse_args():
 
     parser.add_argument("--input_fastq", metavar="", required=True, nargs="+", help="[REQUIRED] Path to adaptive sequencing fastq files to process.")
     parser.add_argument("--input_summary", metavar="", required=True, help="[REQUIRED] Path to ONT sequencing summary file.")
-    parser.add_argument("-o", "--output", metavar="", required=True, help="[REQUIRED] Output directory/file designation")
+    parser.add_argument("-o", "--output", metavar="", required=True, help="[REQUIRED] Output directory designation")
+    parser.add_argument("-o_pre", "--output_prefix", metavar="", default= "sample", help="Output file prefix designation. default is [sample]")
     parser.add_argument("-cls", "--classification", default= "all", metavar="", type= str, choices=['all', 'unblocked', 'stop_receiving', 'no_decision'], help="a designation of the adaptive-sampling sequencing decision classification ['unblocked', 'stop_receiving', or 'no_decision']")
     parser.add_argument("-min_ch", "--minimum_channel", default= 1, metavar="", type=int, help="a designation of the minimum channel/pore number for filtering reads")
     parser.add_argument("-max_ch", "--maximum_channel", default= 512, metavar="", type=int, help="a designation of the maximum channel/pore number for filtering reads")
@@ -33,6 +36,7 @@ def run():
     input_fastq = args.input_fastq
     input_summary = args.input_summary
     out_directory = args.output
+    out_prefix = args.output_prefix
     as_class = args.classification
     min_ch = args.minimum_channel
     max_ch = args.maximum_channel
@@ -51,7 +55,7 @@ def run():
 
     ## producing read list
 
-    seq_summary_process = SeqSummaryProcesser(seq_summary_parsed, out_directory, "read_id_list", classification= as_class, 
+    seq_summary_process = SeqSummaryProcesser(seq_summary_parsed, out_directory, "{}_read_id_list".format(out_prefix), classification= as_class, 
                                             min_ch=min_ch, max_ch=max_ch, min_dur=min_dur, max_dur=max_dur, min_start_time=min_start,
                                             max_start_time=max_start, min_q=min_q, max_q=max_q, min_len=min_len, max_len=max_len)
 
@@ -60,5 +64,5 @@ def run():
     ## producing fastq via seqtk
 
     sequencing_sample = Sequence("ONT", input_fastq)
-    seqtk_subset = SeqtkRunner(sequencing_sample, "read_id_list.csv", out_directory, "filtered_fastq")
+    seqtk_subset = SeqtkRunner(sequencing_sample, "{}_read_id_list.csv".format(out_prefix), out_directory, "{}_filtered_fastq".format(out_prefix))
     seqtk_subset.subset_fastq()

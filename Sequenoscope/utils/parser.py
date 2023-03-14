@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-from utils import is_non_zero_file
+from utils.__init__ import is_non_zero_file
 import pandas as pd
 import json
 
@@ -34,7 +34,7 @@ class GeneralSeqParser:
 
     def parse_seq_summary(self):
         self.parsed_file = pd.read_csv(self.file, sep='\t', index_col=0)
-        self.parsed_file = self.seq_summary_file[["read_id", "channel", "start_time", "duration", "sequence_length_template", "mean_qscore_template", "end_reason"]]
+        self.parsed_file = self.parsed_file[["read_id", "channel", "start_time", "duration", "sequence_length_template", "mean_qscore_template", "end_reason"]]
         self.parsed_file.reset_index(drop=True, inplace=True)
 
     def file_parsing_precheck(self, file_path, delemiter="\t", list_of_headers=None):
