@@ -23,7 +23,7 @@ def read(fname):
     return open(os.path.join(os.path.dirname(__file__), fname)).read()
 
 
-exec(open('sequenoscope/version.py').read())
+exec(open('Sequenoscope/version.py').read())
 
 setup(
     name='Sequenoscope',
@@ -41,7 +41,7 @@ setup(
         'Description'),
     keywords='Keywords',
     classifiers=classifiers,
-    package_dir={'Sequenoscope': 'sequenoscope'},
+    package_dir={'Sequenoscope': 'Sequenoscope'},
     package_data={
         "": ["*.csv", "*txt"],
     },
@@ -63,7 +63,7 @@ setup(
 
     entry_points={
         'console_scripts': [
-            'Sequenoscope=sequenoscope.main:main',
+            'Sequenoscope=Sequenoscope.main:main',
         ],
     },
 )
