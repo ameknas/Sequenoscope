@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: Sequenoscope
+Version: 0.0.1
+Summary: Description
+Home-page: https://github.com/ameknas/Sequenoscope
+Author: Abdallah Meknas
+Author-email: abdallah.meknas@phac-aspc.gc.ca
+License: GPLv3
+Keywords: Keywords
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Operating System :: POSIX :: Linux
+Requires-Python: >=3.7.0,<3.8.0
+License-File: LICENSE
+
+UNKNOWN
+

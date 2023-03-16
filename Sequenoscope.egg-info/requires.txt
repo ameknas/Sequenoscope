@@ -1,0 +1,11 @@
+biopython
+numpy
+pandas
+plotly
+psutil
+pysam
+pytest
+scipy
+seqtk
+simplejson
+six

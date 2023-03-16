@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 import argparse as ap
+import os
+import sys
 from version import __version__
 from utils.parser import GeneralSeqParser 
 from utils.sequence_class import Sequence
@@ -29,6 +31,8 @@ def parse_args():
     parser.add_argument("-max_q", "--maximum_q_score", metavar="", default= 100, type=int, help="a designation of the maximum q score for filtering reads")
     parser.add_argument("-min_len", "--minimum_length", metavar="", default= 0, type=int, help="a designation of the minimum read length for filtering reads")
     parser.add_argument("-max_len", "--maximum_length", metavar="", default= 50000,type=int, help="a designation of the maximum read length for filtering reads")
+    parser.add_argument('--force', required=False, help='Force overwite of existing results directory', action='store_true')
+    parser.add_argument('-v', '--version', action='version', version="%(prog)s " + __version__)
     return parser.parse_args()
 
 def run():
@@ -48,6 +52,15 @@ def run():
     max_q = args.maximum_q_score
     min_len = args.minimum_length
     max_len = args.maximum_length
+    force = args.force
+
+    ## intializing directory for files
+
+    if not os.path.isdir(out_directory):
+        os.mkdir(out_directory, 0o755)
+    elif not force:
+        print("Error directory {} already exists, if you want to overwrite existing results then specify --force".format(out_directory))
+        sys.exit()
 
     ## parsing seq summary file
 
