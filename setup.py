@@ -3,7 +3,7 @@ import os
 from distutils.core import setup
 from setuptools import find_packages
 
-author = 'James Robertson'
+author = 'Abdallah Meknas'
 
 classifiers = """
 Development Status :: 3 - Alpha
@@ -23,7 +23,7 @@ def read(fname):
     return open(os.path.join(os.path.dirname(__file__), fname)).read()
 
 
-exec(open('Sequenoscope/version.py').read())
+exec(open('sequenoscope/version.py').read())
 
 setup(
     name='Sequenoscope',
@@ -33,7 +33,7 @@ setup(
     setup_requires=['pytest-runner'],
     tests_require=['pytest'],
     packages=find_packages(exclude=['tests']),
-    url='https://github.com/ameknas/Sequenoscope',
+    url='https://github.com/ameknas/sequenoscope',
     license='GPLv3',
     author='Abdallah Meknas',
     author_email='abdallah.meknas@phac-aspc.gc.ca',
@@ -41,7 +41,7 @@ setup(
         'Description'),
     keywords='Keywords',
     classifiers=classifiers,
-    package_dir={'Sequenoscope': 'Sequenoscope'},
+    package_dir={'Sequenoscope': 'sequenoscope'},
     package_data={
         "": ["*.csv", "*txt"],
     },
@@ -63,7 +63,7 @@ setup(
 
     entry_points={
         'console_scripts': [
-            'Sequenoscope=Sequenoscope.main:main',
+            'Sequenoscope=sequenoscope.main:main',
         ],
     },
 )
