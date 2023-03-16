@@ -5,7 +5,6 @@ setup.py
 Sequenoscope/__init__.py
 Sequenoscope/constant.py
 Sequenoscope/main.py
-Sequenoscope/sample_read_id_list.csv
 Sequenoscope/version.py
 Sequenoscope.egg-info/PKG-INFO
 Sequenoscope.egg-info/SOURCES.txt

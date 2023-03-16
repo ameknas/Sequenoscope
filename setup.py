@@ -29,7 +29,7 @@ setup(
     name='Sequenoscope',
     include_package_data=True,
     version='0.0.1',
-    python_requires='>=3.7.0,<3.8.0',
+    python_requires='>=3.7.0, <3.8.11',
     setup_requires=['pytest-runner'],
     tests_require=['pytest'],
     packages=find_packages(exclude=['tests']),

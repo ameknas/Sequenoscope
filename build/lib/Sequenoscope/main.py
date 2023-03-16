@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 import sys
-
+from filter_ONT import filter_ONT
 modules = {'analyze': 'map reads to a target and produce a report with sequencing statistics',
             'plot': 'generate plots based on fastq or kmer hash files',
             'filter_ONT': 'filter reads from a fastq file based on a sequencing summary file'
@@ -31,7 +31,7 @@ def main():
         print('Task "' + module + '" not recognised. Cannot continue.\n', file=sys.stderr)
         print_usage_and_exit()
 
-    exec("from Sequenoscope.{} import {}".format(module,module))
+    exec("from {} import {}".format(module,module))
     exec(module + '.run()')
 
 if __name__ == '__main__':

@@ -2,11 +2,11 @@
 import argparse as ap
 import os
 import sys
-from Sequenoscope.version import __version__
-from Sequenoscope.utils.parser import GeneralSeqParser 
-from Sequenoscope.utils.sequence_class import Sequence
-from Sequenoscope.filter_ONT.seq_summary_processing import SeqSummaryProcesser
-from Sequenoscope.filter_ONT.seqtk import SeqtkRunner
+from version import __version__
+from utils.parser import GeneralSeqParser 
+from utils.sequence_class import Sequence
+from filter_ONT.seq_summary_processing import SeqSummaryProcesser
+from filter_ONT.seqtk import SeqtkRunner
 
 def parse_args():
     parser = ap.ArgumentParser(prog="sequenoscope",

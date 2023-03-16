@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-from Sequenoscope.utils.__init__ import is_non_zero_file
+from utils.__init__ import is_non_zero_file
 import pandas as pd
 import json
 

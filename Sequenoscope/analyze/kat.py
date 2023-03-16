@@ -1,6 +1,6 @@
 #!/usr/bin/env python
-from analyze.__init__ import run_command
-from analyze.__init__ import Sequence
+from Sequenoscope.utils.__init__ import run_command
+from Sequenoscope.utils.sequence_class import Sequence
 import os
 import pandas as pd
 import json

@@ -1,8 +1,6 @@
 #!/usr/bin/env python
-from Sequenoscope.filter_ONT import SeqtkRunner, SeqSummaryProcesser
-from Sequenoscope.utils.parser import GeneralSeqParser
-from Sequenoscope.utils.sequence_class import Sequence
-
+from filter_ONT import SeqtkRunner, SeqSummaryProcesser
+from utils import GeneralSeqParser, Sequence
 
 seq_summary_file = "/mnt/c/Users/ameknas/Desktop/Sequenoscope/Sequenoscope/sequenoscope/analyze/test_sequences/sequencing_summary_FAT53867_9a53b23a.txt"
 path_output = "/mnt/c/Users/ameknas/Desktop/Sequenoscope/Sequenoscope/sequenoscope/filter_ONT"

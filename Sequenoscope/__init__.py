@@ -1,4 +1,3 @@
 #!/usr/bin/env python
 
-from version import __version__
-import sequenoscope
+from Sequenoscope.version import __version__

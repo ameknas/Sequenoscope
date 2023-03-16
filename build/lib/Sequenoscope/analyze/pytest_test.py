@@ -1,11 +1,10 @@
 #!/usr/bin/env python
-from Sequenoscope.utils.sequence_class import Sequence
-from Sequenoscope.utils.parser import GeneralSeqParser
-from Sequenoscope.analyze.kat import KatRunner
-from Sequenoscope.analyze.fastP import FastPRunner
-from Sequenoscope.analyze.minimap2 import Minimap2Runner
-from Sequenoscope.analyze.processing import SamBamProcessor, ASReportProcessor
-from Sequenoscope.filter_ONT.seqtk import SeqtkRunner
+from analyze.__init__ import Sequence, Parser
+from analyze.kat import KatRunner
+from analyze.fastP import FastPRunner
+from analyze.minimap2 import Minimap2Runner
+from analyze.processing import SamBamProcessor, ASReportProcessor
+from analyze.seqtk import SeqtkRunner
 
 
 path_ref_file = "/mnt/c/Users/ameknas/Desktop/Sequenoscope/Sequenoscope/sequenoscope/analyze/test_sequences/lambda_genome_reference.fasta"
