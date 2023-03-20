@@ -19,7 +19,6 @@ Sequenoscope/analyze/kat.py
 Sequenoscope/analyze/minimap2.py
 Sequenoscope/analyze/processing.py
 Sequenoscope/analyze/pytest_test.py
-Sequenoscope/analyze/seqtk.py
 Sequenoscope/filter_ONT/__init__.py
 Sequenoscope/filter_ONT/filter_ONT.py
 Sequenoscope/filter_ONT/pytest_test.py

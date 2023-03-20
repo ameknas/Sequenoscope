@@ -2,6 +2,7 @@
 import argparse as ap
 import os
 import sys
+import time
 from Sequenoscope.version import __version__
 from Sequenoscope.utils.parser import GeneralSeqParser 
 from Sequenoscope.utils.sequence_class import Sequence
@@ -72,10 +73,11 @@ def run():
                                             min_ch=min_ch, max_ch=max_ch, min_dur=min_dur, max_dur=max_dur, min_start_time=min_start,
                                             max_start_time=max_start, min_q=min_q, max_q=max_q, min_len=min_len, max_len=max_len)
 
+    
     seq_summary_process.generate_read_ids()
 
     ## producing fastq via seqtk
 
     sequencing_sample = Sequence("ONT", input_fastq)
-    seqtk_subset = SeqtkRunner(sequencing_sample, "{}_read_id_list.csv".format(out_prefix), out_directory, "{}_filtered_fastq".format(out_prefix))
+    seqtk_subset = SeqtkRunner(sequencing_sample, seq_summary_process.result_files["filtered_read_id_list"], out_directory, "{}_filtered_fastq".format(out_prefix))
     seqtk_subset.subset_fastq()
