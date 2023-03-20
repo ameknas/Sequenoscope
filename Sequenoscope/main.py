@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import sys
 
+
 modules = {'analyze': 'map reads to a target and produce a report with sequencing statistics',
             'plot': 'generate plots based on fastq or kmer hash files',
             'filter_ONT': 'filter reads from a fastq file based on a sequencing summary file'
@@ -21,7 +22,6 @@ def print_usage_and_exit():
     sys.exit(0)
 
 def main():
-
     if len(sys.argv) == 1 or sys.argv[1] in ['-h', '-help', '--help']:
         print_usage_and_exit()
 
@@ -31,8 +31,8 @@ def main():
         print('Task "' + module + '" not recognised. Cannot continue.\n', file=sys.stderr)
         print_usage_and_exit()
 
-    exec("from Sequenoscope.{} import {}".format(module,module))
-    exec(module + '.run()')
+    exec("import Sequenoscope.{}.{}".format(module, module))
+    exec("Sequenoscope.{}.{}".format(module,module) + '.run()')
 
 if __name__ == '__main__':
     main()

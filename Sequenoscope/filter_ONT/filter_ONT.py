@@ -55,6 +55,10 @@ def run():
     max_len = args.maximum_length
     force = args.force
 
+    print("-"*40)
+    print("Sequenoscope filter_ONT version {}: filtering ONT reads based on paramters".format(__version__))
+    print("-"*40)
+
     ## intializing directory for files
 
     if not os.path.isdir(out_directory):
@@ -64,6 +68,10 @@ def run():
         sys.exit()
 
     ## parsing seq summary file
+
+    print("-"*40)
+    print("Processing seq summary file and extracting reads based on input parameters...")
+    print("-"*40)
 
     seq_summary_parsed = GeneralSeqParser(input_summary, "seq_summary")
 
@@ -78,6 +86,14 @@ def run():
 
     ## producing fastq via seqtk
 
+    print("-"*40)
+    print("Subsetting fastq file based on extracted reads...")
+    print("-"*40)
+
     sequencing_sample = Sequence("ONT", input_fastq)
     seqtk_subset = SeqtkRunner(sequencing_sample, seq_summary_process.result_files["filtered_read_id_list"], out_directory, "{}_filtered_fastq".format(out_prefix))
     seqtk_subset.subset_fastq()
+
+    print("-"*40)
+    print("All Done!")
+    print("-"*40)
