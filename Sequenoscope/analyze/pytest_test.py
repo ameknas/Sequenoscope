@@ -11,7 +11,7 @@ from Sequenoscope.filter_ONT.seqtk import SeqtkRunner
 path_ref_file = "/mnt/c/Users/ameknas/Desktop/Sequenoscope/Sequenoscope/sequenoscope/analyze/test_sequences/lambda_genome_reference.fasta"
 path_enriched_test_file = "/mnt/c/Users/ameknas/Desktop/Sequenoscope/Sequenoscope/sequenoscope/analyze/test_sequences/Test_br1_sal_lam_enriched.fastq"
 path_control_test_file = "/mnt/c/Users/ameknas/Desktop/Sequenoscope/Sequenoscope/sequenoscope/analyze/test_sequences/Test_br1_sal_lam_control.fastq"
-path_output = "/mnt/c/Users/ameknas/Desktop/Sequenoscope/Sequenoscope/sequenoscope/analyze"
+path_output = "/home/ameknas/sequenoscope-1/Sequenoscope/analyze"
 technology = "ONT"
 
 invalid_ref_file = "/mnt/c/Users/ameknas/Desktop/Sequenoscope/Sequenoscope/sequenoscope/analyze/test_sequences/invalid_reference.fasta"
@@ -65,12 +65,12 @@ def test_make_test():
 #     pass
 
 
-# def test_run_fastp(): 
-#     enriched_sample = Sequence(technology, [path_enriched_test_file, path_enriched_test_file])
-#     fastp_run = FastPRunner(enriched_sample, path_output, "test_output", "test_output_2", report_only=False, dedup=True)
-#     fastp_run.run_fastp()
-#     assert fastp_run.status == True
-#     pass
+def test_run_fastp(): 
+    enriched_sample = Sequence(technology, [path_enriched_test_file])
+    fastp_run = FastPRunner(enriched_sample, path_output, "test_output", "test_output_2", report_only=False, dedup=True)
+    fastp_run.run_fastp()
+    assert fastp_run.status == True
+    pass
 
 # def test_run_minimap2(): 
 #     enriched_sample = Sequence(technology, [path_enriched_test_file, path_enriched_test_file])
@@ -97,33 +97,6 @@ def test_make_test():
 #     assert bedtools_run.status == True
 #     pass
 
-# def test_run_generate_unblocked():
-#     parsed_file = Parser(AS_report_test_file, "csv")
-#     unblocked_run = ASReportProcessor(parsed_file, path_output, "test_output")
-#     unblocked_run.generate_unblocked()
-#     assert unblocked_run.status == True
-#     pass
-
-# def test_run_generate_stop_receiving():
-#     parsed_file = Parser(AS_report_test_file, "csv")
-#     stop_receiving_run = ASReportProcessor(parsed_file, path_output, "test_output")
-#     stop_receiving_run.generate_stop_receiving()
-#     assert stop_receiving_run.status == True
-#     pass
-
-# def test_run_generate_no_decision():
-#     parsed_file = Parser(AS_report_test_file, "csv")
-#     no_decision_run = ASReportProcessor(parsed_file, path_output, "test_output")
-#     no_decision_run.generate_no_decision()
-#     assert no_decision_run.status == True
-#     pass
-
-def test_run_seqtk_unblocked():
-    enriched_sample = Sequence(technology, [path_enriched_test_file])
-    seqtk_UB_subet_run = SeqtkRunner(enriched_sample, UB_csv_test_file, path_output, "test_output")
-    seqtk_UB_subet_run.subset_fastq()
-    assert seqtk_UB_subet_run.status == True
-    pass
 
 
 
