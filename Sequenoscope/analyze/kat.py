@@ -16,7 +16,7 @@ class KatRunner:
     threads = 1
     kmersize = 27
 
-    def __init__(self, input_path, ref_path, out_path, threads = 1, kmersize = 27):
+    def __init__(self, input_path, ref_path, out_path, out_prefix, threads = 1, kmersize = 27):
         """
         Initalize the class with input path, ref_path, and output path
 
@@ -35,6 +35,7 @@ class KatRunner:
         self.input_path = input_path
         self.ref_path = ref_path
         self.out_path = out_path
+        self.out_prefix = out_prefix
         self.threads = threads
         self.kmersize = kmersize
 
@@ -48,9 +49,9 @@ class KatRunner:
         """
         input_fastq = self.input_path.out_files
         ref_fasta = self.ref_path
-        out_file_sect = os.path.join(self.out_path, "output")
-        cvg_file = os.path.join(self.out_path, "output-counts.cvg")
-        tsv_file = os.path.join(self.out_path, "output-stats.tsv")
+        out_file_sect = os.path.join(self.out_path, "{}".format(self.out_prefix))
+        cvg_file = os.path.join(self.out_path, "{}-counts.cvg".format(self.out_prefix))
+        tsv_file = os.path.join(self.out_path, "{}-stats.tsv".format(self.out_prefix))
 
         self.result_files["sect"]["cvg"] = cvg_file
         self.result_files["sect"]["tsv"] = tsv_file
@@ -72,8 +73,8 @@ class KatRunner:
                 returns True if the generated output file is found and not empty, False otherwise
         """
         ref_fasta = self.ref_path
-        out_file_hash = os.path.join(self.out_path, "kat_generated_hash")
-        jf_file = os.path.join(self.out_path, "kat_generated_hash-in.jf{}".format(self.kmersize))
+        out_file_hash = os.path.join(self.out_path, "{}_hash".format(self.out_prefix))
+        jf_file = os.path.join(self.out_path, "{}_hash-in.jf{}".format(self.out_prefix, self.kmersize))
         paired = self.input_path.is_paired
 
         self.result_files["filter"]["jf{}".format(self.kmersize)] = jf_file
@@ -86,17 +87,17 @@ class KatRunner:
             raise ValueError(str(self.error_messages))
 
         input_fastq = self.input_path.out_files
-        out_file_filter = os.path.join(self.out_path, "kat_filtered")
+        out_file_filter = os.path.join(self.out_path, "{}_filtered".format(self.out_prefix))
 
         cmd = [ 'kat','filter','seq','-t', '{}'.format(self.threads),'-o',out_file_filter,'--seq', self.input_path.files[0]]
 
         if paired:
             cmd.append('--seq2')
             cmd.append(self.input_path.files[1])
-            self.result_files["filter"]["filtered_fastq"].append(os.path.join(self.out_path, "kat_filtered.in.R1.fastq"))
-            self.result_files["filter"]["filtered_fastq"].append(os.path.join(self.out_path, "kat_filtered.in.R2.fastq"))
+            self.result_files["filter"]["filtered_fastq"].append(os.path.join(self.out_path, "{}_filtered.in.R1.fastq".format(self.out_prefix)))
+            self.result_files["filter"]["filtered_fastq"].append(os.path.join(self.out_path, "{}_filtered.in.R2.fastq".format(self.out_prefix)))
         else:
-            self.result_files["filter"]["filtered_fastq"].append(os.path.join(self.out_path, "kat_filtered.in.fastq"))
+            self.result_files["filter"]["filtered_fastq"].append(os.path.join(self.out_path, "{}_filtered.in.fastq".format(self.out_prefix)))
 
         if exclude == True:
             cmd.insert(3, "-i")
@@ -119,9 +120,9 @@ class KatRunner:
                 returns True if the generated output file is found and not empty, False otherwise
         """
         input_fastq = self.input_path.out_files
-        out_file_hist = os.path.join(self.out_path, "histogram_file")
-        png_file = os.path.join(self.out_path, "histogram_file.png")
-        json_file = os.path.join(self.out_path, "histogram_file.dist_analysis.json")
+        out_file_hist = os.path.join(self.out_path, "{}_histogram_file".format(self.out_prefix))
+        png_file = os.path.join(self.out_path, "{}_histogram_file.png".format(self.out_prefix))
+        json_file = os.path.join(self.out_path, "{}_histogram_file.dist_analysis.json".format(self.out_prefix))
 
         self.result_files["hist"]["png_file"] = png_file
         self.result_files["hist"]["json_file"] = json_file
@@ -153,36 +154,3 @@ class KatRunner:
             elif os.path.getsize(f) == 0:
                 return False
         return True
-
-    def run_all(self):
-        self.kat_sect()
-        if self.status == True:
-            self.kat_filter()
-            if self.status == True:
-                self.kat_hist()
-        
-class KatParser:
-    tsv_file = None
-    json_file = None
-    kmers_in_seq = None
-    invalid_kmers = None
-    non_zero_kmers = None
-    est_genome_size = None
-    mean_frequency = None
-    number_of_peaks = None
-
-    def init(self, kat_run_object):
-        self.kat_run_object = kat_run_object
-        pass
-
-    def parse_kat_sect_tsv(self):
-        tsv_df = pd.read_csv(self.kat_run_object.result_files["sect"]["tsv"], sep='\t', header=0, index_col=0)
-        self.kmers_in_seq = tsv_df["kmers_in_seq"].sum()
-        self.kmers_in_seq = tsv_df["invalid_kmers"].sum()
-        self.kmers_in_seq = tsv_df["non_zero_kmers"].sum()
-
-    def parse_kat_hist_json(self):
-        json_data = json.load(open(self.kat_run_object.result_files["hist"]["json_file"]))
-        self.est_genome_size = json_data["est_genome_size"]
-        self.mean_frequency = json_data["mean_freq"]
-        self.number_of_peaks = json_data["nb_peaks"]

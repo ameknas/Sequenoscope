@@ -15,7 +15,7 @@ class Minimap2Runner:
     result_files =  {"sam_output_file":""}
     paired = False
 
-    def __init__(self, read_set, out_dir, ref_database, out_prefix=None, threads=1, kmer_size=15):
+    def __init__(self, read_set, out_dir, ref_database, out_prefix, threads=1, kmer_size=15):
         """
         Initalize the class with read_set, out_dir, ref_database, and out_prefix
 
@@ -40,8 +40,6 @@ class Minimap2Runner:
         self.threads = threads
         self.kmer_size = kmer_size
         self.paired = self.read_set.is_paired
-        if self.out_prefix == None:
-            raise ValueError("Please specify a name for the output file")
 
     def run_minimap2(self):
         """

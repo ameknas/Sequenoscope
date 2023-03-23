@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-from Sequenoscope.analyze.__init__ import run_command
+from Sequenoscope.utils.__init__ import run_command
 from Sequenoscope.utils.sequence_class import Sequence
 import os
 
@@ -19,7 +19,7 @@ class FastPRunner:
     result_files = {"html":"", "json":"", "output_files_fastp":[]}
     paired = False
 
-    def __init__(self, read_set, out_dir, out_prefix, out_prefix_2=None, min_read_len=15, max_read_len=0, 
+    def __init__(self, read_set, out_dir, out_prefix, min_read_len=15, max_read_len=0, 
     trim_front_bp=0, trim_tail_bp=0, report_only=True, dedup=False, threads=1):
         """
         Initalize the class with read_set, out_dir, and out_prefix
@@ -51,7 +51,7 @@ class FastPRunner:
         self.read_set = read_set
         self.out_dir = out_dir
         self.out_prefix = out_prefix
-        self.out_prefix_2 = out_prefix_2
+        self.out_prefix_2 = "{}_2".format(self.out_prefix)
         self.min_read_len = min_read_len
         self.max_read_len = max_read_len
         self.trim_front_bp = trim_front_bp
@@ -60,8 +60,8 @@ class FastPRunner:
         self.dedup = dedup
         self.threads = threads
         self.paired = self.read_set.is_paired
-        if self.paired == True and self.report_only == False and self.out_prefix_2 == None:
-            raise ValueError("Please specify a name for the second output file")
+        #if self.paired == True and self.report_only == False and self.out_prefix_2 == None:
+        # raise ValueError("Please specify a name for the second output file")
         
 
     def run_fastp(self):
