@@ -24,6 +24,7 @@ AS_report_test_file = "/home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_se
 UB_csv_test_file = "/home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_sequences/test_output_unblocked_ids.csv"
 SR_csv_test_file = "/home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_sequences/test_output_stop_receiving.csv"
 ND_csv_test_file = "/home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_sequences/test_output_no_decision.csv"
+cmd = "python -m Sequenoscope.main analzye --input_fastq /home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_sequences/Test_br1_sal_lam_enriched.fastq --input_reference /home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_sequences/invalid_reference.fasta -o test -seq_type sr -min_len 3 -trm_tail 100"
 
 
 def test_make_test():

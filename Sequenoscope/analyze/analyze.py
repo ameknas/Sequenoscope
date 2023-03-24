@@ -29,9 +29,9 @@ def parse_args():
     parser.add_argument("-kmer_s", "--kmer_size", default= 15, metavar="", type=int, help="a designation of the kmer size when mapping or processing")
     parser.add_argument("-min_len", "--minimum_read_length", default= 15, metavar="", type=int, help="a designation of the minimum read length. reads shorter than the integer specified required will be discarded, default is 15")
     parser.add_argument("-max_len", "--maximum_read_length", default= 100, metavar="", type=int, help="a designation of the maximum read length. reads longer than the integer specified required will be discarded, default is 0 meaning no limitation")
-    parser.add_argument("-trm_fr", "--trim_front_bp", default= 0, metavar="", type=int, help="a designation of the how many bases to trim from the front of the sequene, default is 0.")
-    parser.add_argument("-trm_tail", "--trim_tail_bp", default= 0,metavar="", type=int, help="a designation of the how many bases to trim from the tail of the sequene, default is 0")
-    parser.add_argument('--exclude', required=False, help='choose to exclude reads based on reference instead include them', action='store_true')
+    parser.add_argument("-trm_fr", "--trim_front_bp", default= 0, metavar="", type=int, help="a designation of the how many bases to trim from the front of the sequence, default is 0.")
+    parser.add_argument("-trm_tail", "--trim_tail_bp", default= 0,metavar="", type=int, help="a designation of the how many bases to trim from the tail of the sequence, default is 0")
+    parser.add_argument('--exclude', required=False, help='choose to exclude reads based on reference instead of including them', action='store_true')
     parser.add_argument('--force', required=False, help='Force overwite of existing results directory', action='store_true')
     parser.add_argument('-v', '--version', action='version', version="%(prog)s " + __version__)
     return parser.parse_args()
@@ -67,7 +67,7 @@ def run():
     ## parsing seq summary file
 
     print("-"*40)
-    print("Processing seq summary file and extracting reads based on input parameters...")
+    print("Processing sequence fastq file...")
     print("-"*40)
 
     sequencing_sample = Sequence("Test", input_fastq)
@@ -104,6 +104,16 @@ def run():
     bedtools_coverage_process = SamBamProcessor(sam_to_bam_process.result_files["bam_output"], out_directory,
                                          input_reference, "{}_bedtools_coverage".format(out_prefix), thread=threads)
     bedtools_coverage_process.run_bedtools()
+
+    print("-"*40)
+    print("Analyzing kmers...")
+    print("-"*40)
+
+    # using kat hist to analyze kmers
+
+    kat_run = KatRunner(sequencing_sample_filtered, input_reference, out_directory, "{}_kmer_analysis".format(out_prefix))
+    kat_run.kat_hist()
+
 
     print("-"*40)
     print("All Done!")
