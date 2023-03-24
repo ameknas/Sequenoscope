@@ -32,28 +32,28 @@ def test_make_test():
 
 def test_kat_sect():
     enriched_sample = Sequence(technology, [path_enriched_test_file, path_enriched_test_file])
-    kat_run = KatRunner(enriched_sample, path_ref_file, path_output)
+    kat_run = KatRunner(enriched_sample, path_ref_file, path_output, "test")
     kat_run.kat_sect()
     assert kat_run.status == True
     pass
 
 def test_kat_filter():
     enriched_sample = Sequence(technology, [path_enriched_test_file, path_enriched_test_file])
-    kat_run = KatRunner(enriched_sample, path_ref_file, path_output)
+    kat_run = KatRunner(enriched_sample, path_ref_file, path_output, "test")
     kat_run.kat_filter(exclude=True)
     assert kat_run.status == True
     pass
 
 def test_kat_hist():
     enriched_sample = Sequence(technology, [path_enriched_test_file])
-    kat_run = KatRunner(enriched_sample, path_ref_file, path_output)
+    kat_run = KatRunner(enriched_sample, path_ref_file, path_output, "test")
     kat_run.kat_hist()
     assert kat_run.status == True
     pass
 
 def test_run_fastp(): 
     enriched_sample = Sequence(technology, [path_enriched_test_file])
-    fastp_run = FastPRunner(enriched_sample, path_output, "test_output", "test_output_2", report_only=False, dedup=True)
+    fastp_run = FastPRunner(enriched_sample, path_output, "test_output", report_only=False, dedup=True)
     fastp_run.run_fastp()
     assert fastp_run.status == True
     pass

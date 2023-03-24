@@ -40,7 +40,7 @@ class FastPRunner:
             trim_front_bp: int
                 trimming how many bases in front for read_set, default is 0
             trim_tail_bp: int
-                ttrimming how many bases in tail for read_set, default is 0
+                trimming how many bases in tail for read_set, default is 0
             report_only: bool
                 a designation of wheather or not to output the fastq file after analysis, default is True indicating only a json and html report will be generated
             dedup: bool
