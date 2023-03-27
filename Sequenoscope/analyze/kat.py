@@ -127,7 +127,7 @@ class KatRunner:
         self.result_files["hist"]["png_file"] = png_file
         self.result_files["hist"]["json_file"] = json_file
 
-        kat_hist_cmd = "kat hist -t {} -o {} {}".format(self.threads, out_file_hist, input_fastq)
+        kat_hist_cmd = "kat hist -t {} -m {} -o {} {}".format(self.threads, self.kmersize, out_file_hist, input_fastq)
         (self.stdout, self.stderr) = run_command(kat_hist_cmd)
         self.status = self.check_files([png_file, json_file])
         if self.status == False:
