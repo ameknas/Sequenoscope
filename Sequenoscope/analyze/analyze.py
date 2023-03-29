@@ -86,7 +86,7 @@ def run():
     ## mapping to reference via minimap2 and samtools
 
     print("-"*40)
-    print("Mapping fastq based on the provided reference fasta file")
+    print("Mapping fastq based on the provided reference fasta file....")
     print("-"*40)
 
     sequencing_sample_filtered = Sequence("Test", fastp_run_process.result_files["output_files_fastp"])
@@ -113,7 +113,7 @@ def run():
 
     # using kat hist to analyze kmers
 
-    kat_run = KatRunner(sequencing_sample_filtered, input_reference, out_directory, "{}_kmer_analysis".format(out_prefix), kmersize = kmer_size)
+    kat_run = KatRunner(sequencing_sample, input_reference, out_directory, "{}_kmer_analysis".format(out_prefix), kmersize = kmer_size)
     kat_run.kat_hist()
 
 
