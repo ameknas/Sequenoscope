@@ -113,7 +113,7 @@ def run():
 
     # using kat hist to analyze kmers
 
-    kat_run = KatRunner(sequencing_sample, input_reference, out_directory, "{}_kmer_analysis".format(out_prefix), kmersize = kmer_size)
+    kat_run = KatRunner(sequencing_sample_filtered, input_reference, out_directory, "{}_kmer_analysis".format(out_prefix), kmersize = kmer_size)
     kat_run.kat_hist()
 
 
