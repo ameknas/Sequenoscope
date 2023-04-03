@@ -2,6 +2,8 @@
 from Sequenoscope.utils.__init__ import is_non_zero_file
 import pandas as pd
 import json
+import re
+import os
 
 class GeneralSeqParser:
     file = None
@@ -48,3 +50,35 @@ class GeneralSeqParser:
                 raise ValueError("Error: column headers did not match expected output. check file.")
         
         return True
+    
+class fastq_parser:
+    REGEX_GZIPPED = re.compile(r'^.+\.gz$')
+    f = None
+    def __init__(self,filepath):
+        self.filepath = filepath
+
+    def parse(self):
+        filepath  = self.filepath
+        if self.REGEX_GZIPPED.match(filepath):
+            # using os.popen with zcat since it is much faster than gzip.open or gzip.open(io.BufferedReader)
+            # http://aripollak.com/pythongzipbenchmarks/
+            # assumes Linux os with zcat installed
+            with os.popen('zcat < {}'.format(filepath)) as f:
+                yield from self.parse_fastq(f)
+        else:
+            with open(filepath, 'r') as f:
+                yield from self.parse_fastq(f)
+        return
+
+
+    def parse_fastq(self,f):
+
+        record = []
+        n = 0
+        for line in f:
+            n += 1
+            record.append(line.rstrip())
+            if n == 4:
+                yield record
+                n = 0
+                record = []

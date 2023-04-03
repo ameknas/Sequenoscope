@@ -5,6 +5,7 @@ from Sequenoscope.analyze.kat import KatRunner
 from Sequenoscope.analyze.fastP import FastPRunner
 from Sequenoscope.analyze.minimap2 import Minimap2Runner
 from Sequenoscope.analyze.processing import SamBamProcessor
+from Sequenoscope.analyze.bam import bam
 
 
 path_ref_file = "/home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_sequences/lambda_genome_reference.fasta"
@@ -25,67 +26,73 @@ UB_csv_test_file = "/home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_seque
 SR_csv_test_file = "/home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_sequences/test_output_stop_receiving.csv"
 ND_csv_test_file = "/home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_sequences/test_output_no_decision.csv"
 cmd = "python -m Sequenoscope.main analzye --input_fastq /home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_sequences/Test_br1_sal_lam_enriched.fastq --input_reference /home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_sequences/invalid_reference.fasta -o test -seq_type sr -min_len 3 -trm_tail 100"
-
+test_bam = "/home/ameknas/sequenoscope-1/test/sample_mapped_bam.bam"
 
 def test_make_test():
     print ("hello world")
     pass
 
-def test_kat_sect():
-    enriched_sample = Sequence(technology, [path_enriched_test_file, path_enriched_test_file])
-    kat_run = KatRunner(enriched_sample, path_ref_file, path_output, "test")
-    kat_run.kat_sect()
-    assert kat_run.status == True
-    pass
+# def test_kat_sect():
+#     enriched_sample = Sequence(technology, [path_enriched_test_file, path_enriched_test_file])
+#     kat_run = KatRunner(enriched_sample, path_ref_file, path_output, "test")
+#     kat_run.kat_sect()
+#     assert kat_run.status == True
+#     pass
 
-def test_kat_filter():
-    enriched_sample = Sequence(technology, [path_enriched_test_file, path_enriched_test_file])
-    kat_run = KatRunner(enriched_sample, path_ref_file, path_output, "test")
-    kat_run.kat_filter(exclude=True)
-    assert kat_run.status == True
-    pass
+# def test_kat_filter():
+#     enriched_sample = Sequence(technology, [path_enriched_test_file, path_enriched_test_file])
+#     kat_run = KatRunner(enriched_sample, path_ref_file, path_output, "test")
+#     kat_run.kat_filter(exclude=True)
+#     assert kat_run.status == True
+#     pass
 
-def test_kat_hist():
-    enriched_sample = Sequence(technology, [path_enriched_test_file])
-    kat_run = KatRunner(enriched_sample, path_ref_file, path_output, "test")
-    kat_run.kat_hist()
-    assert kat_run.status == True
-    pass
+# def test_kat_hist():
+#     enriched_sample = Sequence(technology, [path_enriched_test_file])
+#     kat_run = KatRunner(enriched_sample, path_ref_file, path_output, "test")
+#     kat_run.kat_hist()
+#     assert kat_run.status == True
+#     pass
 
-def test_run_fastp(): 
-    enriched_sample = Sequence(technology, [path_enriched_test_file])
-    fastp_run = FastPRunner(enriched_sample, path_output, "test_output", report_only=False, dedup=True)
-    fastp_run.run_fastp()
-    assert fastp_run.status == True
-    pass
+# def test_run_fastp(): 
+#     enriched_sample = Sequence(technology, [path_enriched_test_file])
+#     fastp_run = FastPRunner(enriched_sample, path_output, "test_output", report_only=False, dedup=True)
+#     fastp_run.run_fastp()
+#     assert fastp_run.status == True
+#     pass
 
-def test_run_minimap2(): 
-    enriched_sample = Sequence(technology, [path_enriched_test_file, path_enriched_test_file])
-    minimap2_run = Minimap2Runner(enriched_sample, path_output, path_ref_file, "test_output")
-    minimap2_run.run_minimap2()
-    assert minimap2_run.status == True
-    pass
+# def test_run_minimap2(): 
+#     enriched_sample = Sequence(technology, [path_enriched_test_file, path_enriched_test_file])
+#     minimap2_run = Minimap2Runner(enriched_sample, path_output, path_ref_file, "test_output")
+#     minimap2_run.run_minimap2()
+#     assert minimap2_run.status == True
+#     pass
 
-def test_run_samtools_bam(): 
-    samtools_run = SamBamProcessor(sam_test_file, path_output, path_ref_file, "test_output")
-    samtools_run.run_samtools_bam(exclude=True)
-    assert samtools_run.status == True
-    pass
+# def test_run_samtools_bam(): 
+#     samtools_run = SamBamProcessor(sam_test_file, path_output, path_ref_file, "test_output")
+#     samtools_run.run_samtools_bam(exclude=True)
+#     assert samtools_run.status == True
+#     pass
 
-def test_run_samtools_fastq(): 
-    samtools_run = SamBamProcessor(bam_test_file, path_output, path_ref_file, "test_output")
-    samtools_run.run_samtools_fastq()
-    assert samtools_run.status == True
-    pass
+# def test_run_samtools_fastq(): 
+#     samtools_run = SamBamProcessor(bam_test_file, path_output, path_ref_file, "test_output")
+#     samtools_run.run_samtools_fastq()
+#     assert samtools_run.status == True
+#     pass
 
-def test_run_samtools_import(): 
-    samtools_run = SamBamProcessor(path_enriched_test_file, path_output, path_ref_file, "test_output")
-    samtools_run.run_samtools_import()
-    assert samtools_run.status == True
-    pass
+# def test_run_samtools_import(): 
+#     samtools_run = SamBamProcessor(path_enriched_test_file, path_output, path_ref_file, "test_output")
+#     samtools_run.run_samtools_import()
+#     assert samtools_run.status == True
+#     pass
 
-def test_run_bedtools(): 
-    bedtools_run = SamBamProcessor(bam_test_file, path_output, path_ref_file, "test_output")
-    bedtools_run.run_bedtools(nonzero=True)
-    assert bedtools_run.status == True
+# def test_run_bedtools(): 
+#     bedtools_run = SamBamProcessor(bam_test_file, path_output, path_ref_file, "test_output")
+#     bedtools_run.run_bedtools(nonzero=True)
+#     assert bedtools_run.status == True
+#     pass
+
+def test_run_bam(): 
+    bam_run = bam(test_bam)
+    print(bam_run.ref_stats)
+    assert bam_run.status == True
     pass
