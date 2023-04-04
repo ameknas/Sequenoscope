@@ -92,7 +92,7 @@ def test_make_test():
 #     pass
 
 def test_run_bam(): 
-    bam_run = bam(test_bam)
-    print(bam_run.ref_stats)
+    bam_run = bam("/home/ameknas/sequenoscope-1/test/sample_mapped_bam.bam")
+    print(bam_run.ref_stats, file=open('output_lam.txt', 'a'))
     assert bam_run.status == True
     pass

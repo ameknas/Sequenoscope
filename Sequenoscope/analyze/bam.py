@@ -64,7 +64,10 @@ class bam:
                 num_reads+=1
                 read_id = read.query_name
                 seq = read.query_sequence
-                length = len(seq)
+                if seq is not None:
+                    length = len(seq)
+                else:
+                    length = 0
                 total_bases += length
                 lengths.append(length)
                 qual = read.query_qualities
@@ -131,12 +134,15 @@ class bam:
         :param qual: string of phred 33 ints for quality
         :return: float mean qscore
         '''
-        score = sum(qual)
-        length = len(qual)
-        if length == 0:
-            return 0
+        if qual is not None:
+            score = sum(qual)
+            length = len(qual)
+            if length == 0:
+                return 0
 
-        return score / length
+            return score / length
+        else:
+            return 0
 
 
     def get_bam_stats(self):
@@ -173,8 +179,8 @@ class bam:
             'samtools',
             'index',
             '-@',"{}".format(self.threads),
-            '-o', "{}".format(self.index_file),
-            "{}".format(self.alignment_file)
+            "{}".format(self.alignment_file),
+            "{}".format(self.index_file)
         ]
         cmd = " ".join(cmd)
         return run_command(cmd)
