@@ -4,7 +4,7 @@ import statistics
 import pysam
 from Sequenoscope.utils.__init__ import run_command, is_non_zero_file
 
-class bam:
+class BamProcessor:
 
     alignment_file = None
     index_file = None

@@ -5,8 +5,8 @@ from Sequenoscope.analyze.kat import KatRunner
 from Sequenoscope.analyze.fastP import FastPRunner
 from Sequenoscope.analyze.minimap2 import Minimap2Runner
 from Sequenoscope.analyze.processing import SamBamProcessor
-from Sequenoscope.analyze.bam import bam
-
+from Sequenoscope.analyze.bam import BamProcessor
+from Sequenoscope.analyze.seq_manifest import SeqManifest
 
 path_ref_file = "/home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_sequences/lambda_genome_reference.fasta"
 path_enriched_test_file = "/home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_sequences/Test_br1_sal_lam_enriched.fastq"
@@ -92,7 +92,21 @@ def test_make_test():
 #     pass
 
 def test_run_bam(): 
-    bam_run = bam("/home/ameknas/sequenoscope-1/test/sample_mapped_bam.bam")
-    print(bam_run.ref_stats, file=open('output_lam.txt', 'a'))
+    bam_run = BamProcessor("/home/ameknas/sequenoscope-1/test-sal/sample_mapped_bam.bam")
+    reads = []
+    for i in bam_run.ref_stats:
+        num_reads = bam_run.ref_stats[i]['num_reads']
+        reads.append(num_reads)
+    print(sum(reads), file=open('test_reads_total.txt', 'a'))
     assert bam_run.status == True
     pass
+
+# def test_run_seq_manifest_nanopore(): 
+#     seq_mani_run = SeqManifest("barcode1",
+#                                "/home/ameknas/sequenoscope-1/test-br1-alt/sample_mapped_bam.bam", 
+#                                "out_mani_1", 
+#                                fastp_fastq="/home/ameknas/sequenoscope-1/test-br1-alt/sample_fastp_output.fastp.fastq",
+#                                in_seq_summary= "/home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_sequences/sequencing_summary_FAT53867_9a53b23a.txt"
+#                                )
+#     assert seq_mani_run.status == True
+#     pass
