@@ -54,6 +54,7 @@ class GeneralSeqParser:
 class fastq_parser:
     REGEX_GZIPPED = re.compile(r'^.+\.gz$')
     f = None
+    read_id_from_record = None
     def __init__(self,filepath):
         self.filepath = filepath
 
@@ -79,6 +80,7 @@ class fastq_parser:
             n += 1
             record.append(line.rstrip())
             if n == 4:
+                self.read_id_from_record = record[0].split(" ")[0][1:]
                 yield record
                 n = 0
                 record = []

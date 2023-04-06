@@ -40,7 +40,7 @@ class SamBamProcessor:
         self.out_prefix = out_prefix
         self.threads = thread
 
-    def run_samtools_bam(self, exclude=False):
+    def run_samtools_bam(self, exclude=None):
         """
         Run the samtools view command on the designated sam file and pipe the output to the samtools sort command for further processing.
 
@@ -56,14 +56,18 @@ class SamBamProcessor:
         
         self.result_files["bam_output"] = bam_output
         
-        cmd = ["samtools", "view", "-S", "-b", "4", self.file, "|",
+        cmd = ["samtools", "view", "-S", "-b", self.file, "|",
                "samtools", "sort", "-@", "{}".format(self.threads), "-T", self.out_prefix, "--reference", self.ref_database,
                "-o", bam_output]
 
-        if exclude == True:
-            cmd.insert(4, "-f")
-        else:
-            cmd.insert(4, "-F")
+        # if exclude == True:
+        #     cmd.insert(4, "-f")
+        #     cmd.insert(5, "4")
+        # elif exclude == False:
+        #     cmd.insert(4, "-F")
+        #     cmd.insert(5, "4")
+        # else:
+        #     pass
 
         cmd_string = " ".join(cmd)
 

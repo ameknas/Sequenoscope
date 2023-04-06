@@ -20,8 +20,7 @@ class SeqManifest:
     error_msg = ''
     start_time = ''
     end_time = ''
-    #filtered_reads = set()
-    filtered_reads = dict()
+    filtered_reads = {}
 
     def __init__(self,sample_id,in_bam,out_file,fastp_fastq=None,in_seq_summary=None,start_time=None,end_time=None,delim="\t"):
         self.delim = delim
@@ -77,7 +76,7 @@ class SeqManifest:
     def process_fastq(self,fastq_file):
         fastq_obj = fastq_parser(fastq_file)
         for record in fastq_obj.parse():
-            read_id = record[0][1:]
+            read_id = fastq_obj.read_id_from_record
             seq = record[1]
             seq_len = len(seq)
             qual = self.convert_qscores(record[3])
@@ -97,8 +96,8 @@ class SeqManifest:
 
         :return:
         '''
-        fout = open(self.out_file,'w')
-        fout.write("{}".format("\t".join(self.fields)))
+        fout = open("{}.txt".format(self.out_file),'w')
+        fout.write("{}\n".format("\t".join(self.fields)))
 
         fin = open(self.in_seq_summary,'r')
         header = next(fin).strip().split(self.delim)
@@ -114,9 +113,9 @@ class SeqManifest:
             read_qual = 0
             is_uniq = True
             is_mapped = False
-            start_time = row['start_time']
+            start_time = row_data['start_time']
             end_time = ''
-            duration = row['duration']
+            duration = row_data['duration']
             if start_time == '':
                 start_time = self.start_time
                 end_time = self.end_time
@@ -151,7 +150,7 @@ class SeqManifest:
             out_row['is_mapped'] = is_mapped
             out_row['is_uniq'] = is_uniq
             out_row['read_len'] = read_len
-            out_row['read_qual'] = read_qual
+            out_row['read_qscore'] = read_qual
             out_row['start_time'] = start_time
             out_row['end_time'] = end_time
             out_row['decision'] = row_data['end_reason']
@@ -159,11 +158,11 @@ class SeqManifest:
 
             if len(mapped_contigs) == 0:
                 out_row['contig_id'] = ''
-                fout.write("{}".format("\t".join([str(x) for x in out_row.values()])))
+                fout.write("{}\n".format("\t".join([str(x) for x in out_row.values()])))
 
             for contig_id in mapped_contigs:
                 out_row['contig_id'] = contig_id
-                fout.write("{}".format("\t".join([str(x) for x in out_row.values()])))
+                fout.write("{}\n".format("\t".join([str(x) for x in out_row.values()])))
 
         fin.close()
         fout.close()
