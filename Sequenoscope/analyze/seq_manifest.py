@@ -28,6 +28,8 @@ class SeqManifest:
         self.sample_id = sample_id
         self.in_seq_summary = in_seq_summary
         self.fastp_fastq = fastp_fastq
+        self.start_time = start_time
+        self.end_time = end_time
 
         if self.in_seq_summary is None:
             if start_time is None or end_time is None:
@@ -172,18 +174,18 @@ class SeqManifest:
 
         :return:
         '''
-        fout = open(self.out_file, 'w')
-        fout.write("{}".format("\t".join(self.fields)))
+        fout = open("{}.txt".format(self.out_file),'w')
+        fout.write("{}\n".format("\t".join(self.fields)))
 
-        for contig_id in self.bam_obj:
-            for read_id in self.bam_obj[contig_id]['reads']:
+        for contig_id in self.bam_obj.ref_stats:
+            for read_id in self.bam_obj.ref_stats[contig_id]['reads']:
                 out_row = self.create_row()
                 is_mapped = False
                 mapped_contigs = []
-                for cid in self.bam_obj:
+                for cid in self.bam_obj.ref_stats:
                     if cid == '*':
                         continue
-                    if read_id in self.bam_obj[cid]['reads']:
+                    if read_id in self.bam_obj.ref_stats[cid]['reads']:
                         mapped_contigs.append(cid)
                 is_uniq = False
                 if len(mapped_contigs) == 1:
@@ -198,18 +200,20 @@ class SeqManifest:
                 if read_id in self.filtered_reads:
                     fastp_status = True
 
-                read_len = self.bam_obj[contig_id]['reads'][read_id][0]
-                read_qual = self.bam_obj[contig_id]['reads'][read_id][0]
+                read_len = self.bam_obj.ref_stats[contig_id]['reads'][read_id][0]
+                read_qual = self.bam_obj.ref_stats[contig_id]['reads'][read_id][1]
                 out_row['sample_id'] = self.sample_id
                 out_row['fastp_status'] = fastp_status
                 out_row['read_id'] = read_id
                 out_row['is_mapped'] = is_mapped
                 out_row['is_uniq'] = is_uniq
                 out_row['read_len'] = read_len
-                out_row['read_qual'] = read_qual
+                out_row['read_qscore'] = read_qual
                 out_row['start_time'] = self.start_time
                 out_row['end_time'] = self.end_time
                 out_row['contig_id'] = cid
-                fout.write("{}".format("\t".join([str(x) for x in out_row.values()])))
+                out_row['channel'] = "N/A"
+                out_row['decision'] = "N/A"
+                fout.write("{}\n".format("\t".join([str(x) for x in out_row.values()])))
 
         fout.close()

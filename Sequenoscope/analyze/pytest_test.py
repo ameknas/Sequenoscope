@@ -109,12 +109,24 @@ def test_make_test():
 #     pass
 
 def test_run_seq_manifest_nanopore(): 
-    seq_mani_run = SeqManifest("barcode1",
+    seq_mani_run_nano = SeqManifest("barcode1",
                                "/home/ameknas/sequenoscope-1/test/sample_mapped_bam.bam", 
                                "test_out_mani_1", 
                                fastp_fastq="/home/ameknas/sequenoscope-1/test/sample_fastp_output.fastp.fastq",
                                in_seq_summary= "/home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_sequences/Nanopore_enriched_control_seq_summary.txt"
                                )
-    print(seq_mani_run.filtered_reads.keys(), file=open('test_output_fastp.txt', 'a'))
-    assert seq_mani_run.status == True
+    print(seq_mani_run_nano.filtered_reads.keys(), file=open('test_output_fastp.txt', 'a'))
+    assert seq_mani_run_nano.status == True
+    pass
+
+def test_run_seq_manifest_Illumina(): 
+    seq_mani_run_Ill = SeqManifest("barcode1",
+                               "/home/ameknas/sequenoscope-1/test/sample_mapped_bam.bam", 
+                               "test_out_mani_2", 
+                               fastp_fastq="/home/ameknas/sequenoscope-1/test/sample_fastp_output.fastp.fastq",
+                               start_time=0,
+                               end_time=100
+                               )
+    print(seq_mani_run_Ill.filtered_reads.keys(), file=open('test_output_fastp.txt', 'a'))
+    assert seq_mani_run_Ill.status == True
     pass
