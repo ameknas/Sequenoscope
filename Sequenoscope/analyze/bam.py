@@ -3,6 +3,7 @@
 import statistics
 import pysam
 from Sequenoscope.utils.__init__ import run_command, is_non_zero_file
+from math import log
 
 class BamProcessor:
 
@@ -125,22 +126,27 @@ class BamProcessor:
             if v >= min_value and v<=max_value:
                 total+=1
         return total
+    
+    def errs_tab(n):
+        return [10**(q / -10) for q in range(n+1)]
 
 
 
-    def calc_mean_qscores(self,qual):
+    def calc_mean_qscores(self,qual, tab=errs_tab(128)):
         '''
         Calculates the mean quality score for a read where they have been converted to phred
         :param qual: string of phred 33 ints for quality
         :return: float mean qscore
         '''
         if qual is not None:
-            score = sum(qual)
-            length = len(qual)
-            if length == 0:
-                return 0
+            mq = -10 * log(sum([tab[q] for q in qual]) / len(qual) , 10)
+            return mq
+            # score = sum(qual)
+            # length = len(qual)
+            # if length == 0:
+            #     return 0
 
-            return score / length
+            # return score / length
         else:
             return 0
 
