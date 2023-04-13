@@ -127,26 +127,24 @@ class BamProcessor:
                 total+=1
         return total
     
-    def errs_tab(n):
+    def error_prob_list_tab(n):
+        """
+        generate a list of error rates for qualities less than or equal to n.
+        source: github.com/wdecoster/nanoget/blob/master/nanoget/utils.py
+        """
         return [10**(q / -10) for q in range(n+1)]
 
-
-
-    def calc_mean_qscores(self,qual, tab=errs_tab(128)):
+    def calc_mean_qscores(self,qual,tab=error_prob_list_tab(128)):
         '''
-        Calculates the mean quality score for a read where they have been converted to phred
+        Calculates the mean quality score for a read where they have been converted to Phred
+        phred scores are first converted to probabilites, then average error probability is calculated.
+        covert the average back to Phred scale
         :param qual: string of phred 33 ints for quality
         :return: float mean qscore
         '''
-        if qual is not None:
-            mq = -10 * log(sum([tab[q] for q in qual]) / len(qual) , 10)
-            return mq
-            # score = sum(qual)
-            # length = len(qual)
-            # if length == 0:
-            #     return 0
-
-            # return score / length
+        if qual:
+            phred_score = -10 * log(sum([tab[q] for q in qual]) / len(qual) , 10)
+            return phred_score
         else:
             return 0
 

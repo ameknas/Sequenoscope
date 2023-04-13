@@ -69,8 +69,8 @@ def test_make_test():
 #     pass
 
 # def test_run_samtools_bam(): 
-#     samtools_run = SamBamProcessor(sam_test_file, path_output, path_ref_file, "test_output")
-#     samtools_run.run_samtools_bam(exclude=True)
+#     samtools_run = SamBamProcessor("/home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_output.sam", path_output, path_ref_file, "test_output")
+#     samtools_run.run_samtools_bam()
 #     assert samtools_run.status == True
 #     pass
 
@@ -102,29 +102,29 @@ def test_make_test():
 #     assert bam_run.status == True
 #     pass
 
-def test_run_bam(): 
-    bam_run = BamProcessor("/home/ameknas/sequenoscope-1/test/sample_mapped_bam.bam")
-    print(bam_run.ref_stats, file=open('test_output_nano.txt', 'a'))
-    print(bam_run.ref_coverage, file=open('test_output_cov.txt', 'a'))
-    assert bam_run.status == True
+# def test_run_bam(): 
+#     bam_run = BamProcessor("/home/ameknas/sequenoscope-1/test/sample_mapped_bam.bam")
+#     print(bam_run.ref_stats, file=open('test_output_nano.txt', 'a'))
+#     print(bam_run.ref_coverage, file=open('test_output_cov.txt', 'a'))
+#     assert bam_run.status == True
+#     pass
+
+def test_run_seq_manifest_with_sum(): 
+    seq_mani_run_nano = SeqManifest("barcode1",
+                               "/home/ameknas/sequenoscope-1/test/sample_mapped_bam.bam", 
+                               "test_out_mani_1_64", 
+                               fastp_fastq="/home/ameknas/sequenoscope-1/test/sample_fastp_output.fastp.fastq",
+                               in_seq_summary= "/home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_sequences/Nanopore_enriched_control_seq_summary.txt"
+                               )
+    print(seq_mani_run_nano.filtered_reads.keys(), file=open('test_output_fastp.txt', 'a'))
+    assert seq_mani_run_nano.status == True
     pass
 
-# def test_run_seq_manifest_nanopore(): 
-#     seq_mani_run_nano = SeqManifest("barcode1",
-#                                "/home/ameknas/sequenoscope-1/test/sample_mapped_bam.bam", 
-#                                "test_out_mani_1_64", 
-#                                fastp_fastq="/home/ameknas/sequenoscope-1/test/sample_fastp_output.fastp.fastq",
-#                                in_seq_summary= "/home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_sequences/Nanopore_enriched_control_seq_summary.txt"
-#                                )
-#     print(seq_mani_run_nano.filtered_reads.keys(), file=open('test_output_fastp.txt', 'a'))
-#     assert seq_mani_run_nano.status == True
-#     pass
-
-# def test_fastq_extractor_sr():
-#     reader = FastqExtractor(out_prefix="test_reads", out_dir=path_output)
-#     reader.extract_single_reads("/home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_sequences/barcode01_fastq_pass_enriched.fastq")
-#     assert reader.status == True
-#     pass
+def test_fastq_extractor_sr():
+    reader = FastqExtractor(out_prefix="test_reads", out_dir=path_output)
+    reader.extract_single_reads("/home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_sequences/barcode01_fastq_pass_enriched.fastq")
+    assert reader.status == True
+    pass
 
 # def test_fastq_extractor_lr():
 #     reader_lr = FastqExtractor(out_prefix="test_reads_lr", out_dir=path_output)
@@ -143,3 +143,16 @@ def test_run_bam():
 #     print(seq_mani_run_Ill.filtered_reads.keys(), file=open('test_output_fastp.txt', 'a'))
 #     assert seq_mani_run_Ill.status == True
 #     pass
+
+def test_run_seq_manifest_no_sum(): 
+    seq_mani_run_Ill = SeqManifest("barcode1",
+                               "/home/ameknas/sequenoscope-1/test/sample_mapped_bam.bam", 
+                               "test_out_mani_2", 
+                               fastp_fastq="/home/ameknas/sequenoscope-1/test/sample_fastp_output.fastp.fastq",
+                               read_list="/home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_reads.txt",
+                               start_time=0,
+                               end_time=100
+                               )
+    print(seq_mani_run_Ill.filtered_reads.keys(), file=open('test_output_fastp.txt', 'a'))
+    assert seq_mani_run_Ill.status == True
+    pass

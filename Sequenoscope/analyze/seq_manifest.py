@@ -12,6 +12,7 @@ class SeqManifest:
     ]
     sample_id = ''
     in_seq_summary = ''
+    read_list = ''
     out_file = ''
     bam_obj = None
     fastp_obj = None
@@ -22,7 +23,7 @@ class SeqManifest:
     end_time = ''
     filtered_reads = {}
 
-    def __init__(self,sample_id,in_bam,out_file,fastp_fastq=None,in_seq_summary=None,start_time=None,end_time=None,delim="\t"):
+    def __init__(self,sample_id,in_bam,out_file,fastp_fastq=None,in_seq_summary=None, read_list=None,start_time=None,end_time=None,delim="\t"):
         self.delim = delim
         self.out_file = out_file
         self.sample_id = sample_id
@@ -30,11 +31,12 @@ class SeqManifest:
         self.fastp_fastq = fastp_fastq
         self.start_time = start_time
         self.end_time = end_time
+        self.read_list = read_list
 
         if self.in_seq_summary is None:
             if start_time is None or end_time is None:
                 self.status = False
-                self.error_msg = 'Error no sequence summary specified, please specify as start and end datetime'
+                self.error_msg = 'Error no sequence summary specified, please specify a start and end datetime'
                 return
 
         self.bam_obj = BamProcessor(input_file=in_bam)
@@ -46,9 +48,9 @@ class SeqManifest:
             self.error_msg = "Error specified seq summary file {} does not exist".format(self.in_seq_summary)
             return
         if self.in_seq_summary is not None:
-            self.create_nanopore_manifest()
+            self.create_manifest_with_sum()
         else:
-            self.create_illumina_manifest()
+            self.create_manifest_no_sum()
 
     def calc_mean_qscores(self,qual):
         '''
@@ -85,15 +87,13 @@ class SeqManifest:
             qscore = self.calc_mean_qscores(qual)
             self.filtered_reads[read_id] = [seq_len,qscore]
 
-
-
     def create_row(self):
         out_row = {}
         for field_id in self.fields:
             out_row[field_id] = ''
         return out_row
 
-    def create_nanopore_manifest(self):
+    def create_manifest_with_sum(self):
         '''
 
         :return:
@@ -169,51 +169,68 @@ class SeqManifest:
         fin.close()
         fout.close()
 
-    def create_illumina_manifest(self):
-        '''
-
-        :return:
-        '''
+    def create_manifest_no_sum(self):
+        
         fout = open("{}.txt".format(self.out_file),'w')
         fout.write("{}\n".format("\t".join(self.fields)))
 
-        for contig_id in self.bam_obj.ref_stats:
-            for read_id in self.bam_obj.ref_stats[contig_id]['reads']:
-                out_row = self.create_row()
-                is_mapped = False
-                mapped_contigs = []
-                for cid in self.bam_obj.ref_stats:
-                    if cid == '*':
-                        continue
-                    if read_id in self.bam_obj.ref_stats[cid]['reads']:
-                        mapped_contigs.append(cid)
+        fin = open(self.read_list,'r')
+        header = next(fin).strip().split(self.delim)
+
+        for line in fin:
+            row = line.strip().split(self.delim)
+            row_data = {}
+            for i in range(0,len(row)) :
+                row_data[header[i]] = row[i]
+
+            read_id = row_data['read_id']
+            read_len = 0
+            read_qual = 0
+            is_uniq = True
+            is_mapped = False
+            start_time = self.start_time
+            end_time = self.end_time
+
+            out_row = self.create_row()
+            for field_id in self.fields:
+                if field_id in row_data:
+                    out_row[field_id] = row_data[field_id]
+            mapped_contigs = []
+            for contig_id in self.bam_obj.ref_stats:
+                if read_id in self.bam_obj.ref_stats[contig_id]['reads']:
+                    read_len = self.bam_obj.ref_stats[contig_id]['reads'][read_id][0]
+                    read_qual = self.bam_obj.ref_stats[contig_id]['reads'][read_id][1]
+                    if contig_id != '*':
+                        mapped_contigs.append(contig_id)
+
+            if len(mapped_contigs) > 0:
+                is_mapped = True
+            if len(mapped_contigs) > 1:
                 is_uniq = False
-                if len(mapped_contigs) == 1:
-                    is_uniq = True
-                if len(mapped_contigs) > 0:
-                    is_mapped = True
-                    cid = ''
-                else:
-                    cid = contig_id
 
-                fastp_status = False
-                if read_id in self.filtered_reads:
-                    fastp_status = True
+            fastp_status = False
+            if read_id in self.filtered_reads:
+                fastp_status = True
+            out_row['fastp_status'] = fastp_status
+            out_row['sample_id'] = self.sample_id
+            out_row['read_id'] = read_id
+            out_row['is_mapped'] = is_mapped
+            out_row['is_uniq'] = is_uniq
+            out_row['read_len'] = read_len
+            out_row['read_qscore'] = read_qual
+            out_row['start_time'] = start_time
+            out_row['end_time'] = end_time
+            out_row['decision'] = "N/A"
+            out_row['channel'] = "N/A"
 
-                read_len = self.bam_obj.ref_stats[contig_id]['reads'][read_id][0]
-                read_qual = self.bam_obj.ref_stats[contig_id]['reads'][read_id][1]
-                out_row['sample_id'] = self.sample_id
-                out_row['fastp_status'] = fastp_status
-                out_row['read_id'] = read_id
-                out_row['is_mapped'] = is_mapped
-                out_row['is_uniq'] = is_uniq
-                out_row['read_len'] = read_len
-                out_row['read_qscore'] = read_qual
-                out_row['start_time'] = self.start_time
-                out_row['end_time'] = self.end_time
-                out_row['contig_id'] = cid
-                out_row['channel'] = "N/A"
-                out_row['decision'] = "N/A"
+
+            if len(mapped_contigs) == 0:
+                out_row['contig_id'] = ''
                 fout.write("{}\n".format("\t".join([str(x) for x in out_row.values()])))
 
+            for contig_id in mapped_contigs:
+                out_row['contig_id'] = contig_id
+                fout.write("{}\n".format("\t".join([str(x) for x in out_row.values()])))
+
+        fin.close()
         fout.close()
