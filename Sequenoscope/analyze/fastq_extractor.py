@@ -15,8 +15,9 @@ class FastqExtractor:
         with open(fastq_file, 'r') as f:
             for line in f:
                 if line.startswith('@'):
-                    read_id = line.strip().split(" ")[0][1:]
-                    self.reads.append(read_id)
+                    if len(line.strip().split()) >= 4:
+                        read_id = line.strip().split(" ")[0][1:]
+                        self.reads.append(read_id)
         with open(output_file, 'w') as f:
             f.write("read_id\n")  # Write the header row
             for read in self.reads:
@@ -32,14 +33,16 @@ class FastqExtractor:
         with open(forward_file, 'r') as f:
             for line in f:
                 if line.startswith('@'):
-                    read_id = line.split(" ")[0][1:] + '_R1'
-                    forward_reads.append(read_id)
+                    if len(line.strip().split(":")) >= 4:
+                        read_id = line.strip().split()[0][1:] #+ '_R1'
+                        forward_reads.append(read_id)
         reverse_reads = []
         with open(reverse_file, 'r') as f:
             for line in f:
                 if line.startswith('@'):
-                    read_id = line.split(" ")[0][1:] + '_R2'
-                    reverse_reads.append(read_id)
+                    if len(line.strip().split(":")) >= 4:
+                        read_id = line.strip().split()[0][1:] #+ '_R2'
+                        reverse_reads.append(read_id)
         with open(output_file, 'w') as f:
             f.write("read_id\n")  # Write the header row
             for read in forward_reads + reverse_reads:

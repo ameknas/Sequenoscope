@@ -16,6 +16,7 @@ class SeqManifest:
     out_file = ''
     bam_obj = None
     fastp_obj = None
+    fastp_fastq = []
     delim = "\t"
     status = True
     error_msg = ''
@@ -77,15 +78,16 @@ class SeqManifest:
 
         return qual_values
 
-    def process_fastq(self,fastq_file):
-        fastq_obj = fastq_parser(fastq_file)
-        for record in fastq_obj.parse():
-            read_id = fastq_obj.read_id_from_record
-            seq = record[1]
-            seq_len = len(seq)
-            qual = self.convert_qscores(record[3])
-            qscore = self.calc_mean_qscores(qual)
-            self.filtered_reads[read_id] = [seq_len,qscore]
+    def process_fastq(self,fastq_file_list):
+        for fastq_file in fastq_file_list:
+            fastq_obj = fastq_parser(fastq_file)
+            for record in fastq_obj.parse():
+                read_id = fastq_obj.read_id_from_record
+                seq = record[1]
+                seq_len = len(seq)
+                qual = self.convert_qscores(record[3])
+                qscore = self.calc_mean_qscores(qual)
+                self.filtered_reads[read_id] = [seq_len,qscore]
 
     def create_row(self):
         out_row = {}
