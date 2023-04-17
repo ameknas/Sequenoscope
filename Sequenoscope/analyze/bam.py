@@ -18,10 +18,13 @@ class BamProcessor:
     error_msg = ''
 
     def __init__(self,input_file):
-        '''
+        """
+        Initalize the class with an input bam file
 
-        :param input_file:
-        '''
+        Arguments:
+            input_file: str
+                a string that designates the path of the bam file to be analyzed
+        """
         self.alignment_file = input_file
         if not is_non_zero_file(input_file):
             self.status = False
@@ -42,19 +45,17 @@ class BamProcessor:
 
 
     def init_base_cov(self):
-        '''
+        """
         Uses the contig lengths from self.ref_stats to create a list of positions with counts initialized to 0
-        :return:
-        '''
+        """
         for contig_id in self.ref_stats:
             self.ref_coverage[contig_id] = [0] * self.ref_stats[contig_id]['length']
 
 
     def process_bam(self):
-        '''
+        """
         Reads a bam file line by line and produces summary statistics based on each contig
-        :return:
-        '''
+        """
         for contig_id in self.ref_stats:
             contig_len = self.ref_stats[contig_id]['length']
             num_reads = 0
@@ -98,12 +99,19 @@ class BamProcessor:
         return
 
     def calc_n50(self,lengths,total_length):
-        '''
+        """
         Calculates the N50 of a set of read lengths
-        :param lengths: list of ints
-        :param total_length: int total number of bases accross all reads
-        :return: int N50
-        '''
+
+        Arguments:
+            lengths: list
+                a list of read lengths for N50 calcualtion
+            total_length: int
+                total number of bases accross all reads
+        
+        Returns: 
+            int:
+               tabulated N50 value based on lengths 
+        """
         target_len = int(total_length / 2)
         s = 0
         global l
@@ -114,23 +122,38 @@ class BamProcessor:
         return l
 
     def count_cov_bases(self,list_of_values,min_value=1,max_value=9999999999999):
-        '''
+        """
         Counts positions where the count is >=min and <= max
-        :param list_of_values: list of ints
-        :param min_value: int
-        :param max_value: int
-        :return: int number of positions meeting this threshold
-        '''
+
+        Arguments:
+            list_of_values: list
+                list of coverage value for calcualtion
+            min_value: int
+                minimum coverage value
+            max_value: int
+                maximum coverage value
+
+        Returns:
+            int:
+                int number of positions meeting this threshold
+        """
         total = 0
         for v in list_of_values:
             if v >= min_value and v<=max_value:
                 total+=1
         return total
     
-    def error_prob_list_tab(n):
+    def error_prob_list_tab(self, n):
         """
         generate a list of error rates for qualities less than or equal to n.
         source: github.com/wdecoster/nanoget/blob/master/nanoget/utils.py
+
+        Arguments: 
+            n: error probability threshold
+
+        Returns:
+            list:
+                list of error rates
         """
         return [10**(q / -10) for q in range(n+1)]
 

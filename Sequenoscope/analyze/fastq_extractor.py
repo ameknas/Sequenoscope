@@ -2,17 +2,38 @@
 import os
 
 class FastqExtractor:
-   
+    out_prefix = None
+    out_dir = None
+    read_set = None
     status = False
     
-    def __init__(self, out_prefix, out_dir):
+    def __init__(self, read_set, out_prefix, out_dir):
+        """
+        Initalize the class with read_set, out_prefix, and out_dir
+
+        Arguments:
+            read_set: sequence object
+                an object that contains the list of sequence files for analysis
+            out_prefix: str
+                a designation of what the output files will be named
+            out_dir: str
+                a string to the path where the output files will be stored
+        """
         self.reads = []
         self.out_prefix = out_prefix
         self.out_dir = out_dir
+        self.read_set = read_set
    
-    def extract_single_reads(self, fastq_file):
+    def extract_single_reads(self):
+        """
+        Extracts the read ids from a single-end fastq file based on the paramters intialized in the previous method.
+
+        Returns:
+            bool:
+                returns True if the generated output file is found and not empty, False otherwise
+        """
         output_file = os.path.join(self.out_dir,"{}.txt".format(self.out_prefix))
-        with open(fastq_file, 'r') as f:
+        with open(self.read_set.files[0], 'r') as f:
             for line in f:
                 if line.startswith('@'):
                     if len(line.strip().split()) >= 4:
@@ -27,17 +48,24 @@ class FastqExtractor:
             self.error_messages = "one or more files was not created or was empty, check error message\n{}".format(self.stderr)
             raise ValueError(str(self.error_messages))
                
-    def extract_paired_reads(self, forward_file, reverse_file):
+    def extract_paired_reads(self):
+        """
+        Extracts the read ids from a paired-end fastq file based on the paramters intialized in the previous method.
+
+        Returns:
+            bool:
+                returns True if the generated output file is found and not empty, False otherwise
+        """
         output_file = os.path.join(self.out_dir,"{}.txt".format(self.out_prefix))
         forward_reads = []
-        with open(forward_file, 'r') as f:
+        with open(self.read_set.files[0], 'r') as f:
             for line in f:
                 if line.startswith('@'):
                     if len(line.strip().split(":")) >= 4:
                         read_id = line.strip().split()[0][1:] #+ '_R1'
                         forward_reads.append(read_id)
         reverse_reads = []
-        with open(reverse_file, 'r') as f:
+        with open(self.read_set.files[1], 'r') as f:
             for line in f:
                 if line.startswith('@'):
                     if len(line.strip().split(":")) >= 4:

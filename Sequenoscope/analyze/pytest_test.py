@@ -111,27 +111,29 @@ def test_make_test():
 #     assert bam_run.status == True
 #     pass
 
-def test_run_seq_manifest_with_sum(): 
-    seq_mani_run_nano = SeqManifest("barcode1",
-                               "/home/ameknas/sequenoscope-1/test/sample_mapped_bam.bam", 
-                               "test_out_mani_1", 
-                               fastp_fastq=["/home/ameknas/sequenoscope-1/test/sample_fastp_output.fastp.fastq"],
-                               in_seq_summary= "/home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_sequences/Nanopore_enriched_control_seq_summary.txt"
-                               )
-    print(seq_mani_run_nano.filtered_reads.keys(), file=open('test_output_fastp.txt', 'a'))
-    assert seq_mani_run_nano.status == True
-    pass
-
-# def test_fastq_extractor_sr():
-#     reader = FastqExtractor(out_prefix="test_reads", out_dir=path_output)
-#     reader.extract_single_reads("/home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_sequences/barcode01_fastq_pass_enriched.fastq")
-#     assert reader.status == True
+# def test_run_seq_manifest_with_sum(): 
+#     seq_mani_run_nano = SeqManifest("barcode1",
+#                                "/home/ameknas/sequenoscope-1/test/sample_mapped_bam.bam", 
+#                                "test_out_mani_1", 
+#                                fastp_fastq=["/home/ameknas/sequenoscope-1/test/sample_fastp_output.fastp.fastq"],
+#                                in_seq_summary= "/home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_sequences/Nanopore_enriched_control_seq_summary.txt"
+#                                )
+#     print(seq_mani_run_nano.filtered_reads, file=open('test_output_fastp.txt', 'a'))
+#     assert seq_mani_run_nano.status == True
 #     pass
 
+def test_fastq_extractor_sr():
+    enriched_sample = Sequence(technology, ["/home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_sequences/ERR2984773_1.fastq", "/home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_sequences/ERR2984773_2.fastq"])
+    extractor_run = FastqExtractor(enriched_sample, out_prefix="test_reads_sr", out_dir=path_output)
+    extractor_run.extract_paired_reads()
+    assert extractor_run.status == True
+    pass
+
 # def test_fastq_extractor_lr():
-#     reader_lr = FastqExtractor(out_prefix="test_reads_lr", out_dir=path_output)
-#     reader_lr.extract_paired_reads("/home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_sequences/ERR2984773_1.fastq", "/home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_sequences/ERR2984773_2.fastq")
-#     assert reader_lr.status == True
+#     enriched_sample = Sequence(technology, ["/home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_sequences/barcode01_fastq_pass_enriched.fastq"])
+#     extractor_run = FastqExtractor(enriched_sample, out_prefix="test_reads_lr", out_dir=path_output)
+#     extractor_run.extract_single_reads()
+#     assert extractor_run.status == True
 #     pass
 
 # def test_run_seq_manifest_Illumina(): 

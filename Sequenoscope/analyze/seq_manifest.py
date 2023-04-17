@@ -113,8 +113,10 @@ class SeqManifest:
                 row_data[header[i]] = row[i]
 
             read_id = row_data['read_id']
-            read_len = 0
-            read_qual = 0
+            #read_len = 0
+            #read_qual = 0
+            read_len = row_data['sequence_length_template']
+            read_qual = row_data['mean_qscore_template']
             is_uniq = True
             is_mapped = False
             start_time = row_data['start_time']
@@ -135,8 +137,9 @@ class SeqManifest:
             mapped_contigs = []
             for contig_id in self.bam_obj.ref_stats:
                 if read_id in self.bam_obj.ref_stats[contig_id]['reads']:
-                    read_len = self.bam_obj.ref_stats[contig_id]['reads'][read_id][0]
-                    read_qual = self.bam_obj.ref_stats[contig_id]['reads'][read_id][1]
+                    #read_len = self.bam_obj.ref_stats[contig_id]['reads'][read_id][0]
+                    #read_qual = self.bam_obj.ref_stats[contig_id]['reads'][read_id][1]
+                    pass
                     if contig_id != '*':
                         mapped_contigs.append(contig_id)
 
