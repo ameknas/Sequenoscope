@@ -143,7 +143,7 @@ class BamProcessor:
                 total+=1
         return total
     
-    def error_prob_list_tab(self, n):
+    def error_prob_list_tab(n):
         """
         generate a list of error rates for qualities less than or equal to n.
         source: github.com/wdecoster/nanoget/blob/master/nanoget/utils.py
@@ -158,13 +158,22 @@ class BamProcessor:
         return [10**(q / -10) for q in range(n+1)]
 
     def calc_mean_qscores(self,qual,tab=error_prob_list_tab(128)):
-        '''
-        Calculates the mean quality score for a read where they have been converted to Phred
-        phred scores are first converted to probabilites, then average error probability is calculated.
-        covert the average back to Phred scale
-        :param qual: string of phred 33 ints for quality
-        :return: float mean qscore
-        '''
+        """
+        Calculates the mean quality score for a read where they have been converted to Phred.
+        Phred scores are first converted to probabilites, then the average error probability is calculated.
+        The average is then converted back to the Phred scale.
+
+        Arguments:
+            qual: string
+                string of Phred 33 ints for quality calcualtions
+            
+            tab: list
+                list of error rates for qaulties specified
+
+        Returns:
+            float:
+                mean qscore
+        """
         if qual:
             phred_score = -10 * log(sum([tab[q] for q in qual]) / len(qual) , 10)
             return phred_score
@@ -173,10 +182,14 @@ class BamProcessor:
 
 
     def get_bam_stats(self):
-        '''
-                Wrapper class around SAMTOOLS IDXSTATS for getting information about bam file
-                :return:
-                '''
+        """
+        Wrapper class around SAMTOOLS IDXSTATS for getting information about bam file
+
+        Returns:
+            dictionary:
+                dictionary with some results from the samtools IDXSTATS tool
+
+        """
         cmd = [
             'samtools',
             'idxstats',
@@ -198,10 +211,13 @@ class BamProcessor:
 
 
     def index_bam(self):
-        '''
+        """
         Wrapper class around SAMTOOLS INDEX for creating a bam index file
-        :return:
-        '''
+
+        Returns:
+            file object:
+                indexed bam file
+        """
         cmd = [
             'samtools',
             'index',
