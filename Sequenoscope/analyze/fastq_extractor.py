@@ -6,6 +6,7 @@ class FastqExtractor:
     out_dir = None
     read_set = None
     status = False
+    result_files = {"read_list_file":""}
     
     def __init__(self, read_set, out_prefix, out_dir):
         """
@@ -33,6 +34,8 @@ class FastqExtractor:
                 returns True if the generated output file is found and not empty, False otherwise
         """
         output_file = os.path.join(self.out_dir,"{}.txt".format(self.out_prefix))
+        self.result_files["read_list_file"] = output_file
+
         with open(self.read_set.files[0], 'r') as f:
             for line in f:
                 if line.startswith('@'):
@@ -57,6 +60,8 @@ class FastqExtractor:
                 returns True if the generated output file is found and not empty, False otherwise
         """
         output_file = os.path.join(self.out_dir,"{}.txt".format(self.out_prefix))
+        self.result_files["read_list_file"] = output_file
+        
         forward_reads = []
         with open(self.read_set.files[0], 'r') as f:
             for line in f:

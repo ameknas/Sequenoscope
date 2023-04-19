@@ -26,6 +26,7 @@ class SeqManifest:
     start_time = ''
     end_time = ''
     filtered_reads = {}
+    error_messages = None
 
     def __init__(self,sample_id,in_bam,out_prefix, out_dir,fastp_fastq=None,in_seq_summary=None, read_list=None,start_time=None,end_time=None,delim="\t"):
         """
@@ -176,8 +177,8 @@ class SeqManifest:
             file object: 
                 seq manifest text file
         """
-        fout = open("{}.txt".format(self.out_prefix),'w')
         manifest_file = os.path.join(self.out_dir,"{}.txt".format(self.out_prefix))
+        fout = open(manifest_file,'w')
         fout.write("{}\n".format("\t".join(self.fields)))
 
         fin = open(self.in_seq_summary,'r')
@@ -250,7 +251,7 @@ class SeqManifest:
 
         self.status = self.check_files([manifest_file])
         if self.status == False:
-            self.error_messages = "one or more files was not created or was empty, check error message\n{}".format(self.stderr)
+            self.error_messages = "one or more files was not created or was empty"
             raise ValueError(str(self.error_messages))
         
         fin.close()
@@ -266,8 +267,8 @@ class SeqManifest:
                 seq manifest text file
         """
         
-        fout = open("{}.txt".format(self.out_prefix),'w')
         manifest_file = os.path.join(self.out_dir,"{}.txt".format(self.out_prefix))
+        fout = open(manifest_file,'w')
         fout.write("{}\n".format("\t".join(self.fields)))
 
         fin = open(self.read_list,'r')
@@ -330,7 +331,7 @@ class SeqManifest:
 
         self.status = self.check_files([manifest_file])
         if self.status == False:
-            self.error_messages = "one or more files was not created or was empty, check error message\n{}".format(self.stderr)
+            self.error_messages = "one or more files was not created or was empty"
             raise ValueError(str(self.error_messages))
         
         fin.close()

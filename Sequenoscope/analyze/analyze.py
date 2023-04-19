@@ -11,6 +11,8 @@ from Sequenoscope.analyze.minimap2 import Minimap2Runner
 from Sequenoscope.analyze.fastP import FastPRunner
 from Sequenoscope.analyze.kat import KatRunner
 from Sequenoscope.analyze.processing import SamBamProcessor
+from Sequenoscope.analyze.fastq_extractor import FastqExtractor
+from Sequenoscope.analyze.seq_manifest import SeqManifest
 
 def parse_args():
     parser = ap.ArgumentParser(prog="sequenoscope",
@@ -22,17 +24,20 @@ def parse_args():
 
     parser.add_argument("--input_fastq", metavar="", required=True, nargs="+", help="[REQUIRED] Path to fastq files to process.")
     parser.add_argument("--input_reference", metavar="", required=True, help="[REQUIRED] Path to reference database to process")
+    parser.add_argument("-seq_sum", "--sequencing_summary", metavar="", help="Path to sequencing summary for manifest creation")
+    parser.add_argument("-start", "--start_time", default=0, metavar="", help="Start time when no seq summary is provided")
+    parser.add_argument("-end", "--end_time", default=100, metavar="", help="End time when no seq summary is provided")
     parser.add_argument("-o", "--output", metavar="", required=True, help="[REQUIRED] Output directory designation")
     parser.add_argument("-o_pre", "--output_prefix", metavar="", default= "sample", help="Output file prefix designation. default is [sample]")
-    parser.add_argument("-seq_type", "--sequencing_type", required=True, metavar="", type= str, choices=['sr', 'lr'], help="a designation of the type of sequencing utilized for the input fastq files")
-    parser.add_argument("-t", "--threads", default= 1, metavar="", type=int, help="a designation of the number of threads to use")
-    parser.add_argument("-kmer_s", "--kmer_size", default= 15, metavar="", type=int, help="a designation of the kmer size when mapping or processing")
-    parser.add_argument("-min_len", "--minimum_read_length", default= 15, metavar="", type=int, help="a designation of the minimum read length. reads shorter than the integer specified required will be discarded, default is 15")
-    parser.add_argument("-max_len", "--maximum_read_length", default= 0, metavar="", type=int, help="a designation of the maximum read length. reads longer than the integer specified required will be discarded, default is 0 meaning no limitation")
-    parser.add_argument("-trm_fr", "--trim_front_bp", default= 0, metavar="", type=int, help="a designation of the how many bases to trim from the front of the sequence, default is 0.")
-    parser.add_argument("-trm_tail", "--trim_tail_bp", default= 0,metavar="", type=int, help="a designation of the how many bases to trim from the tail of the sequence, default is 0")
-    parser.add_argument('--exclude', required=False, help='choose to exclude reads based on reference instead of including them', action='store_true')
-    parser.add_argument('--cov_nonzero', required=False, help='choose to include only nonzero values in coverage calculation', action='store_true')
+    parser.add_argument("-seq_type", "--sequencing_type", required=True, metavar="", type= str, choices=['sr', 'lr'], help="A designation of the type of sequencing utilized for the input fastq files")
+    parser.add_argument("-t", "--threads", default= 1, metavar="", type=int, help="A designation of the number of threads to use")
+    parser.add_argument("-kmer_s", "--kmer_size", default= 15, metavar="", type=int, help="A designation of the kmer size when mapping or processing")
+    parser.add_argument("-min_len", "--minimum_read_length", default= 15, metavar="", type=int, help="A designation of the minimum read length. reads shorter than the integer specified required will be discarded, default is 15")
+    parser.add_argument("-max_len", "--maximum_read_length", default= 0, metavar="", type=int, help="A designation of the maximum read length. reads longer than the integer specified required will be discarded, default is 0 meaning no limitation")
+    parser.add_argument("-trm_fr", "--trim_front_bp", default= 0, metavar="", type=int, help="A designation of the how many bases to trim from the front of the sequence, default is 0.")
+    parser.add_argument("-trm_tail", "--trim_tail_bp", default= 0,metavar="", type=int, help="A designation of the how many bases to trim from the tail of the sequence, default is 0")
+    parser.add_argument('--exclude', required=False, help='Choose to exclude reads based on reference instead of including them', action='store_true')
+    parser.add_argument('--cov_nonzero', required=False, help='Choose to include only nonzero values in coverage calculation', action='store_true')
     parser.add_argument('--force', required=False, help='Force overwite of existing results directory', action='store_true')
     parser.add_argument('-v', '--version', action='version', version="%(prog)s " + __version__)
     return parser.parse_args()
@@ -41,6 +46,9 @@ def run():
     args = parse_args()
     input_fastq = args.input_fastq
     input_reference = args.input_reference
+    seq_summary = args.sequencing_summary
+    start_time = args.start_time
+    end_time = args.end_time
     out_directory = args.output
     out_prefix = args.output_prefix
     seq_class= args.sequencing_type
@@ -66,13 +74,22 @@ def run():
         print("Error directory {} already exists, if you want to overwrite existing results then specify --force".format(out_directory))
         sys.exit()
 
-    ## parsing seq summary file
+    ## initiating sequence class object
 
     print("-"*40)
     print("Processing sequence fastq file...")
     print("-"*40)
 
     sequencing_sample = Sequence("Test", input_fastq)
+    
+    ## extracting reads into a read list
+
+    extractor_run = FastqExtractor(sequencing_sample, out_prefix="{}_read_list".format(out_prefix),
+                                    out_dir=out_directory)
+    if seq_class == 'sr':
+        extractor_run.extract_single_reads()
+    elif seq_class == 'lr':
+        extractor_run.extract_paired_reads()
 
     ## filtering reads with fastp
 
@@ -103,9 +120,9 @@ def run():
                                          input_reference, "{}_mapped_fastq".format(out_prefix), thread=threads)
     bam_to_fastq_process.run_samtools_fastq()
 
-    bedtools_coverage_process = SamBamProcessor(sam_to_bam_process.result_files["bam_output"], out_directory,
-                                         input_reference, "{}_bedtools_coverage".format(out_prefix), thread=threads)
-    bedtools_coverage_process.run_bedtools(nonzero=cov_nonzero)
+    # bedtools_coverage_process = SamBamProcessor(sam_to_bam_process.result_files["bam_output"], out_directory,
+    #                                      input_reference, "{}_bedtools_coverage".format(out_prefix), thread=threads)
+    # bedtools_coverage_process.run_bedtools(nonzero=cov_nonzero)
 
     print("-"*40)
     print("Analyzing kmers...")
@@ -115,6 +132,31 @@ def run():
 
     kat_run = KatRunner(sequencing_sample_filtered, input_reference, out_directory, "{}_kmer_analysis".format(out_prefix), kmersize = kmer_size)
     kat_run.kat_hist()
+
+    print("-"*40)
+    print("Creating manifest files...")
+    print("-"*40)
+
+    if seq_summary is not None:
+        
+        manifest_with_sum_run = SeqManifest(out_prefix,
+                               sam_to_bam_process.result_files["bam_output"], 
+                               "{}_manifest".format(out_prefix),
+                               out_dir=out_directory,
+                               fastp_fastq=fastp_run_process.result_files["output_files_fastp"],
+                               in_seq_summary=seq_summary
+                               )
+    else:
+        
+        manifest_no_sum_run = SeqManifest(out_prefix,
+                               sam_to_bam_process.result_files["bam_output"], 
+                               "{}_manifest".format(out_prefix),
+                               out_dir=out_directory,
+                               fastp_fastq=fastp_run_process.result_files["output_files_fastp"],
+                               read_list=extractor_run.result_files["read_list_file"],
+                               start_time=start_time,
+                               end_time=end_time
+                               )
 
 
     print("-"*40)
