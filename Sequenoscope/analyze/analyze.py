@@ -74,6 +74,17 @@ def run():
         print("Error directory {} already exists, if you want to overwrite existing results then specify --force".format(out_directory))
         sys.exit()
 
+    ##checking fastq files
+
+    if seq_class == 'sr':
+        if not len(input_fastq) == 2:
+            print("Error: Missing second paired-end sequencing file or additional files detected. Use 'lr' if utilizing single-end long-read sequencing files.")
+            sys.exit()
+    elif seq_class == 'lr':
+        if not len(input_fastq) == 1:
+            print("Error: Multiple files detected for single-end long read sequencing. Use 'sr' for paired-end short-read sequencing files.")
+            sys.exit()
+
     ## initiating sequence class object
 
     print("-"*40)
@@ -88,6 +99,7 @@ def run():
                                     out_dir=out_directory)
     if seq_class == 'sr':
         extractor_run.extract_single_reads()
+        ##add stuff
     elif seq_class == 'lr':
         extractor_run.extract_paired_reads()
 

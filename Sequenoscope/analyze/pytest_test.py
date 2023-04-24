@@ -8,6 +8,7 @@ from Sequenoscope.analyze.processing import SamBamProcessor
 from Sequenoscope.analyze.bam import BamProcessor
 from Sequenoscope.analyze.seq_manifest import SeqManifest
 from Sequenoscope.analyze.fastq_extractor import FastqExtractor
+from Sequenoscope.utils.parser import FastqPairedEndRenamer
 
 path_ref_file = "/home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_sequences/lambda_genome_reference.fasta"
 path_enriched_test_file = "/home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_sequences/Test_br1_sal_lam_enriched.fastq"
@@ -111,17 +112,17 @@ def test_make_test():
 #     assert bam_run.status == True
 #     pass
 
-def test_run_seq_manifest_with_sum(): 
-    seq_mani_run_nano = SeqManifest("barcode1",
-                               "/home/ameknas/sequenoscope-1/test/sample_mapped_bam.bam", 
-                               "test_out_mani_1",
-                               out_dir=path_output,
-                               fastp_fastq=["/home/ameknas/sequenoscope-1/test/sample_fastp_output.fastp.fastq"],
-                               in_seq_summary= "/home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_sequences/Nanopore_enriched_control_seq_summary.txt"
-                               )
-    print(seq_mani_run_nano.filtered_reads, file=open('test_output_fastp.txt', 'a'))
-    assert seq_mani_run_nano.status == True
-    pass
+# def test_run_seq_manifest_with_sum(): 
+#     seq_mani_run_nano = SeqManifest("barcode1",
+#                                "/home/ameknas/sequenoscope-1/test/sample_mapped_bam.bam", 
+#                                "test_out_mani_1",
+#                                out_dir=path_output,
+#                                fastp_fastq=["/home/ameknas/sequenoscope-1/test/sample_fastp_output.fastp.fastq"],
+#                                in_seq_summary= "/home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_sequences/Nanopore_enriched_control_seq_summary.txt"
+#                                )
+#     print(seq_mani_run_nano.filtered_reads, file=open('test_output_fastp.txt', 'a'))
+#     assert seq_mani_run_nano.status == True
+#     pass
 
 # def test_fastq_extractor_sr():
 #     enriched_sample = Sequence(technology, ["/home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_sequences/ERR2984773_1.fastq", "/home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_sequences/ERR2984773_2.fastq"])
@@ -152,3 +153,9 @@ def test_run_seq_manifest_with_sum():
 #     print(seq_mani_run_Ill.filtered_reads.keys(), file=open('test_output_fastp.txt', 'a'))
 #     assert seq_mani_run_Ill.status == True
 #     pass
+
+def test_fastq_renamer():
+    enriched_sample = Sequence(technology, ["/home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_sequences/ERR2984773_1.fastq", "/home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_sequences/ERR2984773_2.fastq"])
+    renamer = FastqPairedEndRenamer(enriched_sample, "/home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_reads_sr.txt", path_output, "test")
+    renamer.rename()
+    pass

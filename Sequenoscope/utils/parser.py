@@ -1,9 +1,11 @@
 #!/usr/bin/env python
+from __future__ import print_function
 from Sequenoscope.utils.__init__ import is_non_zero_file
 import pandas as pd
 import json
 import re
 import os
+import sys
 
 class GeneralSeqParser:
     file = None
@@ -84,3 +86,71 @@ class fastq_parser:
                 yield record
                 n = 0
                 record = []
+
+class FastqPairedEndRenamer:
+    def __init__(self, read_set, read_file, out_dir, out_prefix):
+        self.out_prefix = out_prefix
+        self.out_dir = out_dir
+        self.read_set = read_set
+        self.read_file = read_file
+        self.read_list = set()
+        self.read_id_list()
+
+    def read_id_list(self):
+        with open(self.read_file, 'r') as f:
+            for read_id in f:
+                self.read_list.add(read_id)
+
+    def rename(self):
+        for file_num in [0, 1]:
+            line_id = 0
+            name = ''
+            data = ''
+            qual = ''
+            valid = False
+            out_file = open(f"{self.out_dir}/{self.out_prefix}_{file_num+1}.fastq", "w")
+            with open(self.read_set.files[file_num], 'r') as f:
+                for line in f:
+                    if (line_id == 0):
+                        if (valid):
+                            if (len(name) == 0 or len(data) == 0 or len(data) != len(qual)):
+                                print('File is not in FASTQ format')
+                                sys.exit(1)
+                            valid = False
+                            if (name in self.read_list):
+                                out_file.write(name + '2\n')
+                            else:
+                                self.read_list.add(name)
+                                out_file.write(name + f'{file_num+1}\n')
+                            out_file.write(data + '\n')
+                            out_file.write('+' + '\n')
+                            out_file.write(qual + '\n')
+                        name = line.rstrip().split(' ')[0]
+                        data = ''
+                        qual = ''
+                        line_id = 1
+                    elif (line_id == 1):
+                        if (line[0] == '+'):
+                            line_id = 2
+                        else:
+                            data += line.rstrip()
+                    elif (line_id == 2):
+                        qual += line.rstrip()
+                        if (len(qual) >= len(data)):
+                            valid = True
+                            line_id = 0
+
+            if (valid):
+                if (len(name) == 0 or len(data) == 0 or len(data) != len(qual)):
+                    print(len(name), len(data), len(qual))
+                    print('File is not in FASTQ format')
+                    sys.exit(1)
+                if (name in self.read_list):
+                    out_file.write(name + '2\n')
+                else:
+                    self.read_list.add(name)
+                    out_file.write(name + f'{file_num+1}\n')
+                    out_file.write(data + '\n')
+                    out_file.write('+' + '\n')
+                    out_file.write(qual + '\n')
+            out_file.close()

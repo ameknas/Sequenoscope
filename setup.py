@@ -58,7 +58,10 @@ setup(
         'seqtk',
         'simplejson',
         'six',
-
+        'kat',
+        'minimap2',
+        'fastp',
+        'samtools'
     ],
 
     entry_points={
