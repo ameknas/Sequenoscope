@@ -88,6 +88,12 @@ class fastq_parser:
                 record = []
 
 class FastqPairedEndRenamer:
+    out_prefix = None
+    out_dir = None
+    read_set = None
+    status = False
+    result_files = {"fastq_file_renamed":[]}
+
     def __init__(self, read_set, read_file, out_dir, out_prefix):
         self.out_prefix = out_prefix
         self.out_dir = out_dir
@@ -109,6 +115,7 @@ class FastqPairedEndRenamer:
             qual = ''
             valid = False
             out_file = open(f"{self.out_dir}/{self.out_prefix}_{file_num+1}.fastq", "w")
+            self.result_files["fastq_file_renamed"].append(out_file)
             with open(self.read_set.files[file_num], 'r') as f:
                 for line in f:
                     if (line_id == 0):
@@ -154,3 +161,28 @@ class FastqPairedEndRenamer:
                     out_file.write('+' + '\n')
                     out_file.write(qual + '\n')
             out_file.close()
+            self.status = self.check_files(out_file)
+            if self.status == False:
+                self.error_messages = "one or more files was not created or was empty, check error message\n{}".format(self.stderr)
+                raise ValueError(str(self.error_messages))
+
+    def check_files(self, files_to_check):
+        """
+        check if the output file exists and is not empty
+
+        Arguments:
+            files_to_check: list
+                list of file paths
+
+        Returns:
+            bool:
+                returns True if the generated output file is found and not empty, False otherwise
+        """
+        if isinstance (files_to_check, str):
+            files_to_check = [files_to_check]
+        for f in files_to_check:
+            if not os.path.isfile(f):
+                return False
+            elif os.path.getsize(f) == 0:
+                return False
+        return True

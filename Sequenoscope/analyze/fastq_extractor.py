@@ -84,6 +84,40 @@ class FastqExtractor:
         if self.status == False:
             self.error_messages = "one or more files was not created or was empty, check error message\n{}".format(self.stderr)
             raise ValueError(str(self.error_messages))
+        
+    def alt_extract_paired_reads(self):
+        """
+        Extracts the read ids from a paired-end fastq file based on the paramters intialized in the previous method.
+
+        Returns:
+            bool:
+                returns True if the generated output file is found and not empty, False otherwise
+        """
+        output_file = os.path.join(self.out_dir,"{}.txt".format(self.out_prefix))
+        self.result_files["read_list_file"] = output_file
+        
+        forward_reads = []
+        with open(self.read_set.files[0], 'r') as f:
+            for line in f:
+                if line.startswith('@'):
+                    if line.endswith('1\n'):
+                        read_id = line.strip().split()[0][1:] #+ '_R1'
+                        forward_reads.append(read_id)
+        reverse_reads = []
+        with open(self.read_set.files[1], 'r') as f:
+            for line in f:
+                if line.startswith('@'):
+                    if line.endswith('2\n'):
+                        read_id = line.strip().split()[0][1:] #+ '_R2'
+                        reverse_reads.append(read_id)
+        with open(output_file, 'w') as f:
+            f.write("read_id\n")  # Write the header row
+            for read in forward_reads + reverse_reads:
+                f.write(f"{read}\n")
+        self.status = self.check_files(output_file)
+        if self.status == False:
+            self.error_messages = "one or more files was not created or was empty, check error message\n{}".format(self.stderr)
+            raise ValueError(str(self.error_messages))
 
     def check_files(self, files_to_check):
         """

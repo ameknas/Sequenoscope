@@ -56,23 +56,21 @@ def test_make_test():
 #     pass
 
 # def test_run_fastp(): 
-#     enriched_sample = Sequence(technology, ["/home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_sequences/ERR2984773_1.fastq",
-#                                             "/home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_sequences/ERR2984773_2.fastq"])
-#     fastp_run = FastPRunner(enriched_sample, path_output, "illumina_fastp", report_only=False, dedup=True)
+#     enriched_sample = Sequence(technology, ["/home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_1.fastq", "/home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_2.fastq"])
+#     fastp_run = FastPRunner(enriched_sample, path_output, "test_illumina_fastp", report_only=False, dedup=True)
 #     fastp_run.run_fastp()
 #     assert fastp_run.status == True
 #     pass
 
 # def test_run_minimap2(): 
-#     enriched_sample = Sequence(technology, ["/home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_sequences/ERR2984773_1.fastq",
-#                                              "/home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_sequences/ERR2984773_2.fastq"])
-#     minimap2_run = Minimap2Runner(enriched_sample, path_output, "/home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_sequences/Saccharomyces_cerevisiae_draft_genome.fasta", "illumina_sam")
+#     enriched_sample = Sequence(technology, ["/home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_1.fastq", "/home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_2.fastq"])
+#     minimap2_run = Minimap2Runner(enriched_sample, path_output, "/home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_sequences/Saccharomyces_cerevisiae_draft_genome.fasta", "test_illumina_sam")
 #     minimap2_run.run_minimap2()
 #     assert minimap2_run.status == True
 #     pass
 
 # def test_run_samtools_bam(): 
-#     samtools_run = SamBamProcessor("/home/ameknas/sequenoscope-1/Sequenoscope/analyze/illumina_sam.sam", path_output, "/home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_sequences/Saccharomyces_cerevisiae_draft_genome.fasta", "illumina_bam")
+#     samtools_run = SamBamProcessor("/home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_illumina_sam.sam", path_output, "/home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_sequences/Saccharomyces_cerevisiae_draft_genome.fasta", "test_illumina_bam")
 #     samtools_run.run_samtools_bam()
 #     assert samtools_run.status == True
 #     pass
@@ -125,9 +123,9 @@ def test_make_test():
 #     pass
 
 # def test_fastq_extractor_sr():
-#     enriched_sample = Sequence(technology, ["/home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_sequences/ERR2984773_1.fastq", "/home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_sequences/ERR2984773_2.fastq"])
-#     extractor_run = FastqExtractor(enriched_sample, out_prefix="test_reads_sr", out_dir=path_output)
-#     extractor_run.extract_paired_reads()
+#     enriched_sample = Sequence(technology, ["/home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_1.fastq", "/home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_2.fastq"])
+#     extractor_run = FastqExtractor(enriched_sample, out_prefix="test_222_reads_sr", out_dir=path_output)
+#     extractor_run.alt_extract_paired_reads()
 #     assert extractor_run.status == True
 #     pass
 
@@ -139,23 +137,23 @@ def test_make_test():
 #     pass
 
 
-# def test_run_seq_manifest_no_sum(): 
-#     seq_mani_run_Ill = SeqManifest("barcode1",
-#                                "/home/ameknas/sequenoscope-1/Sequenoscope/analyze/illumina_bam.bam", 
-#                                "test_out_mani_2",
-#                                out_dir=path_output,
-#                                fastp_fastq=["/home/ameknas/sequenoscope-1/Sequenoscope/analyze/illumina_fastp.fastp.fastq",
-#                                             "/home/ameknas/sequenoscope-1/Sequenoscope/analyze/illumina_fastp_2.fastp.fastq"],
-#                                read_list="/home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_reads_lr.txt",
-#                                start_time=0,
-#                                end_time=100
-#                                )
-#     print(seq_mani_run_Ill.filtered_reads.keys(), file=open('test_output_fastp.txt', 'a'))
-#     assert seq_mani_run_Ill.status == True
-#     pass
-
-def test_fastq_renamer():
-    enriched_sample = Sequence(technology, ["/home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_sequences/ERR2984773_1.fastq", "/home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_sequences/ERR2984773_2.fastq"])
-    renamer = FastqPairedEndRenamer(enriched_sample, "/home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_reads_sr.txt", path_output, "test")
-    renamer.rename()
+def test_run_seq_manifest_no_sum(): 
+    seq_mani_run_Ill = SeqManifest("barcode1",
+                               "/home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_illumina_bam.bam", 
+                               "test_out_mani_2",
+                               out_dir=path_output,
+                               fastp_fastq=["/home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_illumina_fastp.fastp.fastq",
+                                            "/home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_illumina_fastp_2.fastp.fastq"],
+                               read_list="/home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_222_reads_sr.txt",
+                               start_time=0,
+                               end_time=100
+                               )
+    print(seq_mani_run_Ill.filtered_reads.keys(), file=open('test_output_fastp.txt', 'a'))
+    assert seq_mani_run_Ill.status == True
     pass
+
+# def test_fastq_renamer():
+#     enriched_sample = Sequence(technology, ["/home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_sequences/ERR2984773_1.fastq", "/home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_sequences/ERR2984773_2.fastq"])
+#     renamer = FastqPairedEndRenamer(enriched_sample, "/home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_reads_sr.txt", path_output, "test")
+#     renamer.rename()
+#     pass

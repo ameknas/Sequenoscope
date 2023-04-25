@@ -98,10 +98,10 @@ def run():
     extractor_run = FastqExtractor(sequencing_sample, out_prefix="{}_read_list".format(out_prefix),
                                     out_dir=out_directory)
     if seq_class == 'sr':
-        extractor_run.extract_single_reads()
+        extractor_run.extract_paired_reads()
         ##add stuff
     elif seq_class == 'lr':
-        extractor_run.extract_paired_reads()
+        extractor_run.extract_single_reads()
 
     ## filtering reads with fastp
 
