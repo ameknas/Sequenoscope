@@ -95,6 +95,19 @@ class FastqPairedEndRenamer:
     result_files = {"fastq_file_renamed":[]}
 
     def __init__(self, read_set, read_file, out_dir, out_prefix):
+        """
+        Initalize the class with read_set, out_prefix, and out_dir
+
+        Arguments:
+            read_set: sequence object
+                an object that contains the list of sequence files for analysis
+            read_file: str
+                path with the list of extracted reads from original fastq files
+            out_prefix: str
+                a designation of what the output files will be named
+            out_dir: str
+                a string to the path where the output files will be stored
+        """
         self.out_prefix = out_prefix
         self.out_dir = out_dir
         self.read_set = read_set
@@ -103,11 +116,22 @@ class FastqPairedEndRenamer:
         self.read_id_list()
 
     def read_id_list(self):
+        """
+        Extracts all read ids from the read file into a set
+        """
         with open(self.read_file, 'r') as f:
             for read_id in f:
                 self.read_list.add(read_id)
 
     def rename(self):
+        """
+        creates a copy of each fastq files, extracts the name of the read id and sequence information,
+        appends 1 or 2 to the end of the read id name, and checks if the file was created
+
+        Returns:
+            bool:
+                returns True if the generated output file is found and not empty, False otherwise
+        """
         for file_num in [0, 1]:
             line_id = 0
             name = ''
@@ -115,7 +139,8 @@ class FastqPairedEndRenamer:
             qual = ''
             valid = False
             out_file = open(f"{self.out_dir}/{self.out_prefix}_{file_num+1}.fastq", "w")
-            self.result_files["fastq_file_renamed"].append(out_file)
+            fastq_out_file = os.path.join(self.out_dir,"{}_{}.fastq".format(self.out_prefix, file_num+1))
+            self.result_files["fastq_file_renamed"].append(fastq_out_file)
             with open(self.read_set.files[file_num], 'r') as f:
                 for line in f:
                     if (line_id == 0):
@@ -160,11 +185,13 @@ class FastqPairedEndRenamer:
                     out_file.write(data + '\n')
                     out_file.write('+' + '\n')
                     out_file.write(qual + '\n')
-            out_file.close()
-            self.status = self.check_files(out_file)
+
+            self.status = self.check_files(fastq_out_file)
             if self.status == False:
                 self.error_messages = "one or more files was not created or was empty, check error message\n{}".format(self.stderr)
                 raise ValueError(str(self.error_messages))
+
+            out_file.close()
 
     def check_files(self, files_to_check):
         """

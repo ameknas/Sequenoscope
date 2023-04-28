@@ -13,6 +13,8 @@ from Sequenoscope.analyze.kat import KatRunner
 from Sequenoscope.analyze.processing import SamBamProcessor
 from Sequenoscope.analyze.fastq_extractor import FastqExtractor
 from Sequenoscope.analyze.seq_manifest import SeqManifest
+from Sequenoscope.utils.parser import FastqPairedEndRenamer
+
 
 def parse_args():
     parser = ap.ArgumentParser(prog="sequenoscope",
@@ -98,8 +100,21 @@ def run():
     extractor_run = FastqExtractor(sequencing_sample, out_prefix="{}_read_list".format(out_prefix),
                                     out_dir=out_directory)
     if seq_class == 'sr':
+        ## generate a read set for renaming read_ids
         extractor_run.extract_paired_reads()
-        ##add stuff
+
+        ##rename
+        rename_read_ids_run = FastqPairedEndRenamer(sequencing_sample, extractor_run.result_files["read_list_file"], 
+                                                    out_prefix="{}_renamed_reads".format(out_prefix), out_dir=out_directory)
+        rename_read_ids_run.rename()
+
+        ##overwrite class objects with renamed files
+        sequencing_sample = Sequence("Test", rename_read_ids_run.result_files["fastq_file_renamed"])
+        extractor_run = FastqExtractor(sequencing_sample, out_prefix="{}_read_list".format(out_prefix),
+                                    out_dir=out_directory)
+        
+        ##extract read ids
+        extractor_run.alt_extract_paired_reads()
     elif seq_class == 'lr':
         extractor_run.extract_single_reads()
 
