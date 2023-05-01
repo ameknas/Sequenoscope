@@ -22,13 +22,13 @@ class SeqManifest:
     fastp_fastq = []
     delim = "\t"
     status = False
-    error_msg = ''
     start_time = ''
     end_time = ''
     filtered_reads = {}
     error_messages = None
 
-    def __init__(self,sample_id,in_bam,out_prefix, out_dir,fastp_fastq=None,in_seq_summary=None, read_list=None,start_time=None,end_time=None,delim="\t"):
+    def __init__(self,sample_id,in_bam,out_prefix, out_dir,fastp_fastq=None,in_seq_summary=None,
+                  read_list=None,start_time=None,end_time=None,delim="\t"):
         """
         Initalize the class with sample_id, in_bam, out_prefix, and out_dir. Analyze reads based on seq summary and 
         fastp fast availbility by producing manifest files.
@@ -355,5 +355,95 @@ class SeqManifest:
             if not os.path.isfile(f):
                 return False
             elif os.path.getsize(f) == 0:
+                return False
+        return True
+    
+class SeqManifestSummary:
+    fields = [
+        'sample_id','est_genome_size','est_kmer_coverage_depth','total_bases','total_fastp_bases',
+        'mean_read_length','taxon_id','taxon_length','taxon_covered_bases',
+        'taxon_%_covered_bases','taxon_mean_read_length'
+    ]
+    sample_id = ''
+    out_prefix = ''
+    out_dir = ''
+    kmer_json_file = None
+    fastp_json_files = []
+    bam_obj = None
+    status = False
+    error_messages = None
+
+    def __init__(self,sample_id, bam_obj, out_prefix, out_dir, kmer_json_file=None, fastp_json_files=None):
+        self.sample_id = sample_id
+        self.kmer_json_file = kmer_json_file
+        self.fastp_json_files = fastp_json_files
+        self.bam_obj = bam_obj
+        self.out_prefix = out_prefix
+        self.out_dir = out_dir
+        pass
+    
+    def create_row(self):
+        """
+        create rows and store them into a dictionary
+
+        Returns:
+            dict:
+                dictionary of rows produced.
+        """
+        out_row = {}
+        for field_id in self.fields:
+            out_row[field_id] = ''
+        return out_row
+    
+    def generate_summary(self):
+
+        summary_manifest_file = os.path.join(self.out_dir,"{}.txt".format(self.out_prefix))
+        fout = open(summary_manifest_file,'w')
+        fout.write("{}\n".format("\t".join(self.fields)))
+
+        out_row = self.create_row()
+        for contig_id in self.bam_obj.ref_stats:
+            out_row["sample_id"] = self.sample_id
+            out_row["est_genome_size"] = "N/A"
+            out_row["est_kmer_coverage_depth"] = "N/A"
+            out_row["total_bases"] = "N/A"
+            out_row["total_fastp_bases"] = "N/A"
+            out_row["mean_read_length"] = "N/A"
+            out_row["taxon_id"] = contig_id
+            out_row["taxon_length"] = self.bam_obj.ref_stats[contig_id]['length']
+            out_row["taxon_covered_bases"] = self.bam_obj.ref_stats[contig_id]['covered_bases']
+            if self.bam_obj.ref_stats[contig_id]['length'] != 0:
+                out_row["taxon_%_covered_bases"] = ((self.bam_obj.ref_stats[contig_id]['covered_bases']/self.bam_obj.ref_stats[contig_id]['length']) * 100)
+            else:
+                out_row["taxon_%_covered_bases"] = 0
+            out_row["taxon_mean_read_length"] = self.bam_obj.ref_stats[contig_id]['mean_len']
+
+            fout.write("{}\n".format("\t".join([str(x) for x in out_row.values()])))
+        
+        self.status = self.check_files([summary_manifest_file])
+        if self.status == False:
+            self.error_messages = "one or more files was not created or was empty"
+            raise ValueError(str(self.error_messages))
+        
+        fout.close()
+
+    def check_files(self, files_to_check):
+        """
+        check if the output file exists and is not empty
+
+        Arguments:
+            files_to_check: list
+                list of file paths
+
+        Returns:
+            bool:
+                returns True if the generated output file is found and not empty, False otherwise
+        """
+        if isinstance (files_to_check, str):
+            files_to_check = [files_to_check]
+        for f in files_to_check:
+            if not os.path.isfile(f):
+                return False
+            elif os.path.getsize(f) < 0:
                 return False
         return True

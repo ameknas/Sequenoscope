@@ -9,6 +9,7 @@ from Sequenoscope.analyze.bam import BamProcessor
 from Sequenoscope.analyze.seq_manifest import SeqManifest
 from Sequenoscope.analyze.fastq_extractor import FastqExtractor
 from Sequenoscope.utils.parser import FastqPairedEndRenamer
+from Sequenoscope.analyze.seq_manifest import SeqManifestSummary
 
 path_ref_file = "/home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_sequences/lambda_genome_reference.fasta"
 path_enriched_test_file = "/home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_sequences/Test_br1_sal_lam_enriched.fastq"
@@ -158,3 +159,25 @@ def test_make_test():
 #     renamer.rename()
 #     renamer.status == True
 #     pass
+
+def test_seq_manifest_summary():
+    seq_mani_run_nano = SeqManifest("barcode1",
+                               "/home/ameknas/sequenoscope-1/test_mani_lr/sample_mapped_bam.bam", 
+                               "test_out_mani_1",
+                               out_dir=path_output,
+                               fastp_fastq=["/home/ameknas/sequenoscope-1/test_mani_lr/sample_fastp_output.fastp.fastq"],
+                               in_seq_summary= "/home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_sequences/Nanopore_enriched_control_seq_summary.txt"
+                               )
+    
+    seq_summary_run = SeqManifestSummary("barcode1",
+                               seq_mani_run_nano.bam_obj, 
+                               "test_out_mani_summary",
+                               out_dir=path_output,
+                               kmer_json_file="Nunu.json",
+                               fastp_json_files=["Nunu11.json"]
+                               )
+    
+    seq_summary_run.generate_summary()
+    assert seq_summary_run.status == True
+    pass
+    
