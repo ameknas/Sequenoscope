@@ -14,6 +14,7 @@ from Sequenoscope.analyze.processing import SamBamProcessor
 from Sequenoscope.analyze.fastq_extractor import FastqExtractor
 from Sequenoscope.analyze.seq_manifest import SeqManifest
 from Sequenoscope.utils.parser import FastqPairedEndRenamer
+from Sequenoscope.analyze.seq_manifest import SeqManifestSummary
 
 
 def parse_args():
@@ -31,7 +32,7 @@ def parse_args():
     parser.add_argument("-end", "--end_time", default=100, metavar="", help="End time when no seq summary is provided")
     parser.add_argument("-o", "--output", metavar="", required=True, help="[REQUIRED] Output directory designation")
     parser.add_argument("-o_pre", "--output_prefix", metavar="", default= "sample", help="Output file prefix designation. default is [sample]")
-    parser.add_argument("-seq_type", "--sequencing_type", required=True, metavar="", type= str, choices=['sr', 'lr'], help="A designation of the type of sequencing utilized for the input fastq files")
+    parser.add_argument("-seq_type", "--sequencing_type", required=True, metavar="", type= str, choices=['se', 'pe'], help="A designation of the type of sequencing utilized for the input fastq files")
     parser.add_argument("-t", "--threads", default= 1, metavar="", type=int, help="A designation of the number of threads to use")
     parser.add_argument("-kmer_s", "--kmer_size", default= 15, metavar="", type=int, help="A designation of the kmer size when mapping or processing")
     parser.add_argument("-min_len", "--minimum_read_length", default= 15, metavar="", type=int, help="A designation of the minimum read length. reads shorter than the integer specified required will be discarded, default is 15")
@@ -78,11 +79,11 @@ def run():
 
     ##checking fastq files
 
-    if seq_class == 'sr':
+    if seq_class == 'pe':
         if not len(input_fastq) == 2:
             print("Error: Missing second paired-end sequencing file or additional files detected. Use 'lr' if utilizing single-end long-read sequencing files.")
             sys.exit()
-    elif seq_class == 'lr':
+    elif seq_class == 'se':
         if not len(input_fastq) == 1:
             print("Error: Multiple files detected for single-end long read sequencing. Use 'sr' for paired-end short-read sequencing files.")
             sys.exit()
@@ -99,7 +100,7 @@ def run():
 
     extractor_run = FastqExtractor(sequencing_sample, out_prefix="{}_read_list".format(out_prefix),
                                     out_dir=out_directory)
-    if seq_class == 'sr':
+    if seq_class == 'pe':
         ## generate a read set for renaming read_ids
         extractor_run.extract_paired_reads()
 
@@ -115,7 +116,7 @@ def run():
         
         ##extract read ids
         extractor_run.alt_extract_paired_reads()
-    elif seq_class == 'lr':
+    elif seq_class == 'se':
         extractor_run.extract_single_reads()
 
     ## filtering reads with fastp
@@ -136,7 +137,7 @@ def run():
     sequencing_sample_filtered = Sequence("Test", fastp_run_process.result_files["output_files_fastp"])
     minimap_run_process = Minimap2Runner(sequencing_sample_filtered, out_directory, input_reference,
                                         "{}_mapped_sam".format(out_prefix), threads=threads,
-                                        kmer_size=kmer_size)
+                                        kmer_size=15)
     minimap_run_process.run_minimap2()
 
     sam_to_bam_process = SamBamProcessor(minimap_run_process.result_files["sam_output_file"], out_directory,
@@ -157,7 +158,7 @@ def run():
 
     # using kat hist to analyze kmers
 
-    kat_run = KatRunner(sequencing_sample_filtered, input_reference, out_directory, "{}_kmer_analysis".format(out_prefix), kmersize = kmer_size)
+    kat_run = KatRunner(sequencing_sample_filtered, input_reference, out_directory, "{}_kmer_analysis".format(out_prefix), kmersize = 27)
     kat_run.kat_hist()
 
     print("-"*40)
@@ -173,6 +174,19 @@ def run():
                                fastp_fastq=fastp_run_process.result_files["output_files_fastp"],
                                in_seq_summary=seq_summary
                                )
+        
+        kmer_file = GeneralSeqParser(kat_run.result_files["hist"]["json_file"], "json")
+        fastp_file = GeneralSeqParser(fastp_run_process.result_files["json"], "json")
+
+        seq_summary_single_end_run = SeqManifestSummary(out_prefix,
+                                manifest_with_sum_run.bam_obj, 
+                                "{}_manifest_summary".format(out_prefix),
+                                out_dir=out_directory,
+                                kmer_json_file=kmer_file.parsed_file,
+                                fastp_json_files=fastp_file.parsed_file
+                                )
+    
+        seq_summary_single_end_run.generate_summary()
     else:
         
         manifest_no_sum_run = SeqManifest(out_prefix,
@@ -184,6 +198,20 @@ def run():
                                start_time=start_time,
                                end_time=end_time
                                )
+        
+        kmer_file = GeneralSeqParser(kat_run.result_files["hist"]["json_file"], "json")
+        fastp_file = GeneralSeqParser(fastp_run_process.result_files["json"], "json")
+
+        seq_summary_paired_end_run = SeqManifestSummary(out_prefix,
+                                manifest_no_sum_run.bam_obj, 
+                                "{}_manifest_summary".format(out_prefix),
+                                out_dir=out_directory,
+                                kmer_json_file=kmer_file.parsed_file,
+                                fastp_json_files=fastp_file.parsed_file,
+                                paired=True
+                                )
+    
+        seq_summary_paired_end_run.generate_summary()
 
 
     print("-"*40)

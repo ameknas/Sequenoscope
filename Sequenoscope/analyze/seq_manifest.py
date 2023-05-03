@@ -174,8 +174,8 @@ class SeqManifest:
         Create a manifest file with various statistics when a sequencing summary is present
 
         Returns: 
-            file object: 
-                seq manifest text file
+            bool: 
+                True if the summary manifest file was created, False otherwise.
         """
         manifest_file = os.path.join(self.out_dir,"{}.txt".format(self.out_prefix))
         fout = open(manifest_file,'w')
@@ -368,18 +368,42 @@ class SeqManifestSummary:
     out_prefix = ''
     out_dir = ''
     kmer_json_file = None
-    fastp_json_files = []
+    fastp_json_file = None
     bam_obj = None
     status = False
     error_messages = None
 
-    def __init__(self,sample_id, bam_obj, out_prefix, out_dir, kmer_json_file=None, fastp_json_files=None):
+    def __init__(self,sample_id, bam_obj, out_prefix, out_dir, kmer_json_file=None,
+                  fastp_json_file=None, paired=False):
+        """
+        Initalize the class with sample_id, bam_obj, out_prefix, and out_dir. Extract sequencing
+        statisitics from various files and append to a summary file
+
+        Arguments:
+            sample_id: str
+                a string of the name of the sample to be analyzed
+            bam_obj: str
+                an object that of the SeqManifest class that stores bam information
+            out_prefix: str
+                a designation of what the output files will be named
+            out_dir: str
+                a designation of the output directory
+            kmer_json_file: str
+                a designation to the path of the json file generated from kat hist.
+            fastp_json_file: str
+                a designation to the path of the json file generated from fastp.
+            paired: bool
+                a designation of wheather or not the files specified belong to paired-end sequencing data
+        """
         self.sample_id = sample_id
         self.kmer_json_file = kmer_json_file
-        self.fastp_json_files = fastp_json_files
+        self.fastp_json_file = fastp_json_file
         self.bam_obj = bam_obj
         self.out_prefix = out_prefix
         self.out_dir = out_dir
+        self.paired = paired
+        if self.paired:
+            self.fields.insert(6, "mean_read_length_reverse")
         pass
     
     def create_row(self):
@@ -396,7 +420,13 @@ class SeqManifestSummary:
         return out_row
     
     def generate_summary(self):
+        """
+        Create a summary manifest file with various statistics from different file sources.
 
+        Returns: 
+            bool: 
+                True if the summary manifest file was created, False otherwise.
+        """
         summary_manifest_file = os.path.join(self.out_dir,"{}.txt".format(self.out_prefix))
         fout = open(summary_manifest_file,'w')
         fout.write("{}\n".format("\t".join(self.fields)))
@@ -404,11 +434,11 @@ class SeqManifestSummary:
         out_row = self.create_row()
         for contig_id in self.bam_obj.ref_stats:
             out_row["sample_id"] = self.sample_id
-            out_row["est_genome_size"] = "N/A"
-            out_row["est_kmer_coverage_depth"] = "N/A"
-            out_row["total_bases"] = "N/A"
-            out_row["total_fastp_bases"] = "N/A"
-            out_row["mean_read_length"] = "N/A"
+            out_row["est_genome_size"] = self.kmer_json_file["est_genome_size"]
+            out_row["est_kmer_coverage_depth"] = self.kmer_json_file["hom_peak"]["freq"]
+            out_row["total_bases"] = self.fastp_json_file["summary"]["before_filtering"]["total_bases"]
+            out_row["total_fastp_bases"] = self.fastp_json_file["summary"]["after_filtering"]["total_bases"]
+            out_row["mean_read_length"] = self.fastp_json_file["summary"]["after_filtering"]["read1_mean_length"]
             out_row["taxon_id"] = contig_id
             out_row["taxon_length"] = self.bam_obj.ref_stats[contig_id]['length']
             out_row["taxon_covered_bases"] = self.bam_obj.ref_stats[contig_id]['covered_bases']
@@ -417,6 +447,9 @@ class SeqManifestSummary:
             else:
                 out_row["taxon_%_covered_bases"] = 0
             out_row["taxon_mean_read_length"] = self.bam_obj.ref_stats[contig_id]['mean_len']
+
+            if self.paired:
+                out_row["mean_read_length_reverse"] = self.fastp_json_file["summary"]["after_filtering"]["read2_mean_length"]
 
             fout.write("{}\n".format("\t".join([str(x) for x in out_row.values()])))
         
