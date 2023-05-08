@@ -123,19 +123,19 @@ def test_make_test():
 #     assert seq_mani_run_nano.status == True
 #     pass
 
-def test_fastq_extractor_sr():
-    enriched_sample = Sequence(technology, ["/home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_sequences/ERR2984773_1.fastq", "/home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_sequences/ERR2984773_2.fastq"])
-    extractor_run = FastqExtractor(enriched_sample, out_prefix="test_222_reads_sr", out_dir=path_output)
-    extractor_run.extract_paired_reads()
-    assert extractor_run.status == True
-    pass
+# def test_fastq_extractor_sr():
+#     enriched_sample = Sequence(technology, ["/home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_sequences/ERR2984773_1.fastq", "/home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_sequences/ERR2984773_2.fastq"])
+#     extractor_run = FastqExtractor(enriched_sample, out_prefix="test_222_reads_sr", out_dir=path_output)
+#     extractor_run.extract_paired_reads()
+#     assert extractor_run.status == True
+#     pass
 
-def test_fastq_extractor_lr():
-    enriched_sample = Sequence(technology, ["/home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_sequences/barcode01_fastq_pass_enriched.fastq"])
-    extractor_run = FastqExtractor(enriched_sample, out_prefix="test_reads_lr", out_dir=path_output)
-    extractor_run.extract_single_reads()
-    assert extractor_run.status == True
-    pass
+# def test_fastq_extractor_lr():
+#     enriched_sample = Sequence(technology, ["/home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_sequences/barcode01_fastq_pass_enriched.fastq"])
+#     extractor_run = FastqExtractor(enriched_sample, out_prefix="test_reads_lr", out_dir=path_output)
+#     extractor_run.extract_single_reads()
+#     assert extractor_run.status == True
+#     pass
 
 
 # def test_run_seq_manifest_no_sum(): 

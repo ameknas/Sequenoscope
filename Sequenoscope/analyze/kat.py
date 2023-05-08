@@ -1,9 +1,7 @@
 #!/usr/bin/env python
 from Sequenoscope.utils.__init__ import run_command
-from Sequenoscope.utils.sequence_class import Sequence
+from Sequenoscope.constant import DefaultValues
 import os
-import pandas as pd
-import json
 
 
 class KatRunner:
@@ -16,7 +14,7 @@ class KatRunner:
     threads = 1
     kmersize = 27
 
-    def __init__(self, input_path, ref_path, out_path, out_prefix, threads = 1, kmersize = 27):
+    def __init__(self, input_path, ref_path, out_path, out_prefix, threads = 1, kmersize = DefaultValues.kat_hist_kmer_size):
         """
         Initalize the class with input path, ref_path, and output path
 
@@ -49,14 +47,14 @@ class KatRunner:
         """
         input_fastq = self.input_path.out_files
         ref_fasta = self.ref_path
-        out_file_sect = os.path.join(self.out_path, "{}".format(self.out_prefix))
-        cvg_file = os.path.join(self.out_path, "{}-counts.cvg".format(self.out_prefix))
-        tsv_file = os.path.join(self.out_path, "{}-stats.tsv".format(self.out_prefix))
+        out_file_sect = os.path.join(self.out_path, f"{self.out_prefix}")
+        cvg_file = os.path.join(self.out_path, f"{self.out_prefix}-counts.cvg")
+        tsv_file = os.path.join(self.out_path, f"{self.out_prefix}-stats.tsv")
 
         self.result_files["sect"]["cvg"] = cvg_file
         self.result_files["sect"]["tsv"] = tsv_file
 
-        kat_sect_cmd = "kat sect -t {} -o {} {} {}".format(self.threads, out_file_sect, ref_fasta, input_fastq)
+        kat_sect_cmd = f"kat sect -t {self.threads} -o {out_file_sect} {ref_fasta} {input_fastq}"
         (self.stdout, self.stderr) = run_command(kat_sect_cmd)
         self.status = self.check_files([cvg_file, tsv_file])
         if self.status == False:
@@ -73,31 +71,30 @@ class KatRunner:
                 returns True if the generated output file is found and not empty, False otherwise
         """
         ref_fasta = self.ref_path
-        out_file_hash = os.path.join(self.out_path, "{}_hash".format(self.out_prefix))
-        jf_file = os.path.join(self.out_path, "{}_hash-in.jf{}".format(self.out_prefix, self.kmersize))
+        out_file_hash = os.path.join(self.out_path, f"{self.out_prefix}_hash")
+        jf_file = os.path.join(self.out_path, f"{self.out_prefix}_hash-in.jf{self.kmersize}")
         paired = self.input_path.is_paired
 
-        self.result_files["filter"]["jf{}".format(self.kmersize)] = jf_file
+        self.result_files["filter"][f"jf{self.kmersize}"] = jf_file
 
-        hash_build_command = "kat filter kmer -m {} -o {} {}".format(self.kmersize, out_file_hash, ref_fasta)
+        hash_build_command = f"kat filter kmer -m {self.kmersize} -o {out_file_hash} {ref_fasta}"
         (self.stdout, self.stderr) = run_command(hash_build_command)
         self.status = self.check_files([jf_file])
         if self.status == False:
             self.error_messages = "one or more files was not created or was empty, check error message\n{}".format(self.stderr)
             raise ValueError(str(self.error_messages))
 
-        input_fastq = self.input_path.out_files
-        out_file_filter = os.path.join(self.out_path, "{}_filtered".format(self.out_prefix))
+        out_file_filter = os.path.join(self.out_path, f"{self.out_prefix}_filtered")
 
-        cmd = [ 'kat','filter','seq','-t', '{}'.format(self.threads),'-o',out_file_filter,'--seq', self.input_path.files[0]]
+        cmd = [ 'kat','filter','seq','-t',f'{self.threads}','-o',out_file_filter,'--seq',self.input_path.files[0]]
 
         if paired:
             cmd.append('--seq2')
             cmd.append(self.input_path.files[1])
-            self.result_files["filter"]["filtered_fastq"].append(os.path.join(self.out_path, "{}_filtered.in.R1.fastq".format(self.out_prefix)))
-            self.result_files["filter"]["filtered_fastq"].append(os.path.join(self.out_path, "{}_filtered.in.R2.fastq".format(self.out_prefix)))
+            self.result_files["filter"]["filtered_fastq"].append(os.path.join(self.out_path, f"{self.out_prefix}_filtered.in.R1.fastq"))
+            self.result_files["filter"]["filtered_fastq"].append(os.path.join(self.out_path, f"{self.out_prefix}_filtered.in.R2.fastq"))
         else:
-            self.result_files["filter"]["filtered_fastq"].append(os.path.join(self.out_path, "{}_filtered.in.fastq".format(self.out_prefix)))
+            self.result_files["filter"]["filtered_fastq"].append(os.path.join(self.out_path, f"{self.out_prefix}_filtered.in.fastq"))
 
         if exclude == True:
             cmd.insert(3, "-i")
@@ -120,14 +117,14 @@ class KatRunner:
                 returns True if the generated output file is found and not empty, False otherwise
         """
         input_fastq = self.input_path.out_files
-        out_file_hist = os.path.join(self.out_path, "{}_histogram_file".format(self.out_prefix))
-        png_file = os.path.join(self.out_path, "{}_histogram_file.png".format(self.out_prefix))
-        json_file = os.path.join(self.out_path, "{}_histogram_file.dist_analysis.json".format(self.out_prefix))
+        out_file_hist = os.path.join(self.out_path, f"{self.out_prefix}_histogram_file")
+        png_file = os.path.join(self.out_path, f"{self.out_prefix}_histogram_file.png")
+        json_file = os.path.join(self.out_path, f"{self.out_prefix}_histogram_file.dist_analysis.json")
 
         self.result_files["hist"]["png_file"] = png_file
         self.result_files["hist"]["json_file"] = json_file
 
-        kat_hist_cmd = "kat hist -t {} -m {} -o {} {}".format(self.threads, self.kmersize, out_file_hist, input_fastq)
+        kat_hist_cmd = f"kat hist -t {self.threads} -m {self.kmersize} -o {out_file_hist} {input_fastq}"
         (self.stdout, self.stderr) = run_command(kat_hist_cmd)
         self.status = self.check_files([png_file, json_file])
         if self.status == False:

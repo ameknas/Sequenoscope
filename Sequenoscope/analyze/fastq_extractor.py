@@ -78,7 +78,20 @@ class FastqExtractor:
         self.write_reads(read_lists=[forward_reads, reverse_reads])
     
     def extract_reads(self, file, read_list, read_delimiter=None, split_delimiter=None):
+        """
+        Strip the lines of fastq file based on various delimitors that result
+        from different sequencing instrumnetaion output
 
+        Arguments:
+            file: list object
+                file in read set for extracting reads
+            read_list: list
+                list of where to store reads
+            read_delimitor: str
+                delimitor that is located by the read id after stripping the lines
+            split_delimitor: str
+                delimitor that is located by the read id before stripping the lines
+        """
         with open(file, 'r') as f:
             for line in f:
                 if line.startswith(DefaultValues.fastq_line_starter):
@@ -87,7 +100,17 @@ class FastqExtractor:
                         read_list.append(read_id)
     
     def write_reads(self, read_lists=[]):
-        
+        """
+        Append the lines extracted from a list into a file output and check if the file was created
+
+        Arguments:
+            read_lists: list
+                lists of where reads are stored
+
+        Returns:
+            bool:
+                returns True if the generated output file is found and not empty, False otherwise
+        """
         output_file = os.path.join(self.out_dir,f"{self.out_prefix}.txt")
         self.result_files["read_list_file"] = output_file
 

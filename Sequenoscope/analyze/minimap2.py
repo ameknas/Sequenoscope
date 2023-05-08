@@ -1,7 +1,9 @@
 #!/usr/bin/env python
-from Sequenoscope.utils.__init__ import run_command
-from Sequenoscope.utils.sequence_class import Sequence
+
 import os
+from Sequenoscope.constant import DefaultValues
+from Sequenoscope.utils.__init__ import run_command
+
 
 class Minimap2Runner:
     read_set = None
@@ -15,7 +17,7 @@ class Minimap2Runner:
     result_files =  {"sam_output_file":""}
     paired = False
 
-    def __init__(self, read_set, out_dir, ref_database, out_prefix, threads=1, kmer_size=15):
+    def __init__(self, read_set, out_dir, ref_database, out_prefix, threads=1, kmer_size=DefaultValues.minimap2_kmer_size):
         """
         Initalize the class with read_set, out_dir, ref_database, and out_prefix
 
@@ -49,11 +51,11 @@ class Minimap2Runner:
             bool:
                 returns True if the generated output file is found and not empty, False otherwise
         """
-        sam_file = os.path.join(self.out_dir,"{}.sam".format(self.out_prefix))
+        sam_file = os.path.join(self.out_dir,f"{self.out_prefix}.sam")
         
         self.result_files["sam_output_file"] = sam_file
 
-        cmd = ["minimap2", "-ax", "-t", "{}".format(self.threads), "-k", "{}".format(self.kmer_size), self.ref_database, 
+        cmd = ["minimap2", "-ax", "-t", f"{self.threads}", "-k", f"{self.kmer_size}", self.ref_database, 
         self.read_set.out_files, ">", sam_file]
         
         if self.paired:
