@@ -51,7 +51,7 @@ class FastPRunner:
         self.read_set = read_set
         self.out_dir = out_dir
         self.out_prefix = out_prefix
-        self.out_prefix_2 = "{}_2".format(self.out_prefix)
+        self.out_prefix_2 = f"{self.out_prefix}_2"
         self.min_read_len = min_read_len
         self.max_read_len = max_read_len
         self.trim_front_bp = trim_front_bp
@@ -60,8 +60,6 @@ class FastPRunner:
         self.dedup = dedup
         self.threads = threads
         self.paired = self.read_set.is_paired
-        #if self.paired == True and self.report_only == False and self.out_prefix_2 == None:
-        # raise ValueError("Please specify a name for the second output file")
         
 
     def run_fastp(self):
@@ -72,9 +70,9 @@ class FastPRunner:
             bool:
                 returns True if the generated output file is found and not empty, False otherwise
         """
-        json = os.path.join(self.out_dir,"{}.json".format(self.out_prefix))
-        html = os.path.join(self.out_dir,"{}.html".format(self.out_prefix))
-        out1 = os.path.join(self.out_dir,"{}.fastp.fastq".format(self.out_prefix))
+        json = os.path.join(self.out_dir,f"{self.out_prefix}.json")
+        html = os.path.join(self.out_dir,f"{self.out_prefix}.html")
+        out1 = os.path.join(self.out_dir,f"{self.out_prefix}.fastp.fastq")
 
         self.result_files["html"] = html
         self.result_files["json"] = json
@@ -87,7 +85,7 @@ class FastPRunner:
         cmd_args['--length_limit'] = self.max_read_len
         if self.paired:
             cmd_args['-I'] = self.read_set.files[1]
-            out2 = os.path.join(self.out_dir,"{}.fastp.fastq".format(self.out_prefix_2))
+            out2 = os.path.join(self.out_dir,f"{self.out_prefix_2}.fastp.fastq")
             if not self.report_only:
                 cmd_args['-O'] = out2
         if self.dedup:
@@ -125,8 +123,4 @@ class FastPRunner:
                 return False
             elif os.path.getsize(f) == 0:
                 return False
-        return True
-
-
-{"fastp -i in.R1.fq.gz -I in.R2.fq.gz -o out.R1.fq.gz -O out.R2.fq.gz"}
-        
+        return True        

@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 import os
+from Sequenoscope.constant import DefaultValues
 
 class FastqExtractor:
     out_prefix = None
@@ -33,23 +34,9 @@ class FastqExtractor:
             bool:
                 returns True if the generated output file is found and not empty, False otherwise
         """
-        output_file = os.path.join(self.out_dir,"{}.txt".format(self.out_prefix))
-        self.result_files["read_list_file"] = output_file
+        self.extract_reads(self.read_set.files[0], self.reads, read_delimiter=" ")
 
-        with open(self.read_set.files[0], 'r') as f:
-            for line in f:
-                if line.startswith('@'):
-                    if len(line.strip().split()) >= 4:
-                        read_id = line.strip().split(" ")[0][1:]
-                        self.reads.append(read_id)
-        with open(output_file, 'w') as f:
-            f.write("read_id\n")  # Write the header row
-            for read in self.reads:
-                f.write(f"{read}\n")
-        self.status = self.check_files(output_file)
-        if self.status == False:
-            self.error_messages = "one or more files was not created or was empty, check error message\n{}".format(self.stderr)
-            raise ValueError(str(self.error_messages))
+        self.write_reads(read_lists=[self.reads])
                
     def extract_paired_reads(self):
         """
@@ -59,31 +46,12 @@ class FastqExtractor:
             bool:
                 returns True if the generated output file is found and not empty, False otherwise
         """
-        output_file = os.path.join(self.out_dir,"{}.txt".format(self.out_prefix))
-        self.result_files["read_list_file"] = output_file
-        
         forward_reads = []
-        with open(self.read_set.files[0], 'r') as f:
-            for line in f:
-                if line.startswith('@'):
-                    if len(line.strip().split(":")) >= 4:
-                        read_id = line.strip().split()[0][1:] #+ '_R1'
-                        forward_reads.append(read_id)
+        self.extract_reads(self.read_set.files[0], forward_reads, split_delimiter=":")
         reverse_reads = []
-        with open(self.read_set.files[1], 'r') as f:
-            for line in f:
-                if line.startswith('@'):
-                    if len(line.strip().split(":")) >= 4:
-                        read_id = line.strip().split()[0][1:] #+ '_R2'
-                        reverse_reads.append(read_id)
-        with open(output_file, 'w') as f:
-            f.write("read_id\n")  # Write the header row
-            for read in forward_reads + reverse_reads:
-                f.write(f"{read}\n")
-        self.status = self.check_files(output_file)
-        if self.status == False:
-            self.error_messages = "one or more files was not created or was empty, check error message\n{}".format(self.stderr)
-            raise ValueError(str(self.error_messages))
+        self.extract_reads(self.read_set.files[1], reverse_reads, split_delimiter=":")
+
+        self.write_reads(read_lists=[forward_reads, reverse_reads])
         
     def alt_extract_paired_reads(self):
         """
@@ -93,9 +61,6 @@ class FastqExtractor:
             bool:
                 returns True if the generated output file is found and not empty, False otherwise
         """
-        output_file = os.path.join(self.out_dir,"{}.txt".format(self.out_prefix))
-        self.result_files["read_list_file"] = output_file
-        
         forward_reads = []
         with open(self.read_set.files[0], 'r') as f:
             for line in f:
@@ -110,10 +75,33 @@ class FastqExtractor:
                     if line.endswith('2\n'):
                         read_id = line.strip().split()[0][1:] #+ '_R2'
                         reverse_reads.append(read_id)
-        with open(output_file, 'w') as f:
-            f.write("read_id\n")  # Write the header row
-            for read in forward_reads + reverse_reads:
-                f.write(f"{read}\n")
+        self.write_reads(read_lists=[forward_reads, reverse_reads])
+    
+    def extract_reads(self, file, read_list, read_delimiter=None, split_delimiter=None):
+
+        with open(file, 'r') as f:
+            for line in f:
+                if line.startswith(DefaultValues.fastq_line_starter):
+                    if len(line.strip().split(split_delimiter)) >= DefaultValues.fastq_sample_row_number:
+                        read_id = line.strip().split(read_delimiter)[0][1:]
+                        read_list.append(read_id)
+    
+    def write_reads(self, read_lists=[]):
+        
+        output_file = os.path.join(self.out_dir,f"{self.out_prefix}.txt")
+        self.result_files["read_list_file"] = output_file
+
+        if len(read_lists) == 1:
+            with open(output_file, 'w') as f:
+                f.write("read_id\n")  # Write the header row
+                for read in read_lists[0]:
+                    f.write(f"{read}\n")
+        else:
+            with open(output_file, 'w') as f:
+                f.write("read_id\n")  # Write the header row
+                for read in read_lists[0] + read_lists[1]:
+                    f.write(f"{read}\n")
+            
         self.status = self.check_files(output_file)
         if self.status == False:
             self.error_messages = "one or more files was not created or was empty, check error message\n{}".format(self.stderr)

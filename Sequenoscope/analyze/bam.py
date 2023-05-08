@@ -2,8 +2,11 @@
 
 import statistics
 import pysam
-from Sequenoscope.utils.__init__ import run_command, is_non_zero_file
 from math import log
+from Sequenoscope.constant import DefaultValues
+from Sequenoscope.utils.__init__ import run_command, is_non_zero_file
+
+
 
 class BamProcessor:
 
@@ -157,7 +160,7 @@ class BamProcessor:
         """
         return [10**(q / -10) for q in range(n+1)]
 
-    def calc_mean_qscores(self,qual,tab=error_prob_list_tab(128)):
+    def calc_mean_qscores(self,qual,tab=error_prob_list_tab(DefaultValues.nanoget_threshold)):
         """
         Calculates the mean quality score for a read where they have been converted to Phred.
         Phred scores are first converted to probabilites, then the average error probability is calculated.
@@ -169,6 +172,7 @@ class BamProcessor:
             
             tab: list
                 list of error rates for qaulties specified
+                default designation of 128 based on nanoget 
 
         Returns:
             float:
@@ -201,7 +205,7 @@ class BamProcessor:
         stdout = stdout.split("\n")
         for row in stdout:
             row = row.split("\t")
-            if len(row) < 4:
+            if len(row) < DefaultValues.samtools_idxstats_field_number:
                 continue
             result[row[0]] = {'length':int(row[1]),
                               'reads': {},'num_reads':0,'mean_cov':0,
