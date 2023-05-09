@@ -57,11 +57,7 @@ setup(
         'scipy',
         'seqtk',
         'simplejson',
-        'six',
-        'kat',
-        'minimap2',
-        'fastp',
-        'samtools'
+        'six'
     ],
 
     entry_points={
