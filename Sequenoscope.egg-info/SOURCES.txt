@@ -12,13 +12,16 @@ Sequenoscope.egg-info/dependency_links.txt
 Sequenoscope.egg-info/entry_points.txt
 Sequenoscope.egg-info/requires.txt
 Sequenoscope.egg-info/top_level.txt
-Sequenoscope/analyze/Pandas_report_workflow.py
 Sequenoscope/analyze/__init__.py
+Sequenoscope/analyze/analyze.py
+Sequenoscope/analyze/bam.py
 Sequenoscope/analyze/fastP.py
+Sequenoscope/analyze/fastq_extractor.py
 Sequenoscope/analyze/kat.py
 Sequenoscope/analyze/minimap2.py
 Sequenoscope/analyze/processing.py
 Sequenoscope/analyze/pytest_test.py
+Sequenoscope/analyze/seq_manifest.py
 Sequenoscope/filter_ONT/__init__.py
 Sequenoscope/filter_ONT/filter_ONT.py
 Sequenoscope/filter_ONT/pytest_test.py

@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-
 import argparse as ap
 import os
 import sys
