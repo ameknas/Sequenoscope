@@ -1,10 +1,12 @@
 #!/usr/bin/env python
 
+import os
+from math import log
+from Sequenoscope.constant import DefaultValues
 from Sequenoscope.utils.parser import fastq_parser
 from Sequenoscope.analyze.bam import BamProcessor
 from Sequenoscope.utils.__init__ import is_non_zero_file
-import os
-from math import log
+
 
 class SeqManifest:
     fields = [
@@ -77,7 +79,7 @@ class SeqManifest:
 
         if self.in_seq_summary is not None and not is_non_zero_file(self.in_seq_summary):
             self.status = False
-            self.error_msg = "Error specified seq summary file {} does not exist".format(self.in_seq_summary)
+            self.error_msg = f"Error specified seq summary file {self.in_seq_summary} does not exist"
             return
         if self.in_seq_summary is not None:
             self.create_manifest_with_sum()
@@ -98,7 +100,7 @@ class SeqManifest:
         """
         return [10**(q / -10) for q in range(n+1)]
 
-    def calc_mean_qscores(self,qual,tab=error_prob_list_tab(128)):
+    def calc_mean_qscores(self,qual,tab=error_prob_list_tab(DefaultValues.nanoget_threshold)):
         """
         Calculates the mean quality score for a read where they have been converted to Phred.
         Phred scores are first converted to probabilites, then the average error probability is calculated.
@@ -134,7 +136,7 @@ class SeqManifest:
         """
         qual_values = []
         for c in qual_string:
-            qual_values.append(ord(c) - 33)
+            qual_values.append(ord(c) - DefaultValues.phred_33_encoding_value)
 
         return qual_values
 
@@ -177,7 +179,7 @@ class SeqManifest:
             bool: 
                 True if the summary manifest file was created, False otherwise.
         """
-        manifest_file = os.path.join(self.out_dir,"{}.txt".format(self.out_prefix))
+        manifest_file = os.path.join(self.out_dir,f"{self.out_prefix}.txt")
         fout = open(manifest_file,'w')
         fout.write("{}\n".format("\t".join(self.fields)))
 
@@ -191,8 +193,6 @@ class SeqManifest:
                 row_data[header[i]] = row[i]
 
             read_id = row_data['read_id']
-            #read_len = 0
-            #read_qual = 0
             read_len = row_data['sequence_length_template']
             read_qual = row_data['mean_qscore_template']
             is_uniq = True
@@ -215,8 +215,6 @@ class SeqManifest:
             mapped_contigs = []
             for contig_id in self.bam_obj.ref_stats:
                 if read_id in self.bam_obj.ref_stats[contig_id]['reads']:
-                    #read_len = self.bam_obj.ref_stats[contig_id]['reads'][read_id][0]
-                    #read_qual = self.bam_obj.ref_stats[contig_id]['reads'][read_id][1]
                     pass
                     if contig_id != '*':
                         mapped_contigs.append(contig_id)
@@ -267,7 +265,7 @@ class SeqManifest:
                 seq manifest text file
         """
         
-        manifest_file = os.path.join(self.out_dir,"{}.txt".format(self.out_prefix))
+        manifest_file = os.path.join(self.out_dir,f"{self.out_prefix}.txt")
         fout = open(manifest_file,'w')
         fout.write("{}\n".format("\t".join(self.fields)))
 
@@ -427,7 +425,7 @@ class SeqManifestSummary:
             bool: 
                 True if the summary manifest file was created, False otherwise.
         """
-        summary_manifest_file = os.path.join(self.out_dir,"{}.txt".format(self.out_prefix))
+        summary_manifest_file = os.path.join(self.out_dir,f"{self.out_prefix}.txt")
         fout = open(summary_manifest_file,'w')
         fout.write("{}\n".format("\t".join(self.fields)))
 

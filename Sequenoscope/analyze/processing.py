@@ -1,10 +1,6 @@
 #!/usr/bin/env python
-from Sequenoscope.utils.__init__ import run_command
-from Sequenoscope.utils.parser import GeneralSeqParser
-from Sequenoscope.utils.sequence_class import Sequence
 import os
-import pandas as pd
-
+from Sequenoscope.utils.__init__ import run_command
 
 
 class SamBamProcessor:
@@ -40,7 +36,7 @@ class SamBamProcessor:
         self.out_prefix = out_prefix
         self.threads = thread
 
-    def run_samtools_bam(self, exclude=None):
+    def run_samtools_bam(self):
         """
         Run the samtools view command on the designated sam file and pipe the output to the samtools sort command for further processing.
 
@@ -52,22 +48,13 @@ class SamBamProcessor:
             bool:
                 returns True if the generated output file is found and not empty, False otherwise
         """
-        bam_output = os.path.join(self.out_dir,"{}.bam".format(self.out_prefix))
+        bam_output = os.path.join(self.out_dir,f"{self.out_prefix}.bam")
         
         self.result_files["bam_output"] = bam_output
         
         cmd = ["samtools", "view", "-S", "-b", self.file, "|",
-               "samtools", "sort", "-@", "{}".format(self.threads), "-T", self.out_prefix, "--reference", self.ref_database,
+               "samtools", "sort", "-@", f"{self.threads}", "-T", self.out_prefix, "--reference", self.ref_database,
                "-o", bam_output]
-
-        # if exclude == True:
-        #     cmd.insert(4, "-f")
-        #     cmd.insert(5, "4")
-        # elif exclude == False:
-        #     cmd.insert(4, "-F")
-        #     cmd.insert(5, "4")
-        # else:
-        #     pass
 
         cmd_string = " ".join(cmd)
 
@@ -85,11 +72,11 @@ class SamBamProcessor:
             bool:
                 returns True if the generated output file is found and not empty, False otherwise
         """
-        fastq_output = os.path.join(self.out_dir,"{}.fastq".format(self.out_prefix))
+        fastq_output = os.path.join(self.out_dir,f"{self.out_prefix}.fastq")
 
         self.result_files["fastq_output"] = fastq_output
 
-        cmd = "samtools fastq {} > {}".format(self.file, fastq_output)
+        cmd = f"samtools fastq {self.file} > {fastq_output}"
 
         (self.stdout, self.stderr) = run_command(cmd)
         self.status = self.check_files([fastq_output])
@@ -105,11 +92,11 @@ class SamBamProcessor:
             bool:
                 returns True if the generated output file is found and not empty, False otherwise
         """
-        bam_output = os.path.join(self.out_dir,"{}.bam".format(self.out_prefix))
+        bam_output = os.path.join(self.out_dir,f"{self.out_prefix}.bam")
 
         self.result_files["bam_output"] = bam_output
 
-        cmd = "samtools import {} > {}".format(self.file, bam_output)
+        cmd = f"samtools import {self.file} > {bam_output}"
 
         (self.stdout, self.stderr) = run_command(cmd)
         self.status = self.check_files([bam_output])
@@ -117,7 +104,7 @@ class SamBamProcessor:
             self.error_messages = "one or more files was not created or was empty, check error message\n{}".format(self.stderr)
             raise ValueError(str(self.error_messages))
 
-    def run_bedtools(self, nonzero = False):
+    def run_bedtools(self, nonzero=False):
         """
         Run the bedtools genomcov command on the designated bam file and return a tsv of the depth per base
 
@@ -129,7 +116,7 @@ class SamBamProcessor:
             bool:
                 returns True if the generated output file is found and not empty, False otherwise
         """
-        coverage_tsv = os.path.join(self.out_dir,"{}.tsv".format(self.out_prefix))
+        coverage_tsv = os.path.join(self.out_dir, f"{self.out_prefix}.tsv")
 
         self.result_files["coverage_tsv"] = coverage_tsv
 

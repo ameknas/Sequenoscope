@@ -15,3 +15,4 @@ class DefaultValues:
     samtools_idxstats_field_number: int = 4
     fastq_sample_row_number: int = 4
     fastq_line_starter: str = "@"
+    phred_33_encoding_value: int = 33

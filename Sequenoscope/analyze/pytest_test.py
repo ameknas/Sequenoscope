@@ -160,28 +160,28 @@ def test_make_test():
 #     renamer.status == True
 #     pass
 
-# def test_seq_manifest_summary():
-#     seq_mani_run_nano = SeqManifest("barcode1",
-#                                "/home/ameknas/sequenoscope-1/test_mani_lr/sample_mapped_bam.bam", 
-#                                "test_out_mani_1",
-#                                out_dir=path_output,
-#                                fastp_fastq=["/home/ameknas/sequenoscope-1/test_mani_lr/sample_fastp_output.fastp.fastq"],
-#                                in_seq_summary= "/home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_sequences/Nanopore_enriched_control_seq_summary.txt"
-#                                )
+def test_seq_manifest_summary():
+    seq_mani_run_nano = SeqManifest("barcode1",
+                               "/home/ameknas/sequenoscope-1/test_mani_lr_sum/sample_mapped_bam.bam", 
+                               "test_out_mani_1",
+                               out_dir=path_output,
+                               fastp_fastq=["/home/ameknas/sequenoscope-1/test_mani_lr_sum/sample_fastp_output.fastp.fastq"],
+                               in_seq_summary= "/home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_sequences/Nanopore_enriched_control_seq_summary.txt"
+                               )
     
-#     kmer_file = GeneralSeqParser("/home/ameknas/sequenoscope-1/test_mani/sample_kmer_analysis_histogram_file.dist_analysis.json", "json")
-#     fastp_file = GeneralSeqParser("/home/ameknas/sequenoscope-1/test_mani/sample_fastp_output.json", "json")
+    kmer_file = GeneralSeqParser("/home/ameknas/sequenoscope-1/test_mani_lr_sum/sample_kmer_analysis_histogram_file.dist_analysis.json", "json")
+    fastp_file = GeneralSeqParser("/home/ameknas/sequenoscope-1/test_mani_lr_sum/sample_fastp_output.json", "json")
 
-#     seq_summary_run = SeqManifestSummary("barcode1",
-#                                seq_mani_run_nano.bam_obj, 
-#                                "test_out_mani_summary",
-#                                out_dir=path_output,
-#                                kmer_json_file=kmer_file.parsed_file,
-#                                fastp_json_files=fastp_file.parsed_file,
-#                                paired=True
-#                                )
+    seq_summary_run = SeqManifestSummary("barcode1",
+                               seq_mani_run_nano.bam_obj, 
+                               "test_out_mani_summary",
+                               out_dir=path_output,
+                               kmer_json_file=kmer_file.parsed_file,
+                               fastp_json_file=fastp_file.parsed_file,
+                               paired=False
+                               )
     
-#     seq_summary_run.generate_summary()
-#     assert seq_summary_run.status == True
-#     pass
+    seq_summary_run.generate_summary()
+    assert seq_summary_run.status == True
+    pass
     
