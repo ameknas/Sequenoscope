@@ -36,7 +36,7 @@ def parse_args():
     parser.add_argument("-max_len", "--maximum_read_length", default= 0, metavar="", type=int, help="A designation of the maximum read length. reads longer than the integer specified required will be discarded, default is 0 meaning no limitation")
     parser.add_argument("-trm_fr", "--trim_front_bp", default= 0, metavar="", type=int, help="A designation of the how many bases to trim from the front of the sequence, default is 0.")
     parser.add_argument("-trm_tail", "--trim_tail_bp", default= 0,metavar="", type=int, help="A designation of the how many bases to trim from the tail of the sequence, default is 0")
-    parser.add_argument('--exclude', required=False, help='Choose to exclude reads based on reference instead of including them', action='store_true')
+    #parser.add_argument('--exclude', required=False, help='Choose to exclude reads based on reference instead of including them', action='store_true')
     parser.add_argument('--kat_hist_kmer', default= 27, metavar="", type=int, help="A designation of the kmer size when running kat hist")
     parser.add_argument('--minimap2_kmer', default= 15, metavar="", type=int, help="A designation of the kmer size when running minimap2")
     parser.add_argument('--force', required=False, help='Force overwite of existing results directory', action='store_true')
@@ -60,7 +60,7 @@ def run():
     max_len = args.maximum_read_length
     trim_front = args.trim_front_bp
     trim_tail = args.trim_tail_bp
-    exclude = args.exclude
+    #exclude = args.exclude
     force = args.force
 
     print("-"*40)
@@ -141,7 +141,7 @@ def run():
 
     sam_to_bam_process = SamBamProcessor(minimap_run_process.result_files["sam_output_file"], out_directory,
                                          input_reference, f"{out_prefix}_mapped_bam", thread=threads)
-    sam_to_bam_process.run_samtools_bam(exclude=exclude)
+    sam_to_bam_process.run_samtools_bam()
 
     bam_to_fastq_process = SamBamProcessor(sam_to_bam_process.result_files["bam_output"], out_directory,
                                          input_reference, f"{out_prefix}_mapped_fastq", thread=threads)
