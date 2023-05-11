@@ -2,7 +2,6 @@
 import argparse as ap
 import os
 import sys
-import time
 from Sequenoscope.version import __version__
 from Sequenoscope.utils.parser import GeneralSeqParser 
 from Sequenoscope.utils.sequence_class import Sequence

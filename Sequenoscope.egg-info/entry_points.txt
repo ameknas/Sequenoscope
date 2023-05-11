@@ -1,2 +1,3 @@
 [console_scripts]
 Sequenoscope = Sequenoscope.main:main
+

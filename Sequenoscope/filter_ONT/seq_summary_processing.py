@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 import os
+from Sequenoscope.constant import DefaultValues
 
 class SeqSummaryProcesser:
     parsed_report_object = None
@@ -23,7 +24,7 @@ class SeqSummaryProcesser:
     classes = {"stop_receiving":["signal_positive"], "unblocked":["data_service_unblock_mux_change"],
                "no_decision":["signal_negative", "unblock_mux_change"], "all":["signal_positive", "data_service_unblock_mux_change", "signal_negative", "unblock_mux_change"]}
 
-    def __init__(self, parsed_report_object, out_dir, out_prefix, classification="all", min_ch=0, max_ch=512, min_dur=0, max_dur=None,
+    def __init__(self, parsed_report_object, out_dir, out_prefix, classification="all", min_ch=0, max_ch=DefaultValues.max_nanopore_channel, min_dur=0, max_dur=None,
                  min_start_time=0, max_start_time=None, min_q=0, max_q=None, min_len=0, max_len=None ):
         """
         Initalize the class with parsed_report_object, out_dir, and out_prefix
