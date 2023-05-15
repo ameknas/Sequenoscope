@@ -182,6 +182,7 @@ def run():
                                 )
     
         seq_summary_single_end_run.generate_summary()
+
     else:
         
         manifest_no_sum_run = SeqManifest(out_prefix,
@@ -197,16 +198,29 @@ def run():
         kmer_file = GeneralSeqParser(kat_run.result_files["hist"]["json_file"], "json")
         fastp_file = GeneralSeqParser(fastp_run_process.result_files["json"], "json")
 
-        seq_summary_paired_end_run = SeqManifestSummary(out_prefix,
-                                manifest_no_sum_run.bam_obj, 
-                                f"{out_prefix}_manifest_summary",
-                                out_dir=out_directory,
-                                kmer_json_file=kmer_file.parsed_file,
-                                fastp_json_file=fastp_file.parsed_file,
-                                paired=True
-                                )
-    
-        seq_summary_paired_end_run.generate_summary()
+        if seq_class.upper() == SequenceTypes.paired_end:
+            seq_summary_no_sum_run = SeqManifestSummary(out_prefix,
+                                    manifest_no_sum_run.bam_obj, 
+                                    f"{out_prefix}_manifest_summary",
+                                    out_dir=out_directory,
+                                    kmer_json_file=kmer_file.parsed_file,
+                                    fastp_json_file=fastp_file.parsed_file,
+                                    paired=True
+                                    )
+        
+            
+        else:
+            seq_summary_no_sum_run = SeqManifestSummary(out_prefix,
+                                    manifest_no_sum_run.bam_obj, 
+                                    f"{out_prefix}_manifest_summary",
+                                    out_dir=out_directory,
+                                    kmer_json_file=kmer_file.parsed_file,
+                                    fastp_json_file=fastp_file.parsed_file,
+                                    paired=False
+                                    )
+        
+        seq_summary_no_sum_run.generate_summary()
+        
 
 
     print("-"*40)
