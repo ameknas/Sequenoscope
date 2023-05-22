@@ -34,7 +34,7 @@ class FastqExtractor:
             bool:
                 returns True if the generated output file is found and not empty, False otherwise
         """
-        self.extract_reads(self.read_set.files[0], self.reads, read_delimiter=" ")
+        self.extract_reads(self.read_set.files[0], self.reads, read_delimiter=" ", split_delimiter=None)
 
         self.write_reads(read_lists=[self.reads])
                
@@ -97,6 +97,8 @@ class FastqExtractor:
                 if line.startswith(DefaultValues.fastq_line_starter):
                     if len(line.strip().split(split_delimiter)) >= DefaultValues.fastq_sample_row_number:
                         read_id = line.strip().split(read_delimiter)[0][1:]
+                    else:
+                        read_id = line.strip().split()[0][1:]
                         read_list.append(read_id)
     
     def write_reads(self, read_lists=[]):
