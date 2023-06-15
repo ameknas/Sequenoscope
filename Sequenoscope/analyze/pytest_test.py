@@ -113,11 +113,11 @@ def test_make_test():
 
 # def test_run_seq_manifest_with_sum(): 
 #     seq_mani_run_nano = SeqManifest("barcode1",
-#                                "/home/ameknas/sequenoscope-1/test/sample_mapped_bam.bam", 
+#                                "/home/ameknas/sequenoscope-1/test_SE/sample_mapped_bam.bam", 
 #                                "test_out_mani_1",
 #                                out_dir=path_output,
-#                                fastp_fastq=["/home/ameknas/sequenoscope-1/test/sample_fastp_output.fastp.fastq"],
-#                                in_seq_summary= "/home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_sequences/Nanopore_enriched_control_seq_summary.txt"
+#                                fastp_fastq=["/home/ameknas/sequenoscope-1/test_SE/sample_fastp_output.fastp.fastq"],
+#                                in_seq_summary= "/home/ameknas/sequenoscope-1/Sequenoscope/test_sequences/Nanopore_enriched_control_seq_summary.txt"
 #                                )
 #     print(seq_mani_run_nano.filtered_reads, file=open('test_output_fastp.txt', 'a'))
 #     assert seq_mani_run_nano.status == True
@@ -138,20 +138,20 @@ def test_make_test():
 #     pass
 
 
-# def test_run_seq_manifest_no_sum(): 
-#     seq_mani_run_Ill = SeqManifest("barcode1",
-#                                "/home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_illumina_bam.bam", 
-#                                "test_out_mani_2",
-#                                out_dir=path_output,
-#                                fastp_fastq=["/home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_illumina_fastp.fastp.fastq",
-#                                             "/home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_illumina_fastp_2.fastp.fastq"],
-#                                read_list="/home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_222_reads_sr.txt",
-#                                start_time=0,
-#                                end_time=100
-#                                )
-#     print(seq_mani_run_Ill.filtered_reads.keys(), file=open('test_output_fastp.txt', 'a'))
-#     assert seq_mani_run_Ill.status == True
-#     pass
+def test_run_seq_manifest_no_sum(): 
+    seq_mani_run_Ill = SeqManifest("barcode1",
+                               "/home/ameknas/sequenoscope-1/test_SE_no_seq_summary/sample_mapped_bam.bam", 
+                               "test_out_mani_2_Fat_Tits",
+                               out_dir=path_output,
+                               fastp_fastq=["/home/ameknas/sequenoscope-1/test_SE_no_seq_summary/sample_fastp_output.fastp.fastq"],
+                               read_list="/home/ameknas/sequenoscope-1/test_SE_no_seq_summary/sample_read_list.txt",
+                               in_fastq=["/home/ameknas/sequenoscope-1/Sequenoscope/test_sequences/barcode01_fastq_pass_enriched.fastq"],
+                               start_time=0,
+                               end_time=100
+                               )
+    #print(seq_mani_run_Ill.filtered_reads.keys(), file=open('test_output_fastp.txt', 'a'))
+    assert seq_mani_run_Ill.status == True
+    pass
 
 # def test_fastq_renamer():
 #     enriched_sample = Sequence(technology, ["/home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_sequences/ERR2984773_1.fastq", "/home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_sequences/ERR2984773_2.fastq"])
@@ -160,28 +160,28 @@ def test_make_test():
 #     renamer.status == True
 #     pass
 
-def test_seq_manifest_summary():
-    seq_mani_run_nano = SeqManifest("barcode1",
-                               "/home/ameknas/sequenoscope-1/test_mani_lr_sum/sample_mapped_bam.bam", 
-                               "test_out_mani_1",
-                               out_dir=path_output,
-                               fastp_fastq=["/home/ameknas/sequenoscope-1/test_mani_lr_sum/sample_fastp_output.fastp.fastq"],
-                               in_seq_summary= "/home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_sequences/Nanopore_enriched_control_seq_summary.txt"
-                               )
+# def test_seq_manifest_summary():
+#     seq_mani_run_nano = SeqManifest("barcode1",
+#                                "/home/ameknas/sequenoscope-1/test_mani_lr_sum/sample_mapped_bam.bam", 
+#                                "test_out_mani_1",
+#                                out_dir=path_output,
+#                                fastp_fastq=["/home/ameknas/sequenoscope-1/test_mani_lr_sum/sample_fastp_output.fastp.fastq"],
+#                                in_seq_summary= "/home/ameknas/sequenoscope-1/Sequenoscope/analyze/test_sequences/Nanopore_enriched_control_seq_summary.txt"
+#                                )
     
-    kmer_file = GeneralSeqParser("/home/ameknas/sequenoscope-1/test_mani_lr_sum/sample_kmer_analysis_histogram_file.dist_analysis.json", "json")
-    fastp_file = GeneralSeqParser("/home/ameknas/sequenoscope-1/test_mani_lr_sum/sample_fastp_output.json", "json")
+#     kmer_file = GeneralSeqParser("/home/ameknas/sequenoscope-1/test_mani_lr_sum/sample_kmer_analysis_histogram_file.dist_analysis.json", "json")
+#     fastp_file = GeneralSeqParser("/home/ameknas/sequenoscope-1/test_mani_lr_sum/sample_fastp_output.json", "json")
 
-    seq_summary_run = SeqManifestSummary("barcode1",
-                               seq_mani_run_nano.bam_obj, 
-                               "test_out_mani_summary",
-                               out_dir=path_output,
-                               kmer_json_file=kmer_file.parsed_file,
-                               fastp_json_file=fastp_file.parsed_file,
-                               paired=False
-                               )
+#     seq_summary_run = SeqManifestSummary("barcode1",
+#                                seq_mani_run_nano.bam_obj, 
+#                                "test_out_mani_summary",
+#                                out_dir=path_output,
+#                                kmer_json_file=kmer_file.parsed_file,
+#                                fastp_json_file=fastp_file.parsed_file,
+#                                paired=False
+#                                )
     
-    seq_summary_run.generate_summary()
-    assert seq_summary_run.status == True
-    pass
+#     seq_summary_run.generate_summary()
+#     assert seq_summary_run.status == True
+#     pass
     

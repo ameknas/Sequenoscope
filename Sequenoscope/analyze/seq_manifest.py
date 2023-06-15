@@ -27,9 +27,10 @@ class SeqManifest:
     start_time = ''
     end_time = ''
     filtered_reads = {}
+    raw_reads = {}
     error_messages = None
 
-    def __init__(self,sample_id,in_bam,out_prefix, out_dir,fastp_fastq=None,in_seq_summary=None,
+    def __init__(self,sample_id,in_bam,out_prefix, out_dir, in_fastq=None, fastp_fastq=None,in_seq_summary=None,
                   read_list=None,start_time=None,end_time=None,delim="\t"):
         """
         Initalize the class with sample_id, in_bam, out_prefix, and out_dir. Analyze reads based on seq summary and 
@@ -60,6 +61,7 @@ class SeqManifest:
         self.delim = delim
         self.out_prefix = out_prefix
         self.out_dir = out_dir
+        self.in_fastq = in_fastq
         self.sample_id = sample_id
         self.in_seq_summary = in_seq_summary
         self.fastp_fastq = fastp_fastq
@@ -68,14 +70,21 @@ class SeqManifest:
         self.read_list = read_list
 
         if self.in_seq_summary is None:
-            if start_time is None or end_time is None:
+            if self.start_time is None or self.end_time is None:
                 self.status = False
                 self.error_msg = 'Error no sequence summary specified, please specify a start and end datetime'
                 return
+            if self.in_fastq is None:
+                self.status = False
+                self.error_msg = 'Error no sequence summary specified, please add a the intial fastq file for calculations'
+                return
 
         self.bam_obj = BamProcessor(input_file=in_bam)
+
         if self.fastp_fastq is not None:
-            self.process_fastq(self.fastp_fastq)
+            self.process_fastq(self.fastp_fastq, self.filtered_reads)
+        if self.in_fastq is not None: 
+            self.process_fastq(self.in_fastq, self.raw_reads)
 
         if self.in_seq_summary is not None and not is_non_zero_file(self.in_seq_summary):
             self.status = False
@@ -140,13 +149,15 @@ class SeqManifest:
 
         return qual_values
 
-    def process_fastq(self,fastq_file_list):
+    def process_fastq(self, fastq_file_list, read_dict):
         """
         Process the fastq file and extract reads, quality, and qscores
 
         Argument:
             fastq_file_list:
                 list of fastq files
+            read_dict:
+                dictonary to store reads
         """
         for fastq_file in fastq_file_list:
             fastq_obj = fastq_parser(fastq_file)
@@ -156,7 +167,7 @@ class SeqManifest:
                 seq_len = len(seq)
                 qual = self.convert_qscores(record[3])
                 qscore = self.calc_mean_qscores(qual)
-                self.filtered_reads[read_id] = [seq_len,qscore]
+                read_dict[read_id] = [seq_len,qscore]
 
     def create_row(self):
         """
@@ -193,6 +204,11 @@ class SeqManifest:
                 row_data[header[i]] = row[i]
 
             read_id = row_data['read_id']
+
+            if read_id not in self.filtered_reads.keys():
+                continue
+
+
             read_len = row_data['sequence_length_template']
             read_qual = row_data['mean_qscore_template']
             is_uniq = True
@@ -279,8 +295,13 @@ class SeqManifest:
                 row_data[header[i]] = row[i]
 
             read_id = row_data['read_id']
+
             read_len = 0
             read_qual = 0
+            if read_id in self.raw_reads:
+                read_len = self.raw_reads[read_id][0]
+                read_qual = self.raw_reads[read_id][1]
+
             is_uniq = True
             is_mapped = False
             start_time = self.start_time

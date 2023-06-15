@@ -97,6 +97,7 @@ class FastqExtractor:
                 if line.startswith(DefaultValues.fastq_line_starter):
                     if len(line.strip().split(split_delimiter)) >= DefaultValues.fastq_sample_row_number:
                         read_id = line.strip().split(read_delimiter)[0][1:]
+                        read_list.append(read_id)
                     else:
                         read_id = line.strip().split()[0][1:]
                         read_list.append(read_id)
