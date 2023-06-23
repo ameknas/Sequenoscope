@@ -167,6 +167,7 @@ def run():
                                f"{out_prefix}_manifest",
                                out_dir=out_directory,
                                fastp_fastq=fastp_run_process.result_files["output_files_fastp"],
+                               read_list=extractor_run.result_files["read_list_file"],
                                in_seq_summary=seq_summary
                                )
         
@@ -191,6 +192,7 @@ def run():
                                out_dir=out_directory,
                                fastp_fastq=fastp_run_process.result_files["output_files_fastp"],
                                read_list=extractor_run.result_files["read_list_file"],
+                               in_fastq=input_fastq,
                                start_time=start_time,
                                end_time=end_time
                                )

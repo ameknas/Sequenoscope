@@ -196,6 +196,16 @@ class SeqManifest:
 
         fin = open(self.in_seq_summary,'r')
         header = next(fin).strip().split(self.delim)
+        
+        read_list = []
+
+        with open(self.read_list, 'r') as file:
+            lines = file.readlines()
+
+        for line in lines:
+            line = line.strip()
+            if line != 'read_id':
+                read_list.append(line)
 
         for line in fin:
             row = line.strip().split(self.delim)
@@ -205,9 +215,11 @@ class SeqManifest:
 
             read_id = row_data['read_id']
 
-            if read_id not in self.filtered_reads.keys():
-                continue
+            if read_id not in read_list:
+              continue
 
+            #if read_id not in self.filtered_reads.keys():
+            #   continue
 
             read_len = row_data['sequence_length_template']
             read_qual = row_data['mean_qscore_template']
