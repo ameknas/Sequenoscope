@@ -1,0 +1,1000 @@
+sample_id	read_id	read_len	read_qscore	channel	start_time	end_time	decision	fastp_status	is_mapped	is_uniq	contig_id
+sample	794d91d2-f0e9-4b08-b576-8bb093794d46	276	9.285928	407	41.6295	42.65425	signal_positive	False	False	True	
+sample	bcf8ebb0-26c3-466c-81cc-4a81466b40f1	320	8.441257	116	41.63425	42.98775	signal_positive	False	False	True	
+sample	308c0aea-30e8-4a8a-8eac-e99c93a9b575	332	10.978478	242	42.69	43.85525	signal_positive	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	8b97f2b5-3367-4fbf-be80-f89f8d59a59a	146	10.573377	510	43.77325	44.46875	signal_positive	False	False	True	
+sample	145cce7f-85d2-4b4d-9ba0-8be68a1ef531	324	8.589764	144	42.986	44.16375	signal_positive	False	False	True	
+sample	2a9b8c1f-d83e-4d58-aae7-63d429cef858	931	9.598189	282	42.3705	44.80875	signal_positive	False	False	True	
+sample	7dcca2a4-703b-4085-b436-433bbc841a0d	1112	10.249241	114	41.9875	44.748749999999994	signal_positive	False	False	True	
+sample	e844b6cd-40e3-4fd6-ab3f-886f662cb852	313	9.157900	12	43.85525	45.024249999999995	signal_positive	False	False	True	
+sample	e77dcca2-8fb5-402f-a844-e6ed98e3a5fc	534	11.000410	279	44.4985	46.22075	signal_positive	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	c7410bfd-4db4-4878-a88e-9405fbb24166	1370	10.659890	4	41.81225	45.59925	signal_positive	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	c7cbafb3-e229-4d0f-9127-ea6e941f95a8	2154	8.684243	500	42.1425	47.57825	signal_positive	False	False	True	
+sample	e6f71008-dc83-4de0-942e-57bfd2835510	2114	9.977743	345	42.33425	47.653499999999994	signal_positive	False	False	True	
+sample	7d693e7a-8c83-4bc0-8f53-bde22e4f3a97	1905	11.210499	5	42.9845	47.8865	signal_positive	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	c5076f93-7b6d-422c-8231-c2105ee07dd5	1306	9.884626	472	45.41275	48.70275	signal_positive	False	False	True	
+sample	b91ceeac-ba8d-4518-b87b-272e93dba2fd	1350	11.049523	470	45.3455	49.10975	signal_positive	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	f08e4c98-fa2f-44f1-a21e-f511b1ba15a3	2784	8.537819	303	42.4985	48.6935	signal_positive	False	False	True	
+sample	2231dca0-567b-4d04-81e9-e4cf3740b41e	94	10.414163	507	49.62025	50.33725	signal_positive	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	6455bcb8-65a0-46b1-9804-24ebb4e3cd64	827	8.784512	500	47.58925	50.2505	signal_positive	False	False	True	
+sample	b2e0902a-9cf5-4d96-a146-21a6767bd954	1206	10.386814	186	47.0355	50.07975	signal_positive	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	e289b050-e1dc-47a7-bf6e-9d0465f51d03	698	9.342497	158	48.0985	50.13125	signal_positive	False	False	True	
+sample	83b6e4c2-cd35-45e5-8cc5-b1e2e9c43643	1889	8.877823	456	45.718	50.53775	signal_positive	False	False	True	
+sample	f946653b-b663-4738-9bf0-440aa11c4359	1490	12.504467	193	45.86425	50.0895	signal_positive	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	7ffc305b-04a8-4da7-8520-783ee427ba9b	3309	9.746901	287	42.0105	49.56325	signal_positive	False	False	True	
+sample	8019b338-4667-4576-93ef-81274492a12c	2164	10.432378	264	44.60225	50.311749999999996	signal_positive	True	False	True	
+sample	07bb0d4b-4a95-43ee-a9d5-b497effc0b73	935	10.779352	354	47.0065	49.62525	signal_positive	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	04e7f3bf-d520-45e4-acbe-5573716de5e0	2888	9.966870	231	42.45225	49.586	signal_positive	False	False	True	
+sample	95539044-9321-4cf8-9f70-c6b1484ae3fe	3216	10.980293	155	42.554	50.490750000000006	signal_positive	True	True	True	NC_001416.1
+sample	098acf2f-88e9-4dce-b98b-594e2b13ab2b	2857	10.687777	434	43.426	51.255250000000004	signal_positive	True	False	True	
+sample	ea7715be-1fc3-4791-97a4-9f3ec4f715f0	3163	12.290685	173	42.97875	50.9625	signal_positive	True	True	True	NC_001416.1
+sample	4582f5bd-882b-4641-a81e-ce6683412bf4	3465	9.460144	442	42.122	50.71275	signal_positive	False	False	True	
+sample	639d4160-8d67-4706-a955-0d4fea17cb01	3300	11.030138	356	41.898	50.648500000000006	signal_positive	True	False	True	
+sample	f3e5a32a-43fe-4b7d-8273-4751c72d56f8	1229	10.228109	311	48.1465	51.445	signal_positive	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	81906a8f-e8c8-4f0e-ba5e-d46f565edb1b	1816	10.701533	111	46.1455	51.11	signal_positive	False	False	True	
+sample	034e80ab-1f5e-4fa5-be72-de184cf31309	3010	10.273704	96	43.915	52.13175	signal_positive	False	False	True	
+sample	00e209f0-b854-46ab-b77d-d7a0390e1098	3482	8.137901	234	43.8525	52.19825	signal_positive	False	False	True	
+sample	545c064e-a173-4fe4-aa94-5599e7a13b82	3779	10.604816	57	42.50725	51.5545	signal_positive	True	True	True	NC_001416.1
+sample	98b6c545-faf0-48d2-b79d-2631313b764f	2144	11.837164	143	45.538	51.57125	signal_positive	True	True	True	NC_001416.1
+sample	815ab8f2-4464-4da3-a24a-46f317d95c4a	2969	10.683376	498	45.4985	53.188	signal_positive	False	False	True	
+sample	be8228e0-c7b1-497e-a71f-6f9a72a021f3	3667	10.976058	251	43.205	52.7945	signal_positive	True	True	True	NC_001416.1
+sample	9a8d004e-ddc2-451b-9281-f0afb349a222	3772	9.056254	336	45.56425	53.353750000000005	signal_positive	False	False	True	
+sample	ff6b59bf-ac13-43f3-92d1-67eccc54078e	3646	9.808329	510	44.6295	54.177	signal_negative	False	False	True	
+sample	217b64ec-fd76-4eb1-896f-7721b36be164	2219	10.687576	496	48.74025	54.176750000000006	signal_negative	True	False	True	
+sample	ad0e7d72-a154-4b93-b686-3a7c9aa01c71	2570	10.734820	490	46.889	54.17275	signal_negative	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	88820b98-ac05-4869-ad0a-e63a484c1dba	3464	10.363916	486	45.645	54.17700000000001	signal_negative	False	False	True	
+sample	0d80c8ff-2e86-4765-ba4f-fe983ed5c19d	3500	9.278649	478	46.01	54.17675	signal_negative	False	False	True	
+sample	8fd07df6-807e-406a-a671-80b3231cd736	2305	11.257702	455	47.57075	54.170249999999996	signal_negative	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	5e1ed88f-1235-487d-b659-786d30539b47	5125	9.865980	452	42.707	54.17675	signal_negative	False	False	True	
+sample	2e92c7cb-bcdc-4da3-ba96-f90408d80161	3040	9.167813	353	46.144	54.170249999999996	signal_negative	False	False	True	
+sample	055a581d-f095-496c-856a-2848491d38c5	3044	8.223862	477	46.82875	54.16675	signal_negative	False	False	True	
+sample	7f2ebf3a-0d4e-4523-a0e9-d2ee9930836f	438	8.255204	442	52.61275	54.17125	signal_negative	False	False	True	
+sample	4246230c-c794-42f7-a93d-b8019d9607de	1860	8.849768	472	48.7785	54.17675	signal_negative	False	False	True	
+sample	c7d3a54f-885e-4159-8b29-718fa185a62c	1496	9.396254	346	50.7345	54.171749999999996	signal_negative	False	False	True	
+sample	d1bf8302-8fb7-4bd9-a054-917d75bd6ae3	4865	10.193456	217	42.967	54.17125	signal_negative	False	False	True	
+sample	9a7871f1-f421-4e5a-b7cf-1f44049a4577	1493	9.021306	216	49.70975	53.8615	signal_positive	False	False	True	
+sample	3206fbd7-5b3a-4afa-81ed-cac76af2f92e	997	9.667336	414	51.424	54.17675	signal_negative	False	False	True	
+sample	c67d5024-0b32-4ef4-90d4-897674a87b2b	4324	9.641093	295	43.088	54.17425	signal_negative	False	False	True	
+sample	5f174417-ec8e-4af8-b9ce-fe3e1e6e4adc	1919	8.347364	301	49.50375	54.104	signal_positive	False	False	True	
+sample	9e677c0a-ef43-46de-8a99-f022e8360bad	3606	10.434608	116	44.4805	54.177	signal_negative	False	False	True	
+sample	3739fbe1-408f-47f8-b872-da3e4d7b1631	2752	9.657880	404	47.4975	54.15475	signal_negative	False	False	True	
+sample	f2ef0e4c-38c9-4fbe-8fa8-533429d4037c	3616	11.530823	114	44.866	54.161500000000004	signal_positive	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	55f5dbe6-62a4-40e3-93c8-4cff5b75441c	3445	9.158041	282	45.69725	54.15025	signal_negative	False	False	True	
+sample	36bd7a8c-104c-4659-8feb-cbb5d6c5077d	2498	9.824982	381	47.75125	54.1695	signal_negative	False	False	True	
+sample	1ad3d8c6-7af3-4131-92c3-4b342405bb4d	845	8.577478	111	51.71725	54.18275	signal_negative	False	False	True	
+sample	86527a3d-bb40-4925-8a2d-109af2b06a47	4909	10.076931	103	41.8455	54.1695	signal_negative	False	False	True	
+sample	ad6ac767-709b-4c7a-bef5-bc4faada4d27	3884	11.355404	382	42.90175	54.177	signal_negative	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	d32bf678-535f-4aeb-b9a6-cec596656927	364	9.009043	186	52.85125	54.177	signal_negative	False	False	True	
+sample	3f4d69ff-79f2-4ea2-b314-af22e79d7025	600	9.649417	163	52.3835	54.172	signal_negative	False	False	True	
+sample	ead304e9-b316-47f0-8beb-20838ad05667	2320	10.151360	204	48.7025	54.17675	signal_negative	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	2e75b508-30bb-4cc7-8366-3de9241edc71	3959	10.676057	183	43.51225	54.169250000000005	signal_negative	True	True	True	NC_001416.1
+sample	dde35fc2-553e-4cc5-bd38-e70d81fe9ba7	1064	10.833020	173	51.05625	54.177	signal_negative	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	1d2dfb03-35bb-4fd3-a924-14016cd5294b	1608	8.897325	91	49.43825	54.17375	signal_negative	False	False	True	
+sample	94bb7c76-0942-443e-956b-79cc428b3ab8	2185	8.404223	61	48.67275	54.17075	signal_negative	False	False	True	
+sample	2aadc003-fccd-4743-9b6b-614da20bc4ee	1580	10.078446	142	49.04225	53.93225	signal_positive	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	c3b6beca-8f49-4223-8acf-734f4797a3bd	4081	9.649921	54	43.398	54.17700000000001	signal_negative	False	False	True	
+sample	09959b9b-1a72-4c8d-8ce0-6fa70b2de82c	4903	9.817395	235	41.8475	55.21225	signal_negative	False	False	True	
+sample	38eb2272-7e87-42b5-9210-81d3ae8490fc	3343	10.288586	19	47.085	54.1725	signal_negative	True	True	True	NC_001416.1
+sample	c3f60fdb-6b71-43ae-afc6-c56945bdaea3	4571	8.999980	13	44.7405	54.167	signal_negative	False	False	True	
+sample	950d29d8-161a-472a-ab34-bfda3ffb7883	367	10.111919	62	60.554	61.981	signal_positive	False	False	True	
+sample	6f5c5db3-dcdb-46f4-a50a-13ec68911043	691	10.591673	506	61.06725	63.00025	signal_positive	False	False	True	
+sample	e99fcdaa-f510-4d15-83d0-6e7040eb55f5	1006	10.016140	483	60.58975	63.33175	signal_positive	False	False	True	
+sample	088463b2-7434-4a8b-84c5-ba9e1c6c0494	123	8.351113	239	63.3085	63.8555	signal_positive	False	False	True	
+sample	65b06e7c-096b-4fec-9a63-1b9f4e8ddfe3	1286	9.832317	454	61.179	65.1095	signal_positive	False	False	True	
+sample	73b2dd90-4356-4d39-a763-3c64b9e9b69e	187	10.062077	451	63.92975	64.98625	signal_positive	True	True	True	NC_001416.1
+sample	c31a6a3b-25bd-4463-8a73-e2881c252c29	790	12.102258	407	62.93975	65.24499999999999	signal_positive	True	True	True	NC_001416.1
+sample	1dc09b66-6dcc-4316-9f5b-ddac80ecad8c	705	10.057765	194	63.53275	65.4465	signal_positive	False	False	True	
+sample	5887b5ec-62f3-4901-bdc8-16b19979f428	286	9.183088	176	64.01675	64.92	signal_positive	False	False	True	
+sample	9698497f-1e40-4988-8a34-4a721f3fa6fb	438	10.093805	507	64.54175	65.83224999999999	signal_positive	False	False	True	
+sample	21f2f5d7-e671-45dc-9bb1-ecc21b8f50e2	1171	10.666379	47	62.3055	65.59175	signal_positive	False	False	True	
+sample	6eed7932-cb9b-41fc-96bb-f6338bd7d828	869	10.357873	24	61.9835	65.834	signal_positive	True	False	True	
+sample	e27a2c0f-2d46-4d43-9840-a255dd2e7565	2368	10.670597	429	61.3165	67.3515	signal_positive	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	b50831c9-1913-47e8-974f-10a54e502be3	1344	8.917642	304	63.06325	66.684	signal_positive	False	False	True	
+sample	d2b8373a-81a7-42e0-a204-d2b2f46d2e99	3043	9.869428	195	60.726	67.42999999999999	signal_positive	False	False	True	
+sample	8e05b0a2-9fae-4c0e-ad31-446cc4d038df	1149	11.561442	170	63.6475	67.083	signal_positive	True	True	True	NC_001416.1
+sample	a2f77736-1f65-4952-bedb-fffcba2af252	816	9.589053	141	64.90425	67.03450000000001	signal_positive	False	False	True	
+sample	53d2c577-268d-484d-8a71-e0c3e8e779a8	1931	9.998782	2	62.89075	67.45925	signal_positive	False	False	True	
+sample	77e0c411-3f59-445f-8b5f-8df914e25227	1085	11.305820	496	65.159	68.617	signal_positive	True	True	True	NC_001416.1
+sample	ff6ee80d-b901-4485-a593-005625ec834c	1770	9.263007	389	63.9925	67.69375	signal_positive	False	False	True	
+sample	05cb38ea-dd90-4164-9d15-45adbd1810b9	1118	9.729468	163	64.7805	67.85675	signal_positive	False	False	True	
+sample	88f248cc-948f-4edf-8467-029ad84ef2f8	1616	11.010170	128	63.85125	67.86925	signal_positive	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	ef34827c-3bee-4430-8400-3e3c73bd5911	2231	8.689504	117	62.35	68.712	signal_positive	False	False	True	
+sample	2e8e1cbd-5144-4f68-b883-d5beafc8c5db	904	10.594333	437	66.2915	68.9075	signal_positive	True	True	True	NC_001416.1
+sample	eb057e58-16bc-4d7d-9887-f995ecc76bf3	1545	11.400606	339	65.2145	69.673	signal_positive	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	64883bca-f616-4fca-9faf-794fc51e2be9	2339	10.744657	161	62.194	68.83225	signal_positive	True	False	True	
+sample	375a2d33-3726-49bf-8426-97c792c986d7	2740	8.729419	79	62.04225	68.8745	signal_positive	False	False	True	
+sample	0385d569-7fcd-4476-bdf4-ff6876236454	304	10.125387	141	69.472	70.62325	signal_positive	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	5b13f74b-6e89-4e91-8a01-60519355607b	3535	10.843898	498	60.778	69.7235	signal_positive	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	795575cf-4397-442b-9868-6aacaebaadd5	3393	8.323417	262	61.6335	70.6935	signal_positive	False	False	True	
+sample	9e7e287c-fb89-4320-993f-597b15d53d38	3704	10.929613	90	60.96225	71.06875	signal_positive	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	d8086a2a-4f54-46f8-963b-29e0f8443090	773	10.701979	484	69.848	71.9765	signal_positive	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	b9efbd1c-d434-4c9f-8fc6-99c3b6f17fb8	2472	11.384269	299	64.91275	71.976	signal_positive	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	a97a36c4-b741-479d-99dc-64de9f381b3c	1874	9.193281	432	68.12525	71.7735	signal_positive	False	False	True	
+sample	c83e2b33-e7d5-416c-930e-8a56188e40f4	4232	10.944448	274	61.858	72.41324999999999	signal_positive	True	True	True	NC_001416.1
+sample	bdcc76d3-d3e2-49f7-a381-7ffb22120dd6	2970	11.064083	118	60.7525	71.706	signal_positive	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	3af06c19-255d-48f0-89d5-3e5a0856142a	3376	11.348390	99	63.0145	72.56575	signal_positive	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	de15c4e7-7404-49dc-9d89-536d8fa336dd	3339	11.357900	68	64.62625	72.57124999999999	signal_positive	True	True	True	NC_001416.1
+sample	6d667c76-6d69-4854-9b34-ccca0a47587a	2694	10.653892	11	65.56025	72.353	signal_positive	False	False	True	
+sample	5bdbec50-4fcd-4291-b313-79d19cee5c86	1693	8.625044	489	69.492	73.23925	signal_negative	False	False	True	
+sample	a7cae9ad-319d-4ac8-9077-643e31d62cd9	4588	8.359543	465	61.77275	72.80275	signal_positive	False	False	True	
+sample	c3b8c97c-5906-4f4a-9460-d46f04000884	4052	11.823268	501	62.631	73.24025	signal_negative	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	75b36096-f73b-4f80-b79b-7471e6ba3648	4367	10.075788	458	62.82475	73.22925000000001	signal_negative	False	False	True	
+sample	53aa7870-757e-4f36-a67a-366cab2da56d	3139	10.261803	483	64.44775	73.241	signal_negative	True	True	True	NC_001416.1
+sample	eeb0fec6-123c-4178-978c-fc13527bf9c0	3540	9.964281	467	65.19025	73.2395	signal_negative	False	False	True	
+sample	190020f0-9bdb-4581-b34f-8510aedd8d9b	5224	8.759619	442	60.9435	73.24125000000001	signal_negative	False	False	True	
+sample	cfacda81-7d64-43a6-babe-6183262132f1	4123	8.927721	416	63.29425	73.24525	signal_negative	False	False	True	
+sample	894820c4-d3d5-4eee-87f5-f958f359c72f	2228	9.691057	389	67.75625	73.24249999999999	signal_negative	False	False	True	
+sample	9ff3759e-7b66-4fd2-9ee1-f37bb4fae016	3077	9.664282	310	65.14775	72.80025	signal_positive	False	False	True	
+sample	6e269389-80d9-449c-bd13-ea794dfa9c87	4679	10.042238	309	60.847	73.24125000000001	signal_negative	False	False	True	
+sample	499446f7-f02e-4614-a16f-6cc685ec96a5	1613	9.690361	297	68.19925	73.23	signal_negative	False	False	True	
+sample	0d3cc6dd-ff1b-4d0f-afe1-30e67ffee70e	1245	10.043226	363	69.99025	73.24125000000001	signal_negative	False	False	True	
+sample	6856bfc1-e9d5-4b72-9e2e-b5a9fd481bed	2107	10.874555	291	68.075	73.24175	signal_negative	True	True	True	NC_001416.1
+sample	53426a94-7e33-441c-b56f-4673199e0250	2579	10.437737	380	67.24175	73.24549999999999	signal_negative	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	b5cdc59c-6f32-4cd3-9413-7085d0e415d0	1565	11.004306	290	68.932	73.24525	signal_negative	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	24a1ef06-add7-4283-b953-c2e5dd12a290	1966	10.745709	260	68.204	73.24525	signal_negative	True	False	True	
+sample	d4a3a518-a24c-498d-a39d-a5c31167505d	5132	8.556040	338	60.8715	73.24425	signal_negative	False	False	True	
+sample	b9f23235-83a1-4afb-95e6-f6404040ef34	2999	10.319613	249	65.096	73.24275	signal_negative	False	False	True	
+sample	3a22dd32-ef6d-4e60-949e-eb0498dc7f31	549	9.795685	324	71.75975	73.24525	signal_negative	False	False	True	
+sample	fe54530d-e0a5-41be-9334-a7041138f383	3245	8.723716	184	65.279	73.24525	signal_negative	False	False	True	
+sample	bfb83470-1a64-4eba-bfb4-4e25883c1d25	1757	9.815818	192	68.47775	73.245	signal_negative	False	False	True	
+sample	2e7a08f1-6707-4cd9-828d-d2a0f6e50472	4677	10.070640	158	61.2155	73.24525	signal_negative	False	False	True	
+sample	31452f1d-f910-4cbc-a3ac-700556d93434	5029	11.431098	148	60.81475	73.24525	signal_negative	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	a41c7b78-63cd-4186-afb9-050e7a3f7900	2140	8.473785	139	67.991	73.24025	signal_negative	False	False	True	
+sample	99e3ff05-5fae-4b88-8fe6-f1048d0094b0	1214	9.802822	318	69.77	73.24549999999999	signal_negative	False	False	True	
+sample	4dd13827-e420-4746-b1b1-25e31b664c14	521	10.057461	141	71.6165	73.24225	signal_negative	False	False	True	
+sample	8f329168-6950-468e-9c23-f29c6d2fb513	1477	9.558624	98	69.39975	73.2405	signal_negative	False	False	True	
+sample	ce522850-d77a-4a17-aede-e6603a982f7e	1601	10.479966	181	69.041	73.24275	signal_negative	True	False	True	
+sample	ac10e440-4137-43a3-b627-c3edcea3646d	2753	8.346350	271	66.20325	73.2415	signal_negative	False	False	True	
+sample	b91f0e37-2d7e-4bf2-bd32-a1f0de0be0eb	1907	11.560986	82	68.349	73.245	signal_negative	True	False	True	
+sample	a01ef9d9-54bd-4b93-9c38-63cad76929ae	4486	10.981219	56	62.38375	73.245	signal_negative	True	True	True	NC_001416.1
+sample	da5248df-76a5-4750-9618-d983be8c1020	4211	10.653517	32	62.7475	73.245	signal_negative	False	False	True	
+sample	a9475d04-2dc0-46c3-abd0-b62e8ac5a592	2035	8.587535	112	67.06675	73.24525	signal_negative	False	False	True	
+sample	f6e59618-9bc3-4311-9a6d-90f83e3ef800	2980	9.967586	104	65.858	73.24525	signal_negative	False	False	True	
+sample	a747d10d-4b63-461e-8cc6-eefcbb4137d9	4957	10.689847	16	60.9215	73.239	signal_negative	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	1d943eb4-c331-457b-8c2e-662ec49261ac	4547	9.473715	123	61.09275	73.231	signal_negative	False	False	True	
+sample	0149b77b-6841-43d4-8692-776fe75dfefd	2937	9.931380	1	65.62675	73.25150000000001	signal_negative	False	False	True	
+sample	ab380b44-60dd-48d9-a4da-920452d9f739	1131	10.175488	2	70.336	73.24525	signal_negative	False	False	True	
+sample	23ce79b8-ee45-429a-827f-898c5cf16eb5	192	8.236650	336	80.60675	81.424	signal_positive	False	False	True	
+sample	91d7f0c8-5fab-4b25-84df-d445c01bdeaa	474	11.290615	22	80.05025	81.619	signal_positive	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	4b4e6735-ddf7-4f76-94d2-aad546aaa89f	463	8.374396	493	80.5265	82.14025	signal_positive	False	False	True	
+sample	ce6ae85b-86c9-4b66-8da8-fb1832bf6bcf	121	9.525098	397	82.48775	83.0815	signal_positive	False	False	True	
+sample	16626e01-ee2b-4189-9b2a-0a9d6e440380	1014	9.630808	388	81.0205	83.37625	signal_positive	False	False	True	
+sample	0b720016-3f01-443a-a442-f4f6e9450f4a	994	8.757201	328	80.803	83.564	signal_positive	False	False	True	
+sample	64e18e75-57f7-4139-a11a-91c781709b25	967	10.705971	240	80.19225	82.9045	signal_positive	False	False	True	
+sample	193471b4-1515-4251-9ccc-293c3fc0934b	623	9.182839	199	80.94625	82.82025	signal_positive	False	False	True	
+sample	99d1b7fc-d64f-44ba-b9be-8f49ccc9b485	1609	10.112079	344	80.33275	84.70675	signal_positive	False	False	True	
+sample	d342322e-b1db-4f24-b321-09117fe1ceea	332	11.844630	511	84.0235	85.185	signal_positive	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	6f0f0034-5d4d-4247-b04f-cedca2252d27	463	10.181053	339	84.24475	85.6015	signal_positive	True	True	True	NC_001416.1
+sample	ee7f1f13-78ec-43df-8e93-280b2ca579e4	216	10.234093	83	84.38825	85.342	signal_positive	False	False	True	
+sample	034626c4-a639-46d6-ac1c-1f425784bf28	1674	8.461758	77	80.93225	84.90875	signal_positive	False	False	True	
+sample	51b2b8a2-d40f-49c2-a824-cf13a8a1065e	995	8.741331	388	84.0015	86.65474999999999	signal_positive	False	False	True	
+sample	50f1ac87-1e70-449e-a4b8-88b5c51bfd4b	355	11.482636	260	85.473	86.73725	signal_positive	True	True	True	NC_001416.1
+sample	2ef63fa4-fee2-4e5b-a6de-71b5bc7491ed	667	10.577655	62	84.83625	86.63825000000001	signal_positive	False	False	True	
+sample	9e022cdb-86d2-40f7-9f48-ec5f1cb23cbc	2135	8.301428	30	81.109	86.38525	signal_positive	False	False	True	
+sample	720ad69c-162b-4940-9889-430e768d0b76	2905	10.873350	42	80.06275	87.42625	signal_positive	True	True	True	NC_001416.1
+sample	e11d407b-c708-435b-83e8-3c9031a28e83	1009	9.239068	349	84.26125	86.92675	signal_positive	False	False	True	
+sample	f280c65c-f979-405e-9f5f-bfad00d6d2f5	2319	11.515227	165	79.87325	88.42625	signal_positive	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	5864a575-321c-4c2f-b392-64b8f9d83f03	3070	9.792459	305	79.92225	88.738	signal_positive	False	False	True	
+sample	c6373a52-1326-4732-9997-edef3a46bd8d	3273	10.431184	502	80.34925	88.79299999999999	signal_positive	False	False	True	
+sample	d12280a7-40d7-4edb-989c-0ddcae1a4834	2058	8.999430	475	85.181	89.85175	signal_positive	False	False	True	
+sample	0f34f6cd-2edc-49fa-be6c-82282c12da3a	3728	10.519192	432	79.57175	89.27074999999999	signal_positive	False	False	True	
+sample	61142c54-a5b3-432d-8e6e-a7bfe2b22527	1934	10.200115	121	84.25725	89.4165	signal_positive	False	False	True	
+sample	d3e98e62-8740-43a7-907b-8dcf70ab703e	3234	11.504563	118	81.05375	89.74024999999999	signal_positive	True	True	True	NC_001416.1
+sample	a91e87ec-4a1c-4eb9-ac64-237a992a8ed8	1338	10.173146	200	86.678	90.33375	signal_positive	False	False	True	
+sample	f117d277-8da3-4e65-97a4-84d0603ec284	4135	8.534328	482	81.09475	91.69275	signal_positive	False	False	True	
+sample	fb31dd22-5020-4eb9-a69e-06b5a0ee5550	1759	10.526422	205	86.8355	91.157	signal_positive	True	True	True	NC_001416.1
+sample	dcd25e11-0675-4480-9af3-e8fabede4bdc	677	10.712170	154	89.35925	91.47925000000001	signal_positive	False	False	True	
+sample	669e6a68-4b77-45d5-9caa-e74d87751438	4413	11.886937	480	80.72725	92.06425	signal_negative	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	c5c72b09-96b1-400e-9da6-4d5eb64abe09	2399	8.874392	407	85.48175	92.05925	signal_negative	False	False	True	
+sample	868dfeb6-efc3-4a31-8ca0-a856637c86cb	4874	9.544352	411	80.6375	92.0615	signal_negative	False	False	True	
+sample	54f56ee5-d5d8-436a-8182-9e223f1efcd8	2955	8.616333	408	84.462	92.06425	signal_negative	False	False	True	
+sample	55780d8e-7027-4ea4-b839-7ecce28bcd5a	3660	9.616223	403	84.16275	92.06975	signal_negative	False	False	True	
+sample	6c262427-07f8-449c-a455-f51d3e754b35	459	10.574648	397	90.712	92.05975000000001	signal_negative	True	True	True	NC_001416.1
+sample	d7a7b460-74ef-41a3-91c0-5497d3abac93	2254	11.603624	396	86.04125	92.06425	signal_negative	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	9d562b21-e80d-4311-953b-4a8a60c7d59d	2886	11.877462	226	84.0345	92.06424999999999	signal_negative	True	False	True	
+sample	90a98448-c355-4722-bb40-36c7180c965e	2930	11.202625	395	84.4085	92.06150000000001	signal_negative	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	fbe1463a-5c3a-415e-a31e-8f3fcad6df94	3232	10.234601	199	82.8265	92.06	signal_negative	False	False	True	
+sample	4f3af187-58a2-4642-9b0c-38d036e40d91	4297	12.003316	421	79.5625	92.05975	signal_negative	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	50257bbc-726b-4d68-9537-794c9185eafa	426	8.771928	305	90.52225	92.06125	signal_negative	False	False	True	
+sample	084ace5a-0d26-4c89-958e-93ef8d037ee1	1738	11.257342	424	87.57325	92.06400000000001	signal_negative	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	43dd06ec-0670-4987-b4ac-bf786aa45a0b	313	9.343606	200	90.94725	92.0645	signal_negative	False	False	True	
+sample	ea1b22c2-aa40-4c5d-a412-823970532500	1774	11.971683	303	86.987	92.06049999999999	signal_negative	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	8122b31a-9c7d-4bab-97b7-48a4903e90e3	1541	9.447436	166	88.61825	92.06425	signal_negative	False	False	True	
+sample	dd138a5d-5d36-4c92-86fb-35095acc348a	3269	11.372141	370	83.0235	91.93225	signal_positive	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	cde8b590-1161-465b-a67a-1f5644c33491	3573	9.013232	358	83.406	92.06425	signal_negative	False	False	True	
+sample	28231f83-b8e4-4788-9d67-73b2ab2c948d	1933	9.641212	307	81.62625	92.0615	signal_negative	False	False	True	
+sample	114f4821-e358-4159-a81a-0dc2d5afa26b	4164	10.237869	357	82.22125	92.06125	signal_negative	False	False	True	
+sample	646b859f-881d-4832-9b9e-92df73b92c60	4099	9.795692	296	80.647	92.06425	signal_negative	False	False	True	
+sample	280ee4e9-3770-4ecb-a16a-8f46648ad7dc	1167	11.109622	340	88.825	92.06400000000001	signal_negative	True	True	True	NC_001416.1
+sample	0ab93add-43b8-4158-93a0-bfaa2cddef6c	1155	11.010754	339	88.378	92.05925	signal_negative	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	d731a1a2-e3af-425a-9bbb-33cd74059e97	4317	11.081955	72	81.537	92.06425	signal_negative	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	9f5d22be-9422-442f-8f1b-898e34e84c16	2256	9.446079	247	85.679	92.0615	signal_negative	False	False	True	
+sample	1f9a118b-c9b0-493d-ad0b-7e3da5a914a2	4666	10.559114	333	79.94725	92.05975	signal_negative	True	True	True	NC_001416.1
+sample	44b63c54-8a74-4ad0-b701-33f91e902fa6	1300	10.630284	330	89.08325	91.97375000000001	signal_positive	False	False	True	
+sample	36c31798-01b2-42f4-8a9e-e4dddbbbaaca	3190	10.300600	328	83.95425	92.06425	signal_negative	False	False	True	
+sample	e45ee435-9384-44e0-a804-b002e43800b5	3534	11.864656	222	83.117	92.06425	signal_negative	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	6a8d355e-3147-432f-94fe-ba4ad7617d01	4125	8.416098	23	81.925	92.06075	signal_negative	False	False	True	
+sample	3842c57f-230f-4e38-9867-68e05ae23800	3419	10.692548	12	82.218	92.06450000000001	signal_negative	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	549397cb-6cf2-42bd-9c3f-4aaf6f512052	4152	10.376463	300	81.69125	92.06425	signal_negative	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	146f70ca-f38f-4c75-bb8e-632954fffa0e	1305	12.395546	122	88.22875	92.06425	signal_negative	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	df6b1ee8-7a7e-4c91-9389-fe268ded2cfb	4323	9.013422	11	80.428	92.06049999999999	signal_negative	False	False	True	
+sample	96ec292c-2c96-495f-9f3f-e69df50f7944	1494	11.483583	244	88.0435	92.06424999999999	signal_negative	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	c16d0ac1-b9e0-4a0b-aab6-6f7549d71037	4549	10.625147	237	79.75325	92.06099999999999	signal_negative	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	cfb1b958-f6ac-43da-b5e5-62e01b75970e	1720	8.647711	211	87.65375	92.045	signal_negative	False	False	True	
+sample	99f6cf36-a97c-4b33-9b02-841e90d70bfe	2754	8.642086	206	85.90675	92.06425	signal_negative	False	False	True	
+sample	a7fd550c-865d-465d-86f6-188c39bb3758	224	10.479729	205	91.219	92.05975	signal_negative	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	a6787bac-baa7-4860-b75f-745f36d465b4	3374	10.512989	84	82.691	92.06400000000001	signal_negative	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	33823ea8-bf78-46e6-87c0-224f6531cf8c	2992	10.867833	204	83.95275	92.064	signal_negative	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	759bc3c7-8846-4a2c-bc42-dbb130ec98a6	4500	11.492985	198	79.67225	92.06425	signal_negative	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	b2e42bb2-8581-470d-8695-71c4dd2bf6bf	375	11.657237	66	90.92325	92.0645	signal_negative	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	a873eb22-4721-438a-9f8b-e24e41d7d91e	3529	10.113238	188	83.0375	92.06424999999999	signal_negative	False	False	True	
+sample	c1130c41-3fc1-4112-b969-67139c90e6d7	2015	10.136355	29	86.8955	92.05825	signal_negative	True	True	True	NC_001416.1
+sample	ea9b88d5-0461-4fbd-823d-e91ce6669a88	2555	11.451151	135	83.6915	92.06	signal_negative	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	6c094222-f0aa-4f2f-ae42-c6cf0f4b1053	3601	9.238220	489	83.2525	93.085	signal_negative	False	False	True	
+sample	cfbf12b8-9973-4abf-bfb9-c4a4eb5a775f	5122	8.611463	4	80.57875	92.0645	signal_negative	False	False	True	
+sample	dd572744-fc35-4748-a13f-5f297873df9f	4470	9.537408	143	81.2645	93.085	signal_negative	False	False	True	
+sample	9fc7c206-f484-4204-8f3d-f550482736a8	123	9.335063	171	98.62525	99.21275	signal_positive	False	False	True	
+sample	936f4bab-1bac-4264-94d9-55e7cf8a211f	94	9.369332	107	99.2845	99.884	signal_positive	False	False	True	
+sample	58d47eaf-e5ba-456e-b624-288d656ea47c	368	11.557646	305	98.97975	100.1655	signal_positive	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	27f80e61-47fe-4502-a1e9-2b19dec10256	857	9.579013	176	98.50575	100.89450000000001	signal_positive	False	False	True	
+sample	c7e4b1c8-4919-43ab-9efb-f6ce29f456ca	329	9.665642	87	98.96925	100.17375	signal_positive	True	True	True	NC_001416.1
+sample	40f80f91-923a-49c7-9ad0-70a96ae0396a	386	11.145476	373	99.71725	101.26150000000001	signal_positive	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	205fe3fa-15c4-459c-abb9-0d9920d0acc5	976	9.948368	165	98.4945	101.04125	signal_positive	False	False	True	
+sample	eb90dfcc-6245-4cf0-8f9e-7869fcc8a805	886	8.926369	24	98.83875	101.09025	signal_positive	False	False	True	
+sample	b2aa408c-89f6-4b9c-a16e-66c95c2f766b	311	10.147633	12	100.03175	101.20075	signal_positive	False	False	True	
+sample	e340541c-e495-4329-a985-ede6af736c50	527	10.675694	223	99.8895	101.50675	signal_positive	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	4782e5d1-6a52-431e-9340-ff19ce2682f0	452	10.096314	448	100.37925	102.1035	signal_positive	False	False	True	
+sample	3181e9c1-760a-4850-98e3-cca40957daf6	461	10.492637	141	100.787	102.361	signal_positive	False	False	True	
+sample	32b1cf3a-3caa-42d8-aabc-2806be5d5dad	568	9.393655	20	100.52225	102.06575	signal_positive	False	False	True	
+sample	f485b3dd-f111-4317-9fd4-9b9f61ea9652	1865	8.622384	376	98.90575	103.91825	signal_positive	False	False	True	
+sample	ca8e796d-0977-43e1-b684-6584ad6b064b	1530	10.996843	272	99.18125	103.39225	signal_positive	True	True	True	NC_001416.1
+sample	4e294a59-9569-4624-b7a6-5e438ed43977	1227	10.963852	492	101.0925	104.65350000000001	signal_positive	False	False	True	
+sample	a9e766f1-2660-451c-aff0-2d2cda65f474	1428	9.018190	297	100.4215	104.2515	signal_positive	False	False	True	
+sample	094480dc-5e29-4ee4-b421-fcf9667970f4	1706	11.432241	163	100.77	105.95774999999999	signal_positive	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	64d755d2-30f7-4b6c-972f-e48798e4c978	1435	12.210810	474	101.10275	105.181	signal_positive	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	668dcd15-64f8-4507-9e55-0c9b99630d25	2028	10.915475	116	100.37125	105.60675	signal_positive	True	True	True	NC_001416.1
+sample	037a7b12-7573-4872-9d0d-2f645c97fd0b	382	10.181217	58	104.32375	105.68625	signal_positive	False	False	True	
+sample	c51a6458-94d5-4113-b525-fc7aab0eab37	774	11.171712	369	104.781	106.99375	signal_positive	True	True	True	NC_001416.1
+sample	31940b22-6a8b-42fc-8c66-77c78ed040ef	3100	9.647473	437	98.76475	106.56475	signal_positive	False	False	True	
+sample	89142ff4-9440-4821-b8c9-afaafe8cd031	3305	10.071879	306	99.216	106.984	signal_positive	False	False	True	
+sample	96d5439c-f96e-4386-a14b-971365bc17a0	905	10.236582	467	104.877	107.24324999999999	signal_positive	False	False	True	
+sample	9eb12850-d4f9-4413-a510-25c0c4462824	1976	10.495740	394	102.24975	107.55675000000001	signal_positive	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	1726e2b9-ecdd-47bd-a581-df0e2e362577	2077	9.680593	79	102.63375	107.7595	signal_positive	False	False	True	
+sample	386c70a9-6234-44c7-bb82-325fdc457ca6	4138	10.317080	276	98.54075	109.02475	signal_positive	False	False	True	
+sample	71325f1b-9934-4dfa-a27f-8bf1c124df71	1915	9.614375	371	105.42125	110.09275	signal_positive	False	False	True	
+sample	9b3275c7-82ed-4ef9-a80c-9f6cd07d01c0	461	10.610520	358	107.77475	109.26125	signal_positive	False	False	True	
+sample	a2c7af01-ddbd-4fa7-8f03-fb9f58196fcc	125	8.294510	511	110.21375	110.89575	signal_negative	False	False	True	
+sample	ffc20186-caad-4a81-9801-1c3edd302dd4	558	11.032208	504	109.04325	110.8995	signal_negative	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	199074e3-c479-4cb5-9dee-9faf0e7c0052	2514	11.299668	487	104.06375	110.895	signal_negative	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	f2bc4597-7e3b-48a2-816a-2052aacc0e56	3185	8.137592	484	103.59975	110.8995	signal_negative	False	False	True	
+sample	d8fb825b-e40a-4ff5-878d-db4bf958fcf7	2613	9.131630	475	103.93575	110.889	signal_negative	False	False	True	
+sample	00ccde3f-1863-4393-ad4a-ffe9f720e405	3847	9.682099	456	101.514	110.89949999999999	signal_negative	False	False	True	
+sample	42ab0816-0173-4dd0-9119-4c0ea05168e1	1961	11.255946	455	105.62575	110.89274999999999	signal_positive	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	a709f24d-cab6-4b1a-a7da-b384778f076d	4394	11.212646	370	99.37225	110.89949999999999	signal_negative	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	81b24d3e-adc0-496e-b001-dcb9209928bf	1122	11.295216	369	107.50075	110.89399999999999	signal_negative	True	False	True	
+sample	5c5c0d6e-510e-4848-9450-908a2ad0838a	1077	11.671939	423	107.851	110.8935	signal_negative	True	True	True	NC_001416.1
+sample	cab54485-9ebe-4a46-b73f-5619a50a95fc	3997	10.937341	366	100.896	110.6025	signal_positive	True	True	True	NC_001416.1
+sample	5c587c9a-2091-48c0-b736-84c2c8fa7465	2120	8.698772	390	105.58375	110.89949999999999	signal_negative	False	False	True	
+sample	9857c4eb-c769-4971-9cfc-c304dd486604	3858	11.249038	413	101.0865	110.905	signal_negative	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	1ca488e9-ca35-4eaf-8771-24f6b9b71c4d	1400	9.565396	306	107.24075	110.8995	signal_negative	False	False	True	
+sample	73cc87be-fd9d-4f26-8cdc-dd5ac1e4bd63	2323	9.616384	302	105.57375	110.8995	signal_negative	False	False	True	
+sample	c79a8e21-7bd7-40f6-bd3c-4d3d2fb92db5	4958	9.970256	414	98.386	110.89949999999999	signal_negative	False	False	True	
+sample	39f39e1c-8d7d-4394-94ad-be8b189475ae	3244	11.727225	311	98.5445	110.89975	signal_negative	True	True	True	NC_001416.1
+sample	31426f4c-c1d9-4d33-858e-a20a84fb80c3	505	11.282320	309	109.15875	110.88974999999999	signal_negative	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	e58d8cd6-6796-4b0d-a02b-ba1650214374	2945	10.362614	264	98.4605	110.89949999999999	signal_negative	True	True	True	NC_001416.1
+sample	4b22aedd-4d1c-444e-b5c7-23c878ec9917	2187	10.368477	280	104.6325	110.89949999999999	signal_negative	False	False	True	
+sample	e7e86415-04a8-4658-970b-bfcd5588858d	2711	11.853318	199	103.851	110.8965	signal_negative	True	True	True	NC_001416.1
+sample	ec4d891e-9c16-41f5-b5f1-4decccfaa1fd	430	8.275674	349	109.4725	110.8945	signal_negative	False	False	True	
+sample	b2c64d23-40d0-4dab-8439-6b9173c3a3d6	2550	10.683304	197	104.1525	110.8985	signal_negative	False	False	True	
+sample	177d6c79-456b-4c15-866f-a38e93b64c23	1032	9.837281	186	108.19075	110.89949999999999	signal_negative	False	False	True	
+sample	5e2fbde8-60db-4f4d-930f-d6706ebc82d8	4150	11.816651	172	99.79925	110.8995	signal_negative	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	bafd839b-efc5-4667-ac4c-6cc584f67d39	3343	10.206471	144	102.09275	110.89949999999999	signal_negative	False	False	True	
+sample	914367bf-8a01-488e-ba05-8a6d9bdd00b8	3017	10.260332	208	102.94825	110.8995	signal_negative	False	False	True	
+sample	2923c80d-a4db-4d29-a6dc-bcef56b5af48	4218	11.519878	205	101.30525	110.895	signal_negative	True	True	True	NC_001416.1
+sample	631dd7a6-6cf0-440e-af20-648a85152531	4038	11.488334	284	100.9005	110.89925	signal_negative	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	12c9d70a-573c-47b1-aa30-7288f0a85fe7	2665	10.635873	272	103.5575	110.8995	signal_negative	False	False	True	
+sample	7303d80f-9de3-4242-8814-132629173f28	3505	10.138563	180	100.501	110.8995	signal_negative	False	False	True	
+sample	f5aa7a18-b173-4c03-b575-17db2e7e9726	837	9.868406	116	108.96425	110.8995	signal_negative	False	False	True	
+sample	ac9c142a-fe30-435a-a081-bd080585ea3c	1414	8.418014	163	107.0545	110.89625000000001	signal_negative	False	False	True	
+sample	2d850395-eee7-4b94-bf2c-2298a0ae1e9e	3189	10.718914	133	103.1195	110.8925	signal_negative	True	True	True	NC_001416.1
+sample	5b1c1132-dd61-4a30-bed9-fb13f7f216d0	1899	9.598437	102	103.98475	110.8995	signal_negative	False	False	True	
+sample	f7e3e31e-7d77-4898-ac3b-ffb21c37ced6	5673	10.076907	244	98.4695	110.89949999999999	signal_negative	False	False	True	
+sample	d43c3c00-4d0d-4108-b23b-57543c885b67	3895	10.578228	239	101.243	110.90424999999999	signal_negative	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	5149c565-feee-4ec3-937b-b5a88bdee134	4838	9.882959	224	98.639	110.89949999999999	signal_negative	False	False	True	
+sample	832d1cbd-432b-4a14-b348-be9fce50eed2	4555	10.043121	48	99.42025	110.3785	signal_positive	False	False	True	
+sample	900c2a5a-e79b-4ebe-b051-57041b7fd6c0	4772	9.394915	18	99.6545	110.89925	signal_negative	False	False	True	
+sample	60a2610e-037b-43c6-a569-39bf717dd76a	3294	10.111854	87	101.6895	110.895	signal_negative	False	False	True	
+sample	6a6d4704-cc1d-44fc-a78d-6c9e28a9c45d	2839	10.959998	36	103.549	110.8995	signal_negative	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	2b7f2c3f-10d3-4c4c-9801-236a556b4473	4661	9.649912	29	99.9255	110.89574999999999	signal_negative	False	False	True	
+sample	fe098cf3-0391-4c9c-8439-fc9d8df95961	162	10.979788	95	129.7075	131.06025	signal_negative	False	False	True	
+sample	a3e9fd6c-a3ca-4d15-a854-b922311a6c3d	557	11.149076	475	129.81825	131.48725000000002	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	07625005-c032-411e-8a5a-3d5378d10515	562	9.541126	507	130.024	131.64925	signal_negative	False	False	True	
+sample	9b746605-f4e9-4d07-9d7d-8a7e9cd40f23	322	10.341513	458	130.41575	131.83525	data_service_unblock_mux_change	False	False	True	
+sample	4fa05682-fe85-4a48-91eb-4e69bb4e1c6b	455	9.451058	397	129.929	131.48275	signal_negative	False	False	True	
+sample	02e58592-ed03-4f7a-8548-2c02b5fc2f7e	197	9.485335	391	131.18275	131.83075	signal_positive	False	False	True	
+sample	c8fa7022-687b-47ff-ae77-ccd2edb34085	378	11.564609	374	129.93175	131.48725	data_service_unblock_mux_change	True	False	True	
+sample	22549535-74b8-41d5-90dd-a2491a93bafe	357	8.489706	212	129.8275	131.2585	signal_negative	False	False	True	
+sample	6b01ce49-3e14-4431-98da-bf9dc6075d39	408	9.434205	205	130.829	132.10925	signal_positive	False	False	True	
+sample	fc5af643-db17-4a53-8e30-319cb9117545	142	8.969554	203	131.2635	132.06799999999998	signal_positive	False	False	True	
+sample	54fd3f0f-ef59-4c2c-bab5-4c918f94ecac	305	10.640713	75	130.33025	131.6565	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	1a2a6284-92a1-4567-8529-6fea380fdb91	518	9.230398	28	130.713	132.15324999999999	data_service_unblock_mux_change	False	False	True	
+sample	1da7295a-94c0-4ad3-bc0b-a844db68ee96	476	10.480739	16	130.1995	131.65	signal_negative	False	False	True	
+sample	22b1017e-32f4-4588-99a6-7e339d38e024	492	10.281129	60	129.94225	131.4795	signal_negative	False	False	True	
+sample	e44a55ef-760e-4cc6-a618-d4d2dce1db1a	546	10.710385	467	131.427	132.9625	data_service_unblock_mux_change	False	False	True	
+sample	0882c752-0073-43ad-ad15-b3d4b71abaa9	139	9.517253	505	132.151	132.833	unblock_mux_change	False	False	True	
+sample	ee998a69-1804-4b15-bfa4-7a7076a539f1	437	9.375184	429	130.88575	132.333	signal_negative	False	False	True	
+sample	9abbf0a9-4d28-4cd9-999d-bf3a9e7c7900	664	8.594794	392	131.589	133.218	signal_negative	False	False	True	
+sample	23abcbaa-ef92-47cc-bdf1-1862623525be	437	10.172490	317	131.579	132.95575	signal_negative	False	False	True	
+sample	4696ad9f-b37d-4d78-ba3d-c45ea9b39417	165	9.300673	393	131.6905	132.33124999999998	signal_positive	False	False	True	
+sample	36de15ea-1c1a-4286-98b8-5a811cf2395c	511	10.219154	242	131.628	133.21599999999998	signal_negative	False	False	True	
+sample	a47c0e4f-0e72-41f7-8a18-519da761fe4c	352	9.346234	234	130.97625	132.32874999999999	signal_negative	False	False	True	
+sample	b2f0de3e-8a61-4802-b2bf-f58441c06f71	804	8.373479	306	130.9255	133.22425	signal_positive	False	False	True	
+sample	c000ab10-118d-49ff-b6b3-46b0f5319da3	557	11.840219	146	131.653	133.21824999999998	signal_negative	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	d346d72f-37e9-4c9e-83a2-d61e4836087d	78	8.753218	136	132.0505	132.7835	signal_positive	False	False	True	
+sample	f32d5590-aabb-4bba-9e88-465a765683b5	380	8.241967	117	131.852	133.20025	signal_positive	False	False	True	
+sample	c75b3aff-94f9-48b8-8232-fc172b850b57	440	10.153031	115	131.24675	132.753	signal_negative	True	False	True	
+sample	60a32be2-3d00-4f2c-adaf-e0df7dd1c08b	485	10.581109	67	131.0555	132.50074999999998	data_service_unblock_mux_change	False	False	True	
+sample	b4e8e180-70b9-4b6e-8a68-eb86e4eb868b	248	8.587624	55	131.42025	132.32975000000002	signal_positive	False	False	True	
+sample	a0730021-ec26-43c3-bca0-b55b1bd6ba63	543	10.658504	29	131.63575	133.2235	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	c6e566da-058f-4184-a5d2-ce4f5f1c7833	589	10.028155	474	132.06675	133.61675000000002	signal_negative	False	False	True	
+sample	951510e8-6c62-4bb0-b49d-cafa4c307d0b	332	12.439429	382	131.975	133.46275	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	5a0fc152-1f87-4b06-8ba1-105323046dd2	529	9.209276	414	131.97625	133.46275	data_service_unblock_mux_change	False	False	True	
+sample	dcf7b0c8-e5a0-421c-8116-361f7dc0a485	1076	10.449697	220	130.675	133.613	signal_positive	False	False	True	
+sample	72a40c2e-0175-4a93-a12e-07d1567c4fe6	386	10.242467	233	131.95275	133.46275	data_service_unblock_mux_change	False	False	True	
+sample	6ad3122e-7699-4302-9fc6-4a48ccfb6288	412	9.952559	205	132.9455	134.25825	signal_positive	False	False	True	
+sample	a44033a0-3854-4765-b510-f4431fa0058e	672	10.891797	507	132.17475	134.58225	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	af90d1d9-2d0d-46d1-baf1-ed235faae0a6	310	9.617813	467	133.721	134.85125	signal_positive	False	False	True	
+sample	4ba56004-64b6-44f0-8aa3-e9fdc1c12294	540	10.123085	461	132.67875	134.27100000000002	data_service_unblock_mux_change	False	False	True	
+sample	0cf1a52b-d786-40a0-84b9-f3f4c2837ece	504	10.664943	456	132.74125	134.45525	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	f29f7784-a658-46a0-a560-45e192e40c54	533	10.949377	451	132.86725	134.45525	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	ef355689-0d53-47b4-a873-ed9d3df28a72	392	10.336560	376	133.7595	135.17925	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	554ecb83-11a0-4abc-9462-f293fa509295	476	8.947227	342	132.70725	134.26375	signal_negative	False	False	True	
+sample	89bd694c-bb6b-41f3-9925-9ea32e0c58cc	526	9.299459	429	132.80275	134.393	signal_positive	False	False	True	
+sample	ce22bfe9-7ad4-4c43-b8c1-e75b6a010c65	718	10.923826	301	132.8235	134.90975	signal_positive	True	True	True	NC_001416.1
+sample	308f7d8b-d4f8-42c0-a746-e915b2645127	631	8.028960	135	133.62175	135.17925	data_service_unblock_mux_change	False	False	True	
+sample	1e06d682-4b62-4f13-a706-b133fd803fc5	369	11.403247	118	133.45875	134.7535	signal_negative	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	07d5be1a-15d5-4f8a-9a27-69739d3415b2	507	10.516912	240	132.7135	134.27100000000002	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	08c804fb-4df6-4c34-931b-1e277659ee12	423	9.920118	186	133.6405	135.17925	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	cf0b315c-9ec5-42c8-b043-05a8a6c91d61	281	11.412130	30	133.203	134.5735	signal_negative	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	094fe8a8-966f-4307-8fac-c47bc8872389	398	10.157194	213	133.31625	134.7595	data_service_unblock_mux_change	False	False	True	
+sample	e4a60bb4-b0dd-452c-965b-b5d1f56ee1b4	475	11.584923	496	134.70325	136.28475	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	c14de1d3-a12d-48c0-be5c-c42423ec610c	493	10.951860	430	134.54075	136.123	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	05e1a7c0-1042-48b1-8634-92eed2352e2e	178	8.376144	345	135.222	135.97975	unblock_mux_change	False	False	True	
+sample	f573f07e-6f29-448a-b547-b48ecdb8aacf	573	8.758990	303	133.955	135.44375000000002	data_service_unblock_mux_change	False	False	True	
+sample	a872285f-3e06-4f82-b135-b01aa2c007ac	495	8.532390	249	133.879	135.44375	data_service_unblock_mux_change	False	False	True	
+sample	6baf64e7-60e8-45f0-aa12-7a1cc9a46eba	112	9.987436	20	134.4845	135.377	signal_positive	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	cdc2f863-27de-4738-bef8-c379213f3bdf	1100	9.683173	174	132.65675	135.70999999999998	signal_positive	False	False	True	
+sample	1614ac39-8d89-4cdd-a816-d9630407bebe	355	9.402240	37	134.25825	135.546	data_service_unblock_mux_change	False	False	True	
+sample	c5d6c845-24a9-4fd5-b689-48c7da6935a6	445	10.079997	307	134.044	135.44375000000002	data_service_unblock_mux_change	False	False	True	
+sample	f9d9ae1d-61ca-4025-8267-0d841f894136	656	9.706485	212	133.9955	135.94174999999998	signal_positive	False	False	True	
+sample	810ec325-ae3e-4778-9634-171dc01dfadb	441	8.455378	207	134.051	135.44375	data_service_unblock_mux_change	False	False	True	
+sample	9843a870-f941-4b61-b37f-e2e073c9fe14	544	10.479877	115	133.96075	135.427	signal_negative	False	False	True	
+sample	cfcaf15a-da8a-4418-bbf5-29d68833dc91	558	10.592989	179	134.05875	135.546	data_service_unblock_mux_change	False	False	True	
+sample	e4d7d6df-ac2d-4caa-a524-420abca7e259	447	10.633341	447	135.145	136.55700000000002	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	22fb9d0a-e90d-461d-8e5d-5fcddad855d0	383	10.022785	435	135.8965	137.1085	signal_positive	False	False	True	
+sample	bdd6e7ae-1762-4cd7-8429-f097553b9393	124	8.242250	312	135.85275	136.40625	signal_negative	False	False	True	
+sample	64fe7422-744a-41d7-988b-a79073639435	654	8.025867	304	134.397	136.47324999999998	signal_positive	False	False	True	
+sample	ef8dfa3a-4121-45a8-9068-856f58fe713d	418	9.505112	107	135.15175	136.553	signal_negative	False	False	True	
+sample	7ec6f6d7-0c3b-4d9f-b754-c0063ea67222	371	9.978488	250	135.0585	136.43550000000002	data_service_unblock_mux_change	False	False	True	
+sample	570b8d14-e213-4172-aee9-890c549386aa	352	9.517406	43	135.6455	136.937	data_service_unblock_mux_change	False	False	True	
+sample	e4d7581c-e8e6-4384-a1a4-33180c44c0fc	2115	9.761630	139	132.14725	137.13875000000002	signal_positive	False	False	True	
+sample	a3cebc8d-df38-4311-9758-5d39210d721f	365	10.065239	415	136.89	138.03975	signal_positive	False	False	True	
+sample	d98d5077-f6d4-474f-b76e-54278348966e	473	8.213644	89	136.511	138.01575	data_service_unblock_mux_change	False	False	True	
+sample	bf7f5d7d-706c-401e-a306-58aed6cd85cd	381	11.768694	398	136.15275	137.474	signal_positive	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	5b0240df-ead4-4ca6-b384-a0ccbd497f3e	277	8.267544	13	136.57775	137.40275	signal_positive	False	False	True	
+sample	f7b0d81e-39a9-44e3-af75-19eeadab89b0	420	11.177796	315	136.2295	137.661	signal_negative	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	ae153b67-2940-4814-8878-0a3cc8e4f48a	496	10.086323	150	136.54525	138.01575	data_service_unblock_mux_change	False	False	True	
+sample	f4cd4011-5cea-4a12-b352-78c4d30cc94d	349	9.747948	309	136.50725	137.81825	data_service_unblock_mux_change	False	False	True	
+sample	2dcd0fea-6689-4cb0-b1b0-1096d63a3fcf	417	10.206967	308	136.49075	137.81824999999998	data_service_unblock_mux_change	False	False	True	
+sample	84c17971-d3d8-49de-b506-46ee96b52f49	459	10.244563	239	136.25225	137.665	data_service_unblock_mux_change	False	False	True	
+sample	9a0d0706-3ab3-4e7b-be35-5e529f1458fb	385	8.743851	291	136.3035	137.66500000000002	data_service_unblock_mux_change	False	False	True	
+sample	8f103ad1-e3f4-4c1f-94f4-f71f2c7960fc	2293	10.242579	168	131.7515	138.114	signal_positive	False	False	True	
+sample	e43b16e6-06f4-41b0-b3eb-4208ca7dc32b	423	10.790238	328	135.787	137.35875000000001	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	df870913-8a75-4066-bcef-1db2d39c76c4	458	9.394919	181	136.59	138.01575	data_service_unblock_mux_change	False	False	True	
+sample	5443da43-f932-4591-98f5-9024d83e929f	348	11.595532	157	136.41475	137.81825	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	7e29fb76-efee-41bc-87fc-037f25b46f05	451	9.666839	141	136.3945	137.65925	signal_negative	False	False	True	
+sample	130fce49-636b-464c-b772-8b954aa1ffdd	399	10.824643	106	136.51525	137.81825	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	2c865691-a680-431e-ab8c-f334d44de0ca	462	9.638737	72	136.52225	138.01575000000003	data_service_unblock_mux_change	False	False	True	
+sample	1f4c68d1-27af-4a7f-b53c-b3a882f9d8d0	419	11.403521	67	136.173	137.50475	signal_negative	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	150e482b-7786-47c5-a741-f2707683351d	491	9.017691	200	136.41625	137.813	signal_negative	False	False	True	
+sample	88e6a612-463c-4091-ae7e-dd4139a40c67	422	11.458830	62	136.3685	137.65175000000002	signal_negative	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	681d1912-9234-4608-b283-04c3d21d885b	472	9.126962	464	137.66225	139.2715	signal_negative	False	False	True	
+sample	5ad21297-733a-4282-9427-860654db8a11	425	9.456381	463	137.23225	138.59625	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	44835c25-7622-45b6-ad2b-e27ab71494ef	754	8.735123	432	137.5875	139.27025	signal_negative	False	False	True	
+sample	3febb192-93ba-4d1f-9d4a-f067aca150e4	449	11.529020	374	137.1015	138.59625	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	eb3fb6ab-84f4-4962-b2f2-c24fb9c6d4ee	444	9.925154	345	137.597	138.98725000000002	signal_positive	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	77d0195f-b9c1-4be0-8554-2e4b57cb82f4	427	10.902364	297	137.0875	138.59625	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	46a526e3-c8e7-4004-96ed-74d54e0ef471	460	10.422497	291	137.7945	139.268	signal_negative	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	f3af81e4-a53e-471b-bc11-2d182dcbf742	3794	9.882875	272	129.704	139.01225	signal_positive	False	False	True	
+sample	30ebaa72-d5fc-47a0-8e6b-32dccb28e3ce	422	9.971351	119	137.326	138.86675	signal_negative	False	False	True	
+sample	1c395703-179e-44db-b860-9295384f39dc	397	10.602231	115	137.55075	139.0385	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	c349e991-82b8-48de-a770-f8584ec2d2da	474	11.694085	232	137.079	138.5915	signal_negative	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	1b030e22-42ea-4029-8441-d12ba93a6902	3673	8.416324	42	130.21675	139.27499999999998	signal_positive	False	False	True	
+sample	9460dd0b-bdfc-4b2a-a187-cf05e0cd5fb1	436	10.434950	95	137.526	139.0385	data_service_unblock_mux_change	True	False	True	
+sample	74c59f3e-509b-4d86-8853-f3fee514ce58	1398	10.055094	57	134.831	138.96824999999998	signal_positive	False	False	True	
+sample	55e05787-cab0-4c9d-925c-c5936a68d693	441	10.683356	506	137.919	139.4965	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	bfabcf02-3370-48ab-9db7-033e44d88bdc	507	11.012906	372	137.86325	139.4965	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	bdeec609-eb0f-4c16-a437-64e694b296a3	570	9.669949	371	138.42025	139.95025	data_service_unblock_mux_change	False	False	True	
+sample	a789c6a2-1824-4085-a938-6c36f9dbcd91	446	9.501433	350	138.17725	139.57524999999998	signal_negative	False	False	True	
+sample	f2a584bd-0ad3-454e-83ec-21148a35c6e7	917	12.470978	277	137.22375	140.03125	signal_positive	True	True	True	NC_001416.1
+sample	933d1615-3736-47bd-816e-c4d271e16556	568	8.079946	276	137.97	139.4965	data_service_unblock_mux_change	False	False	True	
+sample	525271b4-d518-4644-9106-6cb4106cf219	354	11.616060	262	138.249	139.58275	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	fabd802e-dddb-43b9-900a-e99addacf4c7	473	11.186511	202	138.552	139.95024999999998	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	0a09b03a-1156-49a1-b717-a4af140d16e3	330	8.056730	249	138.3005	139.58275	data_service_unblock_mux_change	False	False	True	
+sample	47fdc3f0-805d-4408-a665-1b7e2119d1d1	382	10.890059	101	138.24	139.58275	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	5010c71f-1332-4c0f-b178-b91a08f4ccd5	2859	10.671554	259	133.2375	139.948	signal_positive	False	False	True	
+sample	87bb8570-aa60-42a4-8feb-536ebd758f9d	3378	9.799603	162	130.5885	139.63625000000002	signal_positive	False	False	True	
+sample	a99e57bb-86a1-47e6-ad9b-6e532d6942d9	462	10.306287	139	138.2735	139.58275	data_service_unblock_mux_change	False	False	True	
+sample	e97088c9-c8b6-4b68-904f-7a1ea6884aa6	503	8.501313	55	138.633	139.95025	data_service_unblock_mux_change	False	False	True	
+sample	5600d1de-64bb-4b13-8e92-eba638d8283e	2171	9.193049	163	134.7285	140.28875	signal_positive	False	False	True	
+sample	80ce1d1f-c263-4dd9-96fb-03c61f7c21ce	99	9.192080	507	140.425	141.06050000000002	signal_negative	False	False	True	
+sample	7028406c-833e-44b3-b3c2-dca69afdd3d6	417	11.431193	479	139.282	140.877	signal_negative	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	b3ba2dce-cc12-4ffb-acbc-c906101ecf78	557	9.164933	434	139.077	140.88375	data_service_unblock_mux_change	False	False	True	
+sample	16d41977-e97a-46b2-872e-018b76ddaee4	539	10.321542	399	138.7585	140.35	signal_negative	False	False	True	
+sample	c9161c9a-b656-42a3-9f52-849c6e701c19	466	8.319158	192	139.3235	140.88375	data_service_unblock_mux_change	False	False	True	
+sample	934150d5-ec53-4143-9160-d27d433f68b4	554	8.397503	181	139.62075	141.14425	data_service_unblock_mux_change	False	False	True	
+sample	3e05c8e8-94f0-47bb-8b4d-cf0f3ba72463	417	10.531947	138	138.90775	140.3545	data_service_unblock_mux_change	False	False	True	
+sample	28f41053-f716-4830-b010-1b0046c30907	518	8.540427	339	139.0615	140.5855	data_service_unblock_mux_change	False	False	True	
+sample	9f895730-6fc7-459a-88a3-5fcbf1aee877	1866	11.221478	344	134.992	140.66025	signal_positive	True	True	True	NC_001416.1
+sample	558e701f-159b-49d8-b2a3-ffe1fdbc7cb1	382	8.878743	91	139.73425	141.14425	data_service_unblock_mux_change	False	False	True	
+sample	1c5cc5e9-bce2-40b1-86d7-9a6f2661be3b	522	10.738070	62	139.4205	140.88375	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	ef691fb9-9c41-4fe1-bab5-40259c6a36fb	455	10.633121	4	139.322	140.88375	data_service_unblock_mux_change	True	False	True	
+sample	60a93401-d488-4972-b959-3ddfae66f4dc	3328	12.054902	244	132.88825	141.03575	signal_positive	True	True	True	NC_001416.1
+sample	f504764f-6036-4768-ae0a-e8f9170fab87	436	10.139452	256	138.961	140.34075	signal_negative	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	b8909f2d-ea82-4f6e-9f67-a310fdd13971	143	10.609826	478	140.9745	141.6985	signal_positive	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	8f0cec69-e169-415c-bfe2-9d82dced4969	464	9.819421	445	140.06075	141.59275000000002	signal_negative	False	False	True	
+sample	7471e05c-1531-4fd6-b7bd-67613708bf44	1859	10.015550	30	137.15475	142.2955	signal_positive	False	False	True	
+sample	980671db-4dc7-45d8-bd21-429b11ab3136	536	9.152766	464	140.53475	142.08825000000002	data_service_unblock_mux_change	False	False	True	
+sample	2c85654c-e8ed-40a0-8522-c23d2e30f56d	432	8.857070	460	140.42025	141.88675	data_service_unblock_mux_change	False	False	True	
+sample	7ae4b742-5216-453e-b9ab-a823ad0704ed	2729	8.454447	292	134.97425	141.847	signal_positive	False	False	True	
+sample	b9ab9796-c6de-493f-8204-82e3db8ca03b	430	9.001051	194	140.31325	141.72150000000002	data_service_unblock_mux_change	False	False	True	
+sample	e4271be8-2930-40b0-afd4-60b789f8c11c	543	9.542383	238	140.651	142.08350000000002	signal_negative	False	False	True	
+sample	c28f4bf3-a49f-4d0f-b714-7b84f9660109	464	11.033897	48	140.42	141.88674999999998	data_service_unblock_mux_change	False	False	True	
+sample	346acb49-024b-44ee-952e-d3e887800f9c	1267	11.331017	331	138.698	142.15275	signal_positive	True	True	True	NC_001416.1
+sample	41151dde-605e-4b3a-bfe3-be4622b632dc	2969	10.237616	152	133.77325	141.36325	signal_positive	False	False	True	
+sample	77c9bfc5-0bc1-43d5-9f9a-36409deeb163	419	9.792769	127	140.18875	141.5025	signal_positive	False	False	True	
+sample	f25aeff3-9462-439d-9b5e-fe0d481e9431	588	8.085212	506	141.45225	143.00975	data_service_unblock_mux_change	False	False	True	
+sample	237a21ec-739f-4517-b34c-a53b0db398ff	387	10.593196	441	141.06175	142.55349999999999	data_service_unblock_mux_change	False	False	True	
+sample	beb50ca5-de4b-460a-ab3d-9008d26fb1d5	3640	9.269699	500	133.8295	143.16174999999998	signal_positive	False	False	True	
+sample	ea6e9453-7f5a-49ab-b281-97b080443557	1391	9.627062	421	139.43525	143.04125	signal_positive	False	False	True	
+sample	d2a7352d-49b2-43ad-ad93-89ab96e1b27f	453	11.814099	398	141.70325	143.2885	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	85dfdc65-efd6-4911-80bf-3c615e4a431e	427	10.311478	394	141.4005	142.8235	signal_negative	False	False	True	
+sample	bd6b659a-b8e2-4049-ab19-32356d360695	551	10.652567	370	140.82125	142.55349999999999	data_service_unblock_mux_change	False	False	True	
+sample	9b0f00d2-b656-4da9-8994-4504957dbd4f	229	9.952935	299	142.11275	143.1095	signal_positive	False	False	True	
+sample	5c4ef1a7-bb64-461f-bd8f-cb389b1655ea	430	10.586958	309	141.36675	142.7	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	2510e4f9-68a5-4305-8e4f-cd1828b8701f	447	9.338688	256	141.11625	142.49475	signal_positive	False	False	True	
+sample	280d1539-b216-4298-9684-8f7427689e29	371	11.067059	231	141.0765	142.54825	signal_negative	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	252dbb52-c6eb-4c67-91c9-c0ec11bc8efc	488	8.810158	260	140.20475	142.54524999999998	signal_negative	False	False	True	
+sample	52472683-0271-418d-a3cf-b9bfb88cecea	2321	9.610153	160	136.8765	142.52474999999998	signal_positive	False	False	True	
+sample	3a6e5ade-036d-4a39-afca-7865ff0c77f3	1862	10.922737	146	138.52625	143.08425	signal_positive	False	False	True	
+sample	b2f64edf-3d19-42fb-b7b3-d037466045af	435	10.767329	5	141.8745	143.2885	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	6378cf06-994a-4a30-bf32-5dfc369f4520	429	9.379703	487	142.49325	143.7095	signal_positive	False	False	True	
+sample	80bc7e43-128e-4978-9c7b-63e4b8d2eae7	437	9.949347	443	142.0755	143.6165	data_service_unblock_mux_change	False	False	True	
+sample	e44d4577-cef0-493c-a8fc-cd6649cac9fd	564	10.244995	436	142.15725	143.60775	signal_negative	False	False	True	
+sample	8f4828f9-7363-439d-83b8-a02743511bca	671	9.451329	404	141.9035	143.89375	signal_positive	False	False	True	
+sample	b65c4242-865e-4b5f-8f91-6b1f8dc23033	482	9.181367	400	141.94925	143.45925	signal_negative	False	False	True	
+sample	2beb84c6-5b2e-425e-9888-df27954081ef	602	8.952003	380	142.5915	144.28199999999998	data_service_unblock_mux_change	False	False	True	
+sample	3ca8abcc-164f-4ac2-b5b1-ee04ff4a8f6a	362	10.926147	479	141.898	143.46625	signal_negative	True	False	True	
+sample	053613d7-a9b2-40b6-9588-b628d2a3c64d	392	11.010408	226	142.66375	144.28199999999998	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	9a9e5e4a-b15c-4093-bc15-0f0158167525	524	10.096642	318	142.24175	144.04225	data_service_unblock_mux_change	False	False	True	
+sample	a09f8db0-f60f-4f73-ab48-914b082e7a99	566	10.804409	116	142.44875	144.28199999999998	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	1d3fffff-aac5-4a72-9617-6bd31debd3e5	328	10.604800	270	142.6	143.73375	signal_positive	False	False	True	
+sample	b47afa70-2b44-41e8-aeeb-f032fbe74da8	375	11.215763	252	142.08425	143.463	signal_negative	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	30606070-7fa9-4578-a3a1-7e5eb7f11876	386	9.310146	249	142.0115	143.4555	signal_negative	False	False	True	
+sample	19a98e5b-5219-4430-9845-59908f975437	358	9.221376	242	142.277	143.60825	signal_negative	False	False	True	
+sample	236752a4-8f69-4532-86a6-1201a8baa01c	492	10.798257	230	142.653	144.28199999999998	data_service_unblock_mux_change	False	False	True	
+sample	ba9b194f-028a-4153-810f-36208c508e1a	505	9.200179	227	141.8865	143.46050000000002	signal_negative	False	False	True	
+sample	28b37157-e515-48c6-8f88-6b18c72fe0f5	410	11.208342	219	142.286	143.6165	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	c954cc2a-2a9f-4820-8372-021a4c9fd815	504	9.942727	111	142.5765	144.282	data_service_unblock_mux_change	False	False	True	
+sample	ad1e275f-7357-4631-b69b-a743b2c5f4ab	298	10.124058	12	142.856	143.92875	signal_positive	False	False	True	
+sample	0acd54ab-3e1f-4b36-af75-e8a506fcf477	523	12.006544	399	143.5295	145.24725	signal_negative	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	7b24f76d-51e2-4b36-be6f-fddf25b8eb60	471	9.988935	357	143.77725	145.25025000000002	signal_negative	False	False	True	
+sample	5884a5d4-55b7-4ac4-8ff7-c743f0d58142	538	8.664804	345	142.81075	144.4685	data_service_unblock_mux_change	False	False	True	
+sample	78f71ee9-b14d-481a-b99f-f87adaa096f0	578	10.574230	341	143.29325	144.82225	data_service_unblock_mux_change	False	False	True	
+sample	ee923c10-0424-4771-8a1b-68f344beca99	638	8.782436	332	143.15675	144.82225	data_service_unblock_mux_change	False	False	True	
+sample	1f03aec5-a6b3-4ea9-be55-a1579efa71cc	509	11.443147	295	143.234	144.82225	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	0115af36-87aa-4b6b-aa30-7d9a37e5c5e4	435	8.743788	258	142.91675	144.4685	data_service_unblock_mux_change	False	False	True	
+sample	242fef42-227f-41aa-9d5f-92de0a39edbe	476	9.039005	192	143.38475	144.82225	data_service_unblock_mux_change	False	False	True	
+sample	b6c1b67f-3b76-4857-8059-cfb649e29162	934	10.098519	139	142.62025	144.877	signal_positive	False	False	True	
+sample	8d4ed0e1-ce32-4ef1-b58a-46fe285ff35d	514	9.248045	119	143.59925	145.25825	data_service_unblock_mux_change	False	False	True	
+sample	5e752067-8e32-40c6-a68f-cd7f631613f1	432	10.396009	97	143.55475	145.02075000000002	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	af8367d6-3908-4e61-aeb7-fcd37b6d8009	2075	9.832392	37	139.872	144.64575000000002	signal_positive	False	False	True	
+sample	8a0f606f-c185-4121-a576-73976cf4b1fe	462	8.309476	4	143.52925	145.01575	signal_negative	False	False	True	
+sample	7da6e5e6-2775-4f95-b8e5-b9fc6281ea21	321	11.429358	486	144.8475	146.37675	signal_negative	True	False	True	
+sample	e6ef5c22-5251-42d9-b386-ea6c888c7ea7	340	14.254495	438	144.379	145.78425	data_service_unblock_mux_change	True	False	True	
+sample	39f1151b-b269-4d85-bf69-72b77aff873c	424	9.449690	436	144.43375	145.78425000000001	data_service_unblock_mux_change	False	False	True	
+sample	d92537c7-6374-4f40-ba4d-94dd53aed91d	444	10.956433	435	144.9305	146.3845	data_service_unblock_mux_change	False	False	True	
+sample	852e49ff-3a26-41df-abf1-ad743092b249	390	10.079448	374	144.066	145.592	signal_negative	False	False	True	
+sample	6f467e0a-f960-4b5b-b3ef-15a52f36482a	492	9.680230	363	144.58025	146.01025	data_service_unblock_mux_change	False	False	True	
+sample	3fa22d1f-be13-45f3-b1c8-ee2bc461f64c	440	8.905708	242	144.2745	145.78425	data_service_unblock_mux_change	False	False	True	
+sample	a1602c10-7e66-4fef-be5a-2c231c5d000e	479	10.491766	331	144.17825	145.59699999999998	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	2ac4ed1a-1ae8-43e6-93b8-a22f2cc58455	511	9.322206	307	144.06925	145.597	data_service_unblock_mux_change	False	False	True	
+sample	968b7516-0359-4e9e-aeb9-44c1998fd7b3	318	12.984045	327	144.3725	145.68625	signal_positive	True	True	True	NC_001416.1
+sample	62c0b8e2-9b1f-4e02-8099-5757d5e89f85	450	9.784366	263	144.61675	146.249	data_service_unblock_mux_change	False	False	True	
+sample	c7f2185f-57f1-4be0-ae45-760d313ee38a	805	9.779822	259	144.078	146.34225	signal_positive	False	False	True	
+sample	0098ec36-259d-4743-9941-6f3d16bd17ff	329	8.385155	254	144.538	145.68275	signal_positive	False	False	True	
+sample	e79ecd47-79d8-4809-97f8-072c7254da73	389	11.029599	230	144.3935	145.78	signal_negative	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	291151ab-0a8f-4070-bb51-7263515c1f25	2693	10.601169	174	139.7885	146.3565	signal_positive	True	True	True	NC_001416.1
+sample	66e0598b-4b8b-433f-9f5d-20277b93d903	502	9.029230	131	144.5815	146.23975000000002	signal_negative	False	False	True	
+sample	164509ed-8c51-4590-9146-4440396005f2	5469	12.095293	196	131.631	145.53625	signal_positive	True	True	True	NC_001416.1
+sample	d7c07837-2d5e-4e7a-b0e0-3fe64d7670d5	4277	9.921989	35	134.88525	146.09675000000001	signal_positive	False	False	True	
+sample	9477482d-d710-4b46-a554-ac6033dee6ba	190	8.319205	48	144.46575	145.7785	signal_negative	False	False	True	
+sample	00a12b80-fc6b-4d74-993f-8e1bc78d9646	2198	8.478109	452	141.76625	146.47325	signal_positive	False	False	True	
+sample	4c9db1ca-63e8-46c4-8a7c-2e9adaf1cee3	569	9.677601	467	145.68675	147.2775	signal_negative	False	False	True	
+sample	be2ab569-8b93-4bd2-8b8d-e049417e46c3	5666	9.614313	381	131.5665	147.20499999999998	unblock_mux_change	False	False	True	
+sample	6487fa24-215a-43fb-8df1-fd1a37655d2a	586	10.107272	348	145.05425	146.65	data_service_unblock_mux_change	False	False	True	
+sample	50539c65-853e-4dbc-bffb-3dbb1beb375d	496	9.360972	340	145.15175	146.65	data_service_unblock_mux_change	False	False	True	
+sample	82a32b90-991d-4a5c-bdbb-b90df74f2981	597	11.087583	285	145.58	147.2825	signal_negative	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	ea594148-687f-4ece-8d91-9fcb502200a2	591	9.531893	282	145.56125	147.2825	signal_negative	False	False	True	
+sample	93b6db71-dc36-472a-8f40-536546cfbb9f	2154	9.882373	141	141.32025	146.87025	signal_positive	False	False	True	
+sample	1503a3d7-6ecb-433b-acde-0ba0e25fe982	664	8.923641	124	145.62175	147.2865	data_service_unblock_mux_change	False	False	True	
+sample	9a5277cf-b8a1-4683-800a-07e360e157e9	3215	10.629495	335	139.14825	146.48925	signal_positive	True	True	True	NC_001416.1
+sample	bed1d5df-9d3d-4bc3-85b0-5c4e2b065c09	649	9.666275	332	145.2555	147.086	data_service_unblock_mux_change	False	False	True	
+sample	a003db38-eacd-45f7-9d94-e3b40bbf3b79	561	10.589023	319	145.273	147.08599999999998	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	4858e7bb-3924-449c-85a1-7402949edb17	501	10.480018	222	145.76075	147.282	signal_negative	False	False	True	
+sample	5d50494a-f39b-482f-b2a1-2b06deaef6f4	661	10.060660	305	144.93075	146.88125	signal_positive	False	False	True	
+sample	7e69965a-ee5e-47bd-8285-051baaefaa9f	5054	10.503338	26	133.9575	146.3925	signal_positive	False	False	True	
+sample	2e0cabba-0eb6-45a8-acdc-965ce2126ec3	3094	10.924319	14	139.2545	147.124	signal_positive	True	True	True	NC_001416.1
+sample	bd008de2-7c92-4393-a85c-7139d01b46e9	392	9.019182	54	145.9875	147.40875	signal_negative	False	False	True	
+sample	2a40f0c7-bf76-4776-b868-61f9709cbe79	379	9.751706	24	146.6885	148.043	data_service_unblock_mux_change	False	False	True	
+sample	c94b4dde-d858-424b-b6cd-a4431e13912b	485	10.418180	56	146.095	147.564	data_service_unblock_mux_change	False	False	True	
+sample	ef3638dd-d8a8-4b8c-8029-ea2b30b1254f	369	9.873938	93	146.3375	147.67725000000002	signal_negative	False	False	True	
+sample	a778fc04-7f1b-45d8-a4a7-deaa619e7197	472	8.166279	91	146.89575	148.31574999999998	data_service_unblock_mux_change	False	False	True	
+sample	1fa424cd-2ed5-4223-ad73-b51a9ea0b630	306	10.227358	62	146.29775	147.67700000000002	signal_negative	False	False	True	
+sample	08eb0e76-0260-4518-ae0c-584be46dc21a	6658	9.219856	214	130.28025	147.9475	signal_positive	False	False	True	
+sample	ad0ddb9c-2b0f-4cb5-961e-2451c58d696a	529	10.087057	189	146.7935	148.31575	data_service_unblock_mux_change	False	False	True	
+sample	a5663675-d916-4ce0-ab2f-8227372cdb7b	242	10.983922	441	147.477	148.55275	signal_positive	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	fa70679b-9d8d-4779-bedc-84bde5e5fe5c	5401	9.835070	306	134.90675	148.46249999999998	signal_positive	False	False	True	
+sample	46b31c62-d00e-43b8-9d3f-b94dfea30626	521	10.964679	251	147.43	148.97750000000002	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	733849b3-7be3-4ae5-a5c0-c3268d471e97	501	8.020751	336	146.93775	148.56425	data_service_unblock_mux_change	False	False	True	
+sample	ed769a46-d7dc-4aee-bb63-1490a4017866	443	8.276205	319	147.39575	148.9775	data_service_unblock_mux_change	False	False	True	
+sample	0d279473-8114-416e-abaf-5dee7bab14fd	476	10.399512	222	147.71275	149.207	data_service_unblock_mux_change	False	False	True	
+sample	270ac1b0-8d07-4869-8445-c811f54a6b95	208	9.187918	96	148.056	148.86350000000002	signal_positive	False	False	True	
+sample	b6dfcfc2-20f6-4b32-83e7-32543fc5cf1f	439	9.738886	80	147.666	149.203	signal_negative	False	False	True	
+sample	24ef593e-f4d5-44fb-9a9d-1a6d5e3ad320	2045	9.573825	59	143.04725	148.434	signal_positive	False	False	True	
+sample	3c3bcc3f-a003-446e-909e-a4266f6a0107	476	8.007991	52	147.1865	148.57	signal_negative	False	False	True	
+sample	341e6fcd-c42a-48ea-b6c5-9d2c4769c051	362	10.431536	30	147.15025	148.56425	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	cbb38a23-858e-47db-a719-8a126c23cce9	580	9.019570	447	148.734	150.24475	data_service_unblock_mux_change	False	False	True	
+sample	64113c1c-7024-44f9-ab63-577d4ce2b0ef	334	8.041654	443	149.1105	150.247	signal_positive	False	False	True	
+sample	7c5f29b7-3ca8-4f7b-b496-7681d1b24f46	1582	8.621895	434	145.60925	149.77325	signal_positive	False	False	True	
+sample	32e0aaa9-7f2e-4318-8188-5d580ab9514b	1127	9.566035	407	147.26175	150.2125	signal_positive	False	False	True	
+sample	966bb90c-d56d-4750-b534-8d7f5d93ea44	493	10.541827	235	148.707	150.24474999999998	data_service_unblock_mux_change	False	False	True	
+sample	40df66e1-5f29-4368-9346-8415f3814a9e	469	8.384551	204	148.7145	150.23499999999999	signal_negative	False	False	True	
+sample	16512bd5-1b0b-4eda-b58c-d23a5ce98073	547	8.321148	200	148.33875	149.98825	data_service_unblock_mux_change	False	False	True	
+sample	8bc369dc-13d4-4f17-aec7-9bd0516a9e5b	491	10.702062	397	148.61975	150.24475	data_service_unblock_mux_change	False	False	True	
+sample	4674730b-4ba7-4df0-833f-60565e9b5eca	550	10.174500	394	148.62875	150.24475	data_service_unblock_mux_change	False	False	True	
+sample	241b3b69-c75e-400e-814b-021888386fb7	7283	10.903940	183	130.01025	149.92000000000002	signal_positive	True	True	True	NC_001416.1
+sample	3904c551-3168-49f5-8cd5-7e051fe78b9b	495	11.686788	71	148.7165	150.24475	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	dde7f402-2a33-43a2-867b-298c52b54a3c	571	11.283267	487	149.37225	151.22975	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	553ad451-fd8b-4937-bf98-950418e9a5cc	529	10.220181	415	149.06175	150.73575	data_service_unblock_mux_change	False	False	True	
+sample	49198192-f4f0-4bc5-a44c-cc0990a298db	606	11.676999	12	149.48975	151.22975	data_service_unblock_mux_change	True	False	True	
+sample	b4457ef0-84b3-4b3f-bb66-180887be102f	547	10.514544	191	149.4655	151.22975	data_service_unblock_mux_change	False	False	True	
+sample	e21ea20f-cdc3-4363-b8fc-19f48c611224	375	10.424351	199	148.84175	150.52325	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	c3a0ab24-e22e-4872-a0ae-83c71d05ba2d	627	12.274085	331	149.44925	151.22975	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	9d0482f4-3c38-468a-bddb-2d5686428fac	545	11.121764	328	149.3065	151.22975	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	b2192fca-30b4-4b2d-a44a-d63f828a4a1a	582	8.768122	11	149.4395	151.22975	data_service_unblock_mux_change	False	False	True	
+sample	000b53b2-30a2-4636-a2db-ac1a67b745cf	515	11.402992	284	148.9775	150.5185	signal_negative	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	a54c911f-b88c-4e8f-8b51-72c3973ef167	385	11.431784	262	149.283	150.73575	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	dd8a1c75-8600-41d7-82e5-828bde8d5e68	4812	11.459818	173	139.16825	151.03275	signal_positive	True	True	True	NC_001416.1
+sample	4e7d16ec-feed-4fc6-aa94-f983fe9450cd	1681	10.955712	127	145.972	150.602	signal_positive	True	True	True	NC_001416.1
+sample	f3dc35ef-53a3-4ff0-8b75-ce05889b866d	540	9.959847	124	148.997	150.52325000000002	data_service_unblock_mux_change	False	False	True	
+sample	103df457-eb8e-449d-8948-db10a63fc63c	1052	9.967736	121	148.12875	151.3725	signal_positive	False	False	True	
+sample	1504c0cd-fb2f-4d45-ad5d-0c86427d9a4d	439	10.530143	116	148.99325	150.52325	data_service_unblock_mux_change	False	False	True	
+sample	d413a1bf-2208-4cca-aef3-de2e6147b777	647	9.046801	391	150.19375	151.793	signal_negative	False	False	True	
+sample	dd67f3d6-e601-474a-8f8a-4aa2383d7931	3916	10.053437	382	138.491	151.82150000000001	unblock_mux_change	False	False	True	
+sample	973d70e8-cb35-4ae5-84a6-e73458cd2692	182	8.302589	304	150.62825	151.48250000000002	signal_positive	False	False	True	
+sample	607efafd-ca2b-489d-a16d-63f42786571a	542	10.411104	285	150.00025	151.48475	signal_positive	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	0ac04f9b-3ef5-4f3d-b7f3-d29c4bb2cbdb	637	10.790553	283	150.45125	152.35999999999999	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	a860981b-7f03-462f-b2a3-629864077c51	625	13.039291	220	150.4685	152.353	signal_negative	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	c59d96c3-2f13-4e02-84a1-68f45b3460d7	314	11.518606	5	150.73375	151.98375	signal_positive	True	False	True	
+sample	ff420bc4-ec91-4bd6-9349-25b588cca475	649	11.677558	354	150.5115	152.36	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	f4084f3f-7169-4046-b5ab-d8628180aeb8	567	8.790004	216	149.76825	151.52224999999999	data_service_unblock_mux_change	False	False	True	
+sample	163882f1-2212-41fc-8254-fc8ffb83eafb	390	9.063460	189	150.42975	152.36	data_service_unblock_mux_change	False	False	True	
+sample	06888137-1e6c-41a9-bbd1-dc48126a65ff	604	9.506611	70	149.736	151.52224999999999	data_service_unblock_mux_change	False	False	True	
+sample	337010df-7005-4d77-9151-cffd5dd31129	719	10.510429	92	150.292	152.355	signal_negative	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	21158de2-6736-48ad-8bad-0bf31e868677	572	11.633676	60	149.9065	151.51749999999998	signal_negative	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	7ea0824a-6168-46bf-83e1-a562f0447a85	1898	10.338360	101	146.917	152.121	signal_positive	False	False	True	
+sample	13bd0363-13f9-4961-8e75-ac248d6e1283	443	9.094234	511	151.289	152.8295	data_service_unblock_mux_change	False	False	True	
+sample	c9df14ed-bac1-4118-92d4-e9f655d2242c	618	9.488214	443	151.645	153.38925	data_service_unblock_mux_change	False	False	True	
+sample	71139da5-50d9-4c69-9207-f71d60adf280	499	10.244085	480	150.853	152.68200000000002	data_service_unblock_mux_change	False	False	True	
+sample	c2c33ec7-41c7-47df-8fba-8563e6334016	618	10.406902	133	151.03075	152.68200000000002	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	59f678ef-f4dd-4d6a-9901-c8b5fc80cc10	628	9.635098	282	150.77075	152.66925	signal_negative	False	False	True	
+sample	15580ce5-81d1-44b6-8f83-e1751f1e1ae1	446	10.556142	260	151.351	152.8295	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	8bca0f01-ab82-476c-b62c-ecb11bed0cc0	553	10.298101	232	151.6925	153.38925	data_service_unblock_mux_change	False	False	True	
+sample	4cb4817d-0f7f-4feb-9740-54c5f2d0db15	2419	9.238925	348	147.1615	153.10999999999999	signal_positive	False	False	True	
+sample	6e127c89-560d-41b4-baa9-fa42a1446c92	828	9.039517	204	150.65	152.68200000000002	data_service_unblock_mux_change	False	False	True	
+sample	e88bf157-d6c1-4f87-9cec-77a704a13de4	587	9.683754	181	151.6485	153.381	signal_negative	False	False	True	
+sample	85cde987-4d38-4ab8-b966-f121ee644f04	483	11.672475	179	151.575	153.19299999999998	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	5dbd2749-9241-4d5f-94d6-275e6bdb1c51	481	9.624570	93	151.88975	153.38925	data_service_unblock_mux_change	False	False	True	
+sample	ff7fb1c2-cd41-4076-8e72-19792da01c76	595	10.442562	59	151.84275	153.46975	signal_positive	False	False	True	
+sample	f72aa0ff-0c65-4c4d-8af8-38bbedfcc120	428	8.630681	39	151.31	152.8255	signal_negative	False	False	True	
+sample	0394bea0-6d36-43ff-ad59-360df7d8dd4c	514	10.089188	80	151.59975	153.193	data_service_unblock_mux_change	False	False	True	
+sample	0b01dbc1-9e0d-43b5-8ead-09839d984c54	1788	10.600270	413	149.45425	154.11075	signal_positive	False	False	True	
+sample	aea5e0a7-e1cf-42c0-93db-ea53ab16891e	552	9.254363	487	152.1725	153.68625	data_service_unblock_mux_change	False	False	True	
+sample	6ac124f2-c703-437f-861e-ae284256ea0b	527	8.256738	463	152.4915	154.14000000000001	signal_negative	False	False	True	
+sample	0484546b-bd3c-48c4-87ac-6f6bd27bccd6	543	9.211485	283	152.5925	154.1485	data_service_unblock_mux_change	False	False	True	
+sample	0f00cda0-c604-452f-8d56-9e820ab50054	451	8.971545	233	152.72525	154.09199999999998	signal_positive	False	False	True	
+sample	20f0709a-2475-4d76-843a-f7376ebe59d9	1447	10.174905	77	150.47625	154.2985	signal_positive	False	False	True	
+sample	d69337cb-1e99-44cd-a1e8-26ff06e9b442	433	9.564270	47	152.78525	154.31824999999998	signal_negative	False	False	True	
+sample	e5ff877d-47e7-4d68-bd19-f264b87aff50	476	10.825553	45	151.9845	153.68625	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	720b2f49-dc1f-493f-a62f-abdaf1af0bb5	576	8.963552	213	151.6055	153.59575	signal_positive	False	False	True	
+sample	8cf9783c-0881-4fe1-914a-522aa8fabc9a	585	9.194999	191	152.06175	153.68625	data_service_unblock_mux_change	False	False	True	
+sample	31ea4c31-d19f-4ef5-9e7b-3cc63240045e	451	8.712294	186	152.877	154.32250000000002	data_service_unblock_mux_change	False	False	True	
+sample	e409ca9f-33d0-46cd-b6ed-ddcad6b880d2	461	9.562051	160	152.8605	154.317	signal_negative	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	b8d92626-223b-4b13-b9b8-881c777aaada	200	9.145706	6	152.45175	153.834	data_service_unblock_mux_change	False	False	True	
+sample	e5da984b-286f-4831-b8b4-6d54301232a3	3498	8.763487	227	145.57025	154.41475	signal_positive	False	False	True	
+sample	eea892fe-cc3d-47b3-b3d9-64317c257f1f	593	8.520652	431	153.16775	154.83275	data_service_unblock_mux_change	False	False	True	
+sample	76aa8e8c-49f6-488d-9bf1-b54b09164d6b	2898	11.632177	420	147.91025	155.17024999999998	signal_positive	True	True	True	NC_001416.1
+sample	17651362-f183-41b6-9980-a7ebb176084a	5653	9.986392	510	140.5755	155.19125	signal_positive	False	False	True	
+sample	a43c8dd3-a0f7-4b74-a42a-f661da8090bf	238	11.595966	448	153.79625	154.72949999999997	signal_positive	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	316224b8-1bab-41d9-9661-1c0ad216ebc9	5646	9.952450	412	142.949	155.42925000000002	signal_positive	False	False	True	
+sample	6f886881-cf57-4428-b942-59cdf537c007	587	11.430418	404	153.66175	155.42600000000002	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	29194778-1f5f-46a9-bf05-f705775baa22	462	10.516773	369	153.523	155.13049999999998	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	53b6a31e-78d0-4162-9bd1-1d267dabc7d9	641	9.648180	332	153.031	154.55275	data_service_unblock_mux_change	False	False	True	
+sample	05bfd089-5d61-467e-8326-d5287b408f85	644	8.599685	317	153.32	155.13049999999998	data_service_unblock_mux_change	False	False	True	
+sample	acfcca45-b67d-4391-9c2f-14ef4ef0190a	494	10.078381	202	153.48	155.12224999999998	signal_negative	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	5c7e05c9-247c-453e-a0c7-dcc893c96533	2496	10.659247	176	148.837	154.82575	signal_positive	True	True	True	NC_001416.1
+sample	52c5754f-6e8f-4586-9e89-32369cd7ea41	365	10.611229	165	153.23425	154.43975	signal_positive	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	872af061-dc90-4486-86bf-5693e4085f83	508	10.336781	158	153.4945	154.95274999999998	signal_positive	False	False	True	
+sample	8da72e77-11d0-447e-bcbd-fc43f059fcae	2821	9.925081	57	147.842	154.77675000000002	signal_positive	False	False	True	
+sample	3bcf1966-a3fd-46e2-becb-4ef637fe320f	366	8.296344	41	153.12675	154.55274999999997	data_service_unblock_mux_change	False	False	True	
+sample	966b0980-3e8b-4b6b-bee1-8b9db52d17fc	2028	10.470792	38	149.93975	155.23625	signal_positive	False	False	True	
+sample	bca1b450-78b1-407a-a302-9a6c66d0e507	616	9.729090	19	153.2295	154.82750000000001	signal_negative	False	False	True	
+sample	06c7200c-a21d-43cc-ae69-7acff686d4f3	590	9.430045	93	154.2605	155.88225	data_service_unblock_mux_change	False	False	True	
+sample	f2fb778c-dae8-4560-acb0-90f11957f4ec	602	11.538860	253	153.62225	155.88250000000002	signal_positive	True	True	True	NC_001416.1
+sample	977590eb-9fab-431b-a45e-d19bfb0505f7	4004	10.364286	339	146.06475	156.4805	signal_positive	True	True	True	NC_001416.1
+sample	ab97ecb1-5992-4995-a27c-279868ee4021	467	10.014925	338	154.604	156.1955	data_service_unblock_mux_change	False	False	True	
+sample	bc871918-6d61-4fd7-a0b1-90feb20cb785	357	10.240926	327	154.74325	156.19549999999998	data_service_unblock_mux_change	False	False	True	
+sample	5ae5f00c-1e04-410a-996a-d272cecba422	207	10.319963	319	155.13375	156.10725	signal_positive	True	True	True	NC_001416.1
+sample	3f42bde1-dd5d-4232-b49a-e6bebc19244c	434	8.552335	304	154.71875	156.18875	signal_negative	False	False	True	
+sample	55d2053c-2e28-4893-b687-2ab2d96398a4	514	9.880636	262	154.387	155.8705	signal_negative	False	False	True	
+sample	7246d650-5d65-40b8-a81a-76ecf9602136	508	10.625547	109	154.9915	156.4345	signal_negative	False	False	True	
+sample	342e573b-ebfa-4983-a18f-b2a9f68a650a	430	9.045578	104	154.68275	156.44075	data_service_unblock_mux_change	False	False	True	
+sample	d22a563b-f191-4e76-98d1-0811971a9c6d	467	10.938224	70	154.45975	155.88225000000003	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	c55f62dd-46f3-4031-859b-69e5271432de	434	11.271318	67	154.47675	155.88225	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	8c6ed590-acdd-45ae-a44d-028637d649a4	422	9.725218	87	154.28875	155.88225	data_service_unblock_mux_change	False	False	True	
+sample	f2ea669c-1f1a-4916-8d8d-52b34e702e2d	904	8.408640	254	154.7275	157.35675	signal_positive	False	False	True	
+sample	d69675fb-8461-425e-9496-f05c486ce2fe	541	10.927756	469	155.2105	156.815	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	c730be00-ba93-47e0-b6a7-827fb8a01681	442	9.429423	256	155.1715	156.621	signal_negative	False	False	True	
+sample	cb44b168-6c41-4ec9-8181-aa917f97ec4f	5378	10.028953	468	146.58225	157.2625	signal_positive	False	False	True	
+sample	71f9716c-f2b1-41f6-ab2f-fc1bd07977a8	481	9.184476	455	155.31675	156.81500000000003	data_service_unblock_mux_change	False	False	True	
+sample	294bf64f-65eb-475e-8297-5dd15bed788e	454	9.969481	453	155.11275	156.6165	signal_negative	False	False	True	
+sample	7177ad6f-9cca-423a-887a-41b2fc2cf1ba	405	12.228512	438	155.03175	156.62775	data_service_unblock_mux_change	True	False	True	
+sample	7210d760-43fc-4a64-a8a1-8b557471a705	587	9.369263	412	155.91425	157.48600000000002	signal_positive	False	False	True	
+sample	c360a3a2-9cb2-4e29-b8a0-100cfb04934d	413	12.319086	390	155.9445	157.36875	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	e975dda1-3e4d-450e-a24e-d2a44d89217f	526	9.788065	205	155.74925	157.36874999999998	data_service_unblock_mux_change	False	False	True	
+sample	c788b936-4280-4660-bda7-20ff943d20a7	408	10.288852	102	155.545	157.08524999999997	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	6fc8e6cf-c694-49e7-9a87-6cfb9148f79b	3433	9.163983	358	149.07875	157.3085	signal_positive	False	False	True	
+sample	71739e80-8106-468d-b8d0-e46d56eae6ef	447	9.524031	331	155.252	156.63	signal_positive	False	False	True	
+sample	ebf876e8-8182-45be-94a7-00b60ddc7846	546	10.564515	330	155.25875	156.815	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	9c111073-b479-4125-9554-f36557931708	538	8.441574	154	155.2765	156.815	data_service_unblock_mux_change	False	False	True	
+sample	c142b381-0eba-4626-85e3-9ab9bb5f9819	4355	8.211390	278	146.9515	157.03875000000002	signal_positive	False	False	True	
+sample	66e913f4-f399-49eb-94fc-8400cbc91039	4647	11.304004	277	144.544	157.07600000000002	signal_positive	True	True	True	NC_001416.1
+sample	0a535545-960f-404e-aaf2-d807ac38b492	6116	10.093729	137	141.6575	156.96675	signal_positive	False	False	True	
+sample	09e83e1b-4cde-4873-890b-bfd71a666f25	545	9.008267	48	155.56325	157.36875	data_service_unblock_mux_change	False	False	True	
+sample	d3cde523-79ad-426b-b0f9-55576a1918ef	441	9.322403	168	155.60475	157.36475	signal_negative	False	False	True	
+sample	413d64f0-a414-425d-bd7a-153040985939	8495	9.788439	10	137.81925	156.6665	signal_positive	False	False	True	
+sample	84ff9464-577a-44d0-8dba-045b75dc5f1d	4717	9.403953	427	147.18675	158.48125	signal_positive	False	False	True	
+sample	9b0e1c4d-03f9-4e5b-a5f9-06d78536b398	461	8.387451	371	156.7565	158.398	data_service_unblock_mux_change	False	False	True	
+sample	f5302c72-3b6b-42e8-aa92-66eacc9bf4a1	434	10.193377	354	156.4775	158.02575	signal_negative	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	d76db40c-c0e9-4c02-803d-8cf221fb18b1	478	9.536233	235	156.518	158.03725	data_service_unblock_mux_change	False	False	True	
+sample	fffd3953-eb9c-4884-b7b1-d842c7e4612d	609	10.043985	204	156.62325	158.39800000000002	data_service_unblock_mux_change	False	False	True	
+sample	31918779-78ce-4308-9e56-ca157e29bff6	1170	10.129331	146	155.491	158.39225000000002	signal_positive	False	False	True	
+sample	99a8276f-e718-4238-b2b5-246fa84cb9ed	476	10.338007	142	156.65625	158.39225	signal_negative	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	8e8d4893-8f18-4f8c-8f2f-cc8fcc6fbf5c	501	9.825150	111	156.436	157.95875	signal_positive	False	False	True	
+sample	c0cb5e5c-ac9c-402d-87cf-d36bcb9e45e5	561	8.036751	8	156.533	158.02874999999997	signal_negative	False	False	True	
+sample	64e33764-af13-4d95-87cf-b1c72de86ccc	526	9.661018	428	157.437	158.906	data_service_unblock_mux_change	False	False	True	
+sample	a9330b3e-f3c3-42ce-8084-cb3ace492898	499	10.951792	415	157.20275	158.90125	signal_negative	False	False	True	
+sample	56ef4f7f-262d-422b-bb15-66f366e1c012	499	9.880739	486	157.01175	158.65550000000002	data_service_unblock_mux_change	False	False	True	
+sample	d68ac214-325f-4ccf-85a0-f24fa7f8db9a	570	9.146469	312	157.70925	159.381	data_service_unblock_mux_change	False	False	True	
+sample	8135e7aa-1fcf-4484-a636-6584ae813da9	523	10.454758	307	157.17275	158.906	data_service_unblock_mux_change	False	False	True	
+sample	541c95bd-6c18-456a-a2db-7c541b9934d0	406	10.433079	302	157.889	159.377	signal_negative	False	False	True	
+sample	7521fc26-c8bb-42ee-a67d-f591a7253d74	173	9.094150	301	158.84975	159.56675	signal_positive	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	32350b81-f0b7-4fc4-a711-eb53dd29d422	500	10.403679	295	157.05275	158.6555	data_service_unblock_mux_change	True	False	True	
+sample	d1741c77-f075-4118-abbd-f8d4adbf0ec6	616	10.434916	240	156.83525	158.6495	signal_negative	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	49617568-7548-4437-bea7-9297d1ec50c0	179	8.535637	234	157.7595	158.64225	signal_positive	False	False	True	
+sample	4fa1056a-801c-41c8-a85e-11dab48b4954	498	10.977100	226	157.69125	159.381	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	0a87d954-2090-4a3f-a569-c00d4a117aa4	553	10.391415	133	157.84025	159.37324999999998	signal_negative	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	a544411b-3a83-433a-bfb1-8bf403e15e8c	7937	10.355569	132	139.4715	158.873	signal_positive	True	True	True	NC_001416.1
+sample	644159c9-23a4-4e84-9a91-5bc9f645c4a8	642	8.708356	107	156.96425	158.6555	data_service_unblock_mux_change	False	False	True	
+sample	cbc3896a-7f0c-4adf-b1b7-f46c09f5b8e6	1533	10.334627	19	155.38175	158.79575	signal_positive	False	False	True	
+sample	30072404-4ebd-404d-af00-bc060e4e1c3a	273	8.868852	6	157.27425	158.906	data_service_unblock_mux_change	False	False	True	
+sample	4d241ccf-d42a-48e2-ae5f-f5009e1a48ca	3499	10.712438	106	149.62175	159.0955	signal_positive	False	False	True	
+sample	3a6e6fa2-2856-4e62-8d09-24a7aefa807d	452	10.843286	91	157.065	158.63975	signal_negative	True	False	True	
+sample	afd58deb-baf5-4541-a809-8e3a674b8cdb	525	11.646356	90	156.98775	158.65550000000002	data_service_unblock_mux_change	True	False	True	
+sample	d6e53b7d-86c3-4e0e-b15b-80352a7f6b96	340	10.903955	67	157.76425	159.09125	signal_negative	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	1017cbbb-f135-44c1-bb95-fef1ac687ab0	345	10.148433	43	157.6965	159.09099999999998	signal_negative	False	False	True	
+sample	d9452aad-0bc6-4256-8f42-f8d49827fcf2	1589	10.725541	460	155.9085	160.1065	signal_positive	True	True	True	NC_001416.1
+sample	4808ad9d-5363-4c36-a0ca-1628725f8d30	229	8.504995	363	159.5735	160.42849999999999	signal_positive	False	False	True	
+sample	e9fe8301-125a-40c6-9a42-9b9296c9ebfb	321	9.725256	319	158.589	160.2325	signal_negative	False	False	True	
+sample	1ab25eda-5fa8-4c95-85c1-ac0967dfeac7	420	9.395603	199	158.4825	159.856	data_service_unblock_mux_change	False	False	True	
+sample	79441b9d-67da-4a6e-987a-d7ca6bbb5854	437	11.336466	193	158.336	159.77425000000002	signal_negative	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	fede3ee4-a2d5-4db4-bf2c-fb9c37cd221d	530	11.374691	191	158.84175	160.48825	signal_negative	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	bfc95c94-ec7a-47d3-ad68-b6b32bfdf0d9	526	9.421308	52	158.79075	160.23975000000002	data_service_unblock_mux_change	False	False	True	
+sample	97b77528-1033-4b11-a85e-0fdf97048dc1	774	10.744425	448	158.27175	160.50775	signal_positive	False	False	True	
+sample	a6715801-21b9-4ab9-921f-8658c7c67923	2325	11.183013	284	154.536	160.232	signal_positive	True	True	True	NC_001416.1
+sample	0efb864e-201f-4925-9a11-04fefe4a6079	466	8.803781	259	158.1015	159.59449999999998	data_service_unblock_mux_change	False	False	True	
+sample	45a81d92-e5cc-49ab-8cdb-96d5401a0a12	368	10.858293	223	158.40475	159.856	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	e0aca324-33e5-440e-a7b9-e2e9c8dfd98f	498	9.946898	93	158.0865	159.5945	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	57b94742-522e-4521-bd95-7cefc76cf556	3457	8.321539	82	153.19475	160.16325	signal_positive	False	False	True	
+sample	997035fb-3c6a-41fe-88aa-9cd2b82a53d3	398	9.882115	59	158.79225	160.23975	data_service_unblock_mux_change	False	False	True	
+sample	9653e756-947e-49fd-89dc-cd5f09e23b8b	455	11.132118	53	157.94525	159.58775	signal_negative	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	61296e93-f7d1-48fb-9fe3-90675ffa032d	462	9.259120	4	158.2945	159.77925	data_service_unblock_mux_change	False	False	True	
+sample	2fe510f1-f45b-4d3d-8efc-e39bb5f6c611	295	11.929199	438	160.1415	161.55575000000002	signal_negative	True	False	True	
+sample	e4605788-4d76-4f80-967e-b1fab71abe01	570	8.188725	396	159.918	161.40275	data_service_unblock_mux_change	False	False	True	
+sample	7370e9b2-de49-41df-bc47-44e62f989f63	460	8.022480	371	160.13275	161.5615	data_service_unblock_mux_change	False	False	True	
+sample	ad9d3cb3-5cbd-4f98-8479-f2abc746a186	455	10.078335	127	159.682	161.15425	data_service_unblock_mux_change	False	False	True	
+sample	27d5b446-6fe9-4b2e-b3e2-86d10755917d	522	9.861707	484	159.5695	160.93875	data_service_unblock_mux_change	False	False	True	
+sample	eaf94556-387a-420b-a3a8-cbb3a119fba0	800	10.496186	216	158.51875	161.08775	signal_positive	True	True	True	NC_001416.1
+sample	02b51bb6-dae8-4869-818c-62fdbf7d03a6	558	8.227369	234	159.13025	160.75725	signal_negative	False	False	True	
+sample	eb6e3801-5814-41be-a9d2-fe4c6ab54b1b	604	9.487175	195	159.1955	160.76225000000002	data_service_unblock_mux_change	False	False	True	
+sample	ccd6ae1f-897c-45bd-9fc9-f645df44c65c	456	9.300582	189	159.195	160.76225	data_service_unblock_mux_change	False	False	True	
+sample	82604985-beb4-4db5-b69b-e7e577429eeb	373	10.181527	180	159.2585	160.76225	data_service_unblock_mux_change	False	False	True	
+sample	55b87cb4-21d9-4ab8-92ae-d26c7a0ad447	108	9.062703	102	160.16425	160.711	signal_positive	False	False	True	
+sample	e4ad75dc-3bae-4535-beba-9b407bb0e06c	518	8.654372	88	159.64475	161.15425	data_service_unblock_mux_change	False	False	True	
+sample	2c0abba9-e4f8-437a-af5f-a8ad38e51d9d	408	11.136852	14	159.204	160.76225	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	31429066-fc6a-4486-921f-103ad36d1ad6	1886	8.541327	13	157.17875	161.008	signal_positive	False	False	True	
+sample	d50bd75f-f114-41e2-b4c2-02ad5d09c3e0	495	10.220709	51	159.72525	161.15425	data_service_unblock_mux_change	False	False	True	
+sample	71bc5e56-e595-4a88-985e-14610e9e28ec	432	9.144070	47	159.77425	161.15425	data_service_unblock_mux_change	False	False	True	
+sample	3059e685-58d1-4adb-b11f-f9fdaef791b4	406	10.964840	116	160.06425	161.5615	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	a47f2cb2-44b1-4c34-82ed-f36b42bf5bd0	647	10.121902	469	160.64	162.42125	data_service_unblock_mux_change	False	False	True	
+sample	926e9bad-7501-4eab-a618-cbdc0651bc35	588	10.651578	510	160.77475	162.60525	signal_negative	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	580ad37b-458e-48ab-9122-f6b788b71284	527	10.777019	478	160.79225	162.525	signal_positive	False	False	True	
+sample	6ff272bd-9e00-4bc9-b6f0-3cfad237e4b2	492	10.736796	402	160.167	161.7225	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	8b860b47-db15-43f4-a1f0-f8eec5608e68	529	8.524687	400	160.331	161.928	data_service_unblock_mux_change	False	False	True	
+sample	4a6cbb71-e00d-4aa0-b275-376596ec3419	580	11.310638	340	160.68425	162.42125	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	03d26463-f9c5-4788-8d08-4e25b01f21a7	457	10.784750	170	160.3425	161.71575	signal_negative	True	False	True	
+sample	85906dc2-a9b4-4b3f-ac2a-ac2155679af0	548	11.786715	163	160.95475	162.61374999999998	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	64e4d54e-8547-4a27-b781-fd8670c4c629	465	10.029421	108	160.407	161.7225	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	da1d5a5c-4b90-47b6-955a-21283fe3195c	596	11.229571	98	160.7215	162.42125	data_service_unblock_mux_change	True	False	True	
+sample	33d3be52-e2bc-417c-a198-0fc55c3024f3	1384	10.906760	57	157.94725	161.8905	signal_positive	True	True	True	NC_001416.1
+sample	1869ef64-612c-4367-923d-e071922dfa9c	523	11.090075	277	160.8785	162.61375	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	678d911d-de8b-4e02-aeab-289dee1fea7a	469	8.628089	66	161.25425	162.61375	data_service_unblock_mux_change	False	False	True	
+sample	ee2b783a-5fb5-4987-94e0-8cd4874d1706	515	9.144243	203	160.55275	161.928	data_service_unblock_mux_change	False	False	True	
+sample	746d5b2e-6899-451c-8ecd-4547ba9d5ca2	829	11.138571	444	160.6975	163.1635	signal_positive	True	True	True	NC_001416.1
+sample	7a5e4595-cb1a-4eee-9c35-d0291c94d0d7	2607	9.654415	386	157.0935	163.494	signal_positive	False	False	True	
+sample	3b70f8cd-c65a-4012-9482-469d4edcc187	4550	9.648731	360	151.14125	162.68050000000002	signal_positive	False	False	True	
+sample	2f46895d-8fdc-4bb3-9338-2bd1e8c08366	383	9.812528	305	161.382	162.76675	data_service_unblock_mux_change	False	False	True	
+sample	3ce24da2-9aad-4f8e-97a6-fd66c87aba82	386	11.522453	229	161.33625	162.76675	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	65bc36de-9f1b-4c9c-8bf4-93bcc1f4108d	2858	9.957668	285	155.6335	163.27125	signal_positive	False	False	True	
+sample	893e826a-e8d9-4c80-94d3-4707be921df4	3002	10.023153	272	154.79325	162.80325	signal_positive	False	False	True	
+sample	6ee84e8f-5bd7-4a71-a89b-df2222d5fbd6	166	9.135435	271	162.18325	162.85725	signal_positive	False	False	True	
+sample	8e8c138d-11d9-4c1f-93a6-628eae9bd2f3	482	9.647595	344	161.17775	162.76675	data_service_unblock_mux_change	False	False	True	
+sample	beddb819-aabb-45f5-a154-1f8312c6bb22	1187	9.464663	247	159.46825	162.75725	signal_positive	False	False	True	
+sample	ad740874-c5ea-46dc-a2fb-7c58899aa560	464	10.167055	246	161.3015	162.7585	signal_negative	False	False	True	
+sample	60ff3b97-b7fd-4890-a4e3-b9979d67d044	616	10.596080	218	161.6945	163.399	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	39696a1a-a21f-4130-8717-754a2c2480d0	593	9.918062	147	161.4185	162.959	data_service_unblock_mux_change	False	False	True	
+sample	a5adf4f2-78e9-43a1-9e0e-30d69b63fe8d	130	9.663968	76	162.04175	162.71875	signal_positive	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	8fab921d-2c77-4f5c-92c5-414073b3e501	572	11.388015	204	161.386	162.95374999999999	signal_negative	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	98bc8b4f-1d54-4fc8-9b71-d6e3b8942396	1961	11.119940	87	158.333	163.1195	signal_positive	True	True	True	NC_001416.1
+sample	8bcfad6d-5437-403b-9af2-0f87ef9a2d65	415	9.999290	509	162.73075	164.404	signal_negative	False	False	True	
+sample	6d8c1034-2933-4c29-982e-bf7d72a41336	1930	11.070168	404	159.21125	164.47275000000002	signal_positive	True	True	True	NC_001416.1
+sample	5eb30d57-8fcc-4d06-a61b-5d273dc006f4	486	8.752759	402	162.9705	164.60975	data_service_unblock_mux_change	False	False	True	
+sample	28d6d7ca-74a6-40b9-a292-aa1d4db3cdef	515	8.705455	42	161.9475	163.65525	data_service_unblock_mux_change	False	False	True	
+sample	f5640be0-965b-44f0-b956-f0f60471f10c	688	8.727149	371	161.8145	163.65525000000002	data_service_unblock_mux_change	False	False	True	
+sample	ed80b64d-a5bc-4f24-9482-9605433c2f79	558	10.188245	364	162.01425	163.65525	data_service_unblock_mux_change	False	False	True	
+sample	471e6ac7-7f61-4461-9013-6cba0d5c6780	591	10.082917	349	161.95425	163.65525	data_service_unblock_mux_change	False	False	True	
+sample	41396d3f-7405-4be5-85c7-5561cb9cb99b	507	10.015206	235	162.56525	164.16549999999998	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	f8e4ef67-34c0-4278-9f7d-c8a9dbda5ff4	475	11.773240	170	162.11475	163.64849999999998	signal_negative	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	c89fd3eb-22c8-43f5-9bba-2bc0029d205a	520	11.499885	93	162.796	164.4065	signal_negative	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	69b167c5-cfd5-4911-93c3-971be58e6db9	571	10.882434	86	162.38225	163.873	signal_negative	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	9c84a815-a0ba-4e98-ac6e-7620e322a150	493	9.925160	56	162.3685	163.877	data_service_unblock_mux_change	False	False	True	
+sample	3e541c2a-c7ce-43e1-a238-4b3832d33bce	446	8.282708	34	162.94175	164.40550000000002	signal_negative	False	False	True	
+sample	e431f0fb-7741-43c0-ab64-c5f77ae0c68f	1460	8.568211	494	161.73425	165.50675	signal_positive	False	False	True	
+sample	ea7feb39-726a-45f4-a286-5a26359b79d5	536	9.697968	429	163.42175	164.99450000000002	data_service_unblock_mux_change	False	False	True	
+sample	9e2be39a-ec84-4193-8a2a-dc2510dcaf64	471	9.813912	317	163.77175	165.59725	data_service_unblock_mux_change	False	False	True	
+sample	3f96bf8c-6110-41de-97ad-ccb2e62527e1	167	10.526368	270	164.9175	165.69475	signal_positive	False	False	True	
+sample	f3a60372-f0a2-4fd3-b05e-b66ff850513c	212	10.816859	225	164.3255	165.27425	signal_positive	True	True	True	NC_001416.1
+sample	2871e912-e83c-4364-932c-172054463daa	479	10.384599	174	163.27775	164.79825	signal_negative	False	False	True	
+sample	94cac0d5-fbc7-45b7-a8d9-c43f1c8a6d8a	4415	8.894778	79	154.7715	165.58475	signal_positive	False	False	True	
+sample	33435f2f-edf9-425c-afc4-7bab056f4a3c	6510	9.873981	105	148.07975	164.66125	signal_positive	False	False	True	
+sample	e54c44f9-8eaa-4004-a489-de0869f05e37	422	9.266974	24	163.55725	164.99450000000002	data_service_unblock_mux_change	False	False	True	
+sample	3bf4b62c-4e54-498b-ad51-01af07f04536	530	9.980017	497	164.1415	165.85150000000002	data_service_unblock_mux_change	False	False	True	
+sample	95989c26-f343-4de5-a61d-c3b3b6a2c23b	557	11.234283	479	164.66325	166.2885	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	a7bcc54e-c285-42c5-9918-3a492a6acb2a	580	9.095096	469	164.18675	165.8515	data_service_unblock_mux_change	False	False	True	
+sample	e6007ac4-4a97-4391-8bd2-8e551c83bb7c	411	9.411628	349	164.28725	165.84675000000001	signal_negative	False	False	True	
+sample	390156b1-afe3-492f-91b3-28c667211326	561	10.598109	143	164.156	165.85150000000002	data_service_unblock_mux_change	False	False	True	
+sample	4d971ea9-2fe7-4a7b-a558-c31436d4efac	562	10.557703	340	164.8125	166.464	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	80e8db19-d405-4ef1-8742-827067dafee9	2928	10.681091	131	159.31475	166.46675	signal_positive	False	False	True	
+sample	f8fa4769-4bbd-4a7d-8b5e-660ddcd1aac9	473	9.469703	258	164.82975	166.464	data_service_unblock_mux_change	False	False	True	
+sample	e8d5c5d1-590c-463b-9c87-3f28b8bb5090	616	10.922732	221	164.11775	165.8515	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	c25116cf-0585-4aa1-a2f5-9e710427556a	454	8.558628	213	164.54025	166.07999999999998	data_service_unblock_mux_change	False	False	True	
+sample	020c4592-0547-4ad4-8183-76b0c39d25f2	418	10.718250	199	164.80325	166.2885	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	2404e878-f455-45ad-b419-aae94ea94097	292	9.932746	190	164.514	166.08	data_service_unblock_mux_change	False	False	True	
+sample	df8c46bf-5db8-49c1-af19-c206a111eaf6	11680	10.165670	110	137.4015	166.4425	signal_positive	True	True	True	NC_001416.1
+sample	0e5e5f13-e475-4a6e-85a6-dec05b4c9afb	3597	8.305829	39	156.52375	165.80375	signal_positive	False	False	True	
+sample	35d10363-2274-4455-a66f-a669fbec86a2	3280	9.959125	28	159.02925	166.16674999999998	signal_positive	False	False	True	
+sample	cf0606fe-ae3c-4414-a328-321807b580e7	268	8.401238	13	165.1105	165.899	signal_positive	False	False	True	
+sample	745832a2-107c-4ece-b794-0b7bc5af0174	3164	10.182044	436	159.41425	166.90900000000002	signal_positive	False	False	True	
+sample	06bdf09a-8b14-408e-91d7-e79b66113821	4390	9.354660	462	156.407	167.1635	signal_positive	False	False	True	
+sample	3abc56eb-05a4-4b15-9eef-76d8c67214c3	697	9.138330	341	165.73325	167.54575	data_service_unblock_mux_change	False	False	True	
+sample	a7fd0a16-0486-468e-8f71-215b5cdfafb6	253	10.502940	196	165.8835	166.82825	signal_positive	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	2b305d60-ef83-44ad-9830-c4084a13ac13	478	9.580455	178	165.502	167.04250000000002	data_service_unblock_mux_change	False	False	True	
+sample	9d1166bb-97ee-47b4-bb51-450235c16703	731	9.191495	371	164.538	167.03150000000002	signal_positive	False	False	True	
+sample	a6779cb9-56c0-4ef6-8315-6b8b46f63b3e	2719	11.522811	327	159.711	167.51375000000002	signal_positive	True	True	True	NC_001416.1
+sample	230222f7-0d37-47be-82b6-66d138eadfdc	3550	10.548573	295	159.065	167.67925	signal_positive	False	False	True	
+sample	25c2e7d8-b7fd-44ca-bbe4-90812131dfe5	813	11.156478	60	164.32775	166.59400000000002	signal_positive	True	True	True	NC_001416.1
+sample	ff3d238d-5d5e-4a4f-abe4-80129bc234ce	3772	11.223484	261	158.16475	167.4605	signal_positive	True	True	True	NC_001416.1
+sample	85ea6d5d-6049-4ba5-9d19-d25fbd586432	2074	10.501921	146	162.3895	167.44675	signal_positive	False	False	True	
+sample	e9ed391e-8586-4992-a5c6-6b920f5aeb0f	402	9.781129	106	165.546	167.033	signal_negative	False	False	True	
+sample	97f95304-db00-4020-9fd8-a606e246c6e5	448	9.024264	212	165.16	166.63675	signal_negative	False	False	True	
+sample	cee6055f-91e1-4855-9a2d-a649d176d391	124	8.380563	29	166.59675	167.14899999999997	signal_positive	False	False	True	
+sample	b76e476d-eda6-4f3c-bb8a-139cbfd3629e	557	9.828631	458	167.023	168.61575	data_service_unblock_mux_change	False	False	True	
+sample	ca26bc83-fce7-4107-a6f9-119835dae0a1	498	8.792920	451	167.002	168.61575000000002	data_service_unblock_mux_change	False	False	True	
+sample	a5b846cb-c4c3-4751-87a1-b2b873b3fa5c	6545	9.980858	422	153.1035	168.024	signal_positive	False	False	True	
+sample	e5ae4f00-29f5-4727-bdf7-c2221abfc471	4272	10.874999	299	155.804	168.03975	signal_positive	True	True	True	NC_001416.1
+sample	a0efd050-ea39-4b6e-8f4d-551d50d7f34c	411	10.558328	350	167.08225	168.45075	signal_negative	False	False	True	
+sample	7d6a86de-3f20-45a7-98fa-fc3438c7efaf	407	9.696726	320	166.402	167.82274999999998	data_service_unblock_mux_change	False	False	True	
+sample	85e5a83d-7792-472f-bfd0-e6cb31460d6a	529	10.827105	284	166.46275	168.05625	signal_negative	True	False	True	
+sample	134688de-1e35-48bb-b514-4983425069d6	4136	9.866688	282	157.7475	168.11575	signal_positive	False	False	True	
+sample	301a9b78-1479-499b-9f7c-c9c9c8bca160	8282	8.352766	276	148.19525	167.69125	signal_positive	False	False	True	
+sample	30988754-0fa9-4efc-86dd-5d566edfbcde	783	8.792694	332	165.88125	167.817	signal_negative	False	False	True	
+sample	20d370a3-b516-4381-9642-731716a96233	110	8.912833	225	167.1925	167.94925	signal_positive	False	False	True	
+sample	6bcc3b3f-260e-49e6-80bc-6f7c4b465e67	243	8.709987	220	167.21225	168.17375	signal_positive	False	False	True	
+sample	522db6f1-1b46-4768-bf8c-a0c870864aaf	574	9.440549	198	166.68725	168.28900000000002	data_service_unblock_mux_change	False	False	True	
+sample	42b534c5-52a5-43a5-bed6-73248c50c4fc	489	11.217550	148	166.4575	168.06050000000002	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	b09b54b2-4062-4591-b3b3-676ecbc156ed	477	9.152535	109	167.07875	168.45625	data_service_unblock_mux_change	False	False	True	
+sample	be036bcc-e2d6-4a88-86ac-d4c790e52abf	1365	11.251971	511	164.85675	168.73975000000002	signal_positive	True	True	True	NC_001416.1
+sample	21f548f0-3773-4d82-9062-ca9aeb8760a0	482	11.437382	476	167.84375	169.3115	signal_positive	True	True	True	NC_001416.1
+sample	0562e202-45da-4128-a152-5194da7793b7	515	11.223992	20	167.2505	168.79475	data_service_unblock_mux_change	True	False	True	
+sample	55c6d448-6d59-496d-a447-b716a9cb849d	535	11.188806	399	167.87875	169.49125	signal_negative	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	ace70ff2-9907-43ce-98da-da24c0ff8352	393	9.377309	357	168.19425	169.583	signal_positive	False	False	True	
+sample	f84411c1-5872-4637-ac0c-c7eb4de7d7ae	2815	9.106217	267	162.6435	169.445	signal_positive	False	False	True	
+sample	446af54f-1868-4656-a420-dd4ee66a050f	473	9.527458	261	167.7945	169.49575	data_service_unblock_mux_change	False	False	True	
+sample	0621d01f-0b01-4a6d-8c6a-26742cadb6a2	1418	9.262381	195	166.06675	169.15825	signal_positive	False	False	True	
+sample	18450d16-92ce-4e6e-b69a-dfeed9ded341	381	10.603837	173	167.70525	169.0415	signal_negative	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	e23fb241-b91a-4f8a-b57d-030601e11fa2	408	9.005496	150	167.3815	168.78875	signal_negative	False	False	True	
+sample	ec7ff36c-2ca3-41b6-8981-b7a38eb9c616	433	8.237801	63	167.3195	168.79475	data_service_unblock_mux_change	False	False	True	
+sample	17208dd3-b78f-4ed0-a5ad-cec9eeea29d5	460	8.223722	336	168.17575	169.6825	signal_negative	False	False	True	
+sample	a2c4f8ef-d3af-4bbe-b527-885cbbae45c1	440	10.807824	328	168.16775	169.6875	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	d344cd9b-255b-4191-9e8b-f035f6f4dcee	397	10.155466	302	168.07075	169.6875	data_service_unblock_mux_change	False	False	True	
+sample	1ef2c1aa-643f-4328-950d-68cf0be49ad9	753	9.495013	28	168.05525	169.6875	data_service_unblock_mux_change	False	False	True	
+sample	6a58f7a3-48b0-4eb9-8185-296ff1fbdc1c	365	9.268155	431	168.49925	169.85625	data_service_unblock_mux_change	False	False	True	
+sample	2c69c300-e621-4e49-96d0-ae51347aac4f	566	9.638234	478	168.99825	170.56050000000002	signal_negative	False	False	True	
+sample	84508802-ce7c-4a38-b4c9-a4fda5fb2667	531	9.236632	465	169.0515	170.56900000000002	data_service_unblock_mux_change	False	False	True	
+sample	4d00c15c-d79f-4d7e-98bb-435ca341556a	486	11.185231	394	168.58175	170.05775	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	39abfe11-c332-4a2f-9c00-bbf639293313	477	9.083490	425	168.49725	169.85625000000002	data_service_unblock_mux_change	False	False	True	
+sample	00787c75-b313-4c63-8b45-60056e867929	412	10.152758	398	168.33975	169.85175	signal_negative	False	False	True	
+sample	a6315b45-8247-4374-bf70-509b3171fc58	401	9.100299	402	168.65125	170.05775	data_service_unblock_mux_change	False	False	True	
+sample	0a8b43b6-7668-4d5b-a80e-a25b05f33bb6	1342	8.048101	385	167.2175	170.27625	signal_positive	False	False	True	
+sample	a8abca25-4e0d-4ce8-9fe9-1ec4c57ee791	521	9.157892	360	168.9565	170.56475	signal_negative	False	False	True	
+sample	3b79a13e-7777-47cb-9cb0-b3784181d997	439	10.914762	198	168.436	169.85625000000002	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	029170ad-5cdc-42d4-93a2-753891a936e3	449	9.611294	230	168.5245	169.85625	data_service_unblock_mux_change	False	False	True	
+sample	a984e22e-2b3b-4d8d-a554-953f9c3252af	408	11.627335	67	168.65375	170.05775	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	d8a40fa0-df8c-4cf8-878a-43cd18769ca2	301	10.488370	225	169.203	170.56900000000002	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	ce6a6d89-5f12-4c65-b387-f74f7b930804	441	9.480639	142	168.9975	170.569	data_service_unblock_mux_change	False	False	True	
+sample	4c645b13-766c-40b7-9887-a7db1d6260dd	410	11.234929	127	168.60975	170.04174999999998	signal_negative	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	f8ff0d3d-a204-4f39-aadb-a2d6ae9fc98e	574	9.601460	29	168.78725	170.37	data_service_unblock_mux_change	False	False	True	
+sample	2f64bd00-96ad-497a-9490-ad2f84f18abc	514	8.446691	16	168.77425	170.362	signal_negative	False	False	True	
+sample	e9f33338-db07-4e69-8689-00f00d944f2d	245	10.030585	374	169.762	170.75025	signal_positive	False	False	True	
+sample	1b9cef08-be92-42fb-84ee-810a6663152e	560	9.905747	93	168.8915	170.56900000000002	data_service_unblock_mux_change	False	False	True	
+sample	49a9b7a5-fdc1-4e13-a214-ade50b8130da	8351	9.124840	31	149.05275	169.86325	signal_positive	False	False	True	
+sample	d7bd4bef-3169-4092-849f-57c58de828aa	401	9.602107	121	169.3085	170.7485	data_service_unblock_mux_change	False	False	True	
+sample	292f1b8f-82a4-4516-b6d6-fd1f022b11ba	2382	8.412770	456	161.36325	170.81674999999998	unblock_mux_change	False	False	True	
+sample	cfdc39f2-d16f-42f7-984a-dad47a033dd6	428	10.514331	399	169.71325	171.14675	signal_positive	False	False	True	
+sample	161a46d2-a391-468d-931f-fb27b82420fc	491	10.969644	340	169.891	171.53975	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	362758f4-539e-442c-8fe1-9d5d421162fc	11020	10.134920	292	141.85875	171.45624999999998	signal_positive	False	False	True	
+sample	e94a4101-3e8a-434e-82e9-c6711fd25d61	509	10.681406	331	169.56525	171.21175	data_service_unblock_mux_change	False	False	True	
+sample	9fcc0c7c-a254-4086-b109-ba08761208a5	519	9.888859	141	169.89125	171.53475	signal_negative	False	False	True	
+sample	11c6ee72-f9f6-4146-b9bb-c5b4267ef457	3453	9.351783	97	163.309	171.35999999999999	signal_positive	False	False	True	
+sample	6a26649b-b7e5-4fb4-bd23-87246adcbc83	1802	9.018209	91	166.52775	171.553	signal_positive	False	False	True	
+sample	c8e18838-aade-45c5-ab07-4916193193a9	467	9.974411	41	169.43625	170.97575	signal_negative	False	False	True	
+sample	c5b6f0fd-d5fa-4706-ba03-111707c5164d	570	8.377315	72	169.6045	171.2065	signal_negative	False	False	True	
+sample	890d047d-c2d4-40cf-b1aa-4e50941aee68	8097	9.488128	23	148.89375	171.334	unblock_mux_change	False	False	True	
+sample	c4ed7d9c-fb16-423f-b439-e05038ef580c	700	9.778975	436	169.99	171.74175	signal_positive	False	False	True	
+sample	17839544-329e-415b-9b82-23d2ac83a161	713	9.615186	505	169.803	171.81175	data_service_unblock_mux_change	False	False	True	
+sample	719911d3-d897-45fc-beb3-3113100e74fc	382	9.122631	403	171.28925	172.8035	signal_negative	False	False	True	
+sample	066f3201-0fd0-41c2-a6d6-dc7287c8aa42	367	11.512073	378	170.6375	171.93275	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	249eccaa-d628-424f-85af-3f95f56bdf60	4050	10.268405	370	159.12175	172.24249999999998	signal_positive	False	False	True	
+sample	6bd58dd2-efaf-45aa-8570-a66f67b9f08d	583	9.270479	348	171.217	172.8035	signal_negative	False	False	True	
+sample	c41031c5-d88f-41cd-92d0-4b292758b764	513	10.433419	451	170.23175	171.81175000000002	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	6443adc7-2b95-42b7-b292-2c49790a2f94	380	10.524206	444	171.31775	172.66025	signal_positive	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	9cfb9564-8328-460f-9e6f-234ad28165de	575	11.335464	283	171.14325	172.809	data_service_unblock_mux_change	False	False	True	
+sample	e7a81eb4-b732-4c80-be7d-00eb4fea0451	487	9.806009	267	170.339	171.7985	signal_negative	False	False	True	
+sample	2f6832ee-1936-4f5d-bba6-a24b269f6b33	1642	9.552997	258	168.3055	172.36225	signal_positive	False	False	True	
+sample	3176e24e-4f3f-45ed-9382-e89cdd5adb35	457	12.035824	216	170.22925	171.80625	signal_negative	True	False	True	
+sample	ec62adac-238b-48d2-b1ae-c1a2c7c52fff	370	10.390673	180	170.53375	171.93275	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	d3d8fc98-134d-41f3-bbb2-e77b690cc3e8	495	10.779134	122	171.18625	172.809	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	4e3f53e3-b888-49ac-ad7a-0df98c260d80	461	8.817672	118	171.02225	172.5875	signal_negative	False	False	True	
+sample	c0cefe1a-6681-49c7-b637-379d36df4271	11079	10.587447	115	142.98875	171.83100000000002	unblock_mux_change	True	True	True	NC_001416.1
+sample	bb3e2964-0279-4b18-97c3-d0d7c9a60022	658	9.340409	198	170.02625	171.8055	signal_negative	False	False	True	
+sample	129da9f1-dbae-4618-ad55-f60f0100afe4	452	9.243918	154	170.34575	171.81175000000002	data_service_unblock_mux_change	False	False	True	
+sample	de7567cb-6ca1-4e35-af15-67a01446b499	500	8.898911	111	170.77525	172.388	data_service_unblock_mux_change	False	False	True	
+sample	14100e31-9c26-49fe-8be6-cd152b621ea2	288	8.023500	108	170.87525	172.388	data_service_unblock_mux_change	False	False	True	
+sample	90b431bc-2277-40cd-9906-3f946136fc2f	2127	9.970417	151	166.441	172.24425	signal_positive	False	False	True	
+sample	06ebcdc9-8031-4b81-a8d9-ff9d610659fb	491	9.933088	420	171.72625	173.25375	signal_positive	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	2010425a-d4a5-44a3-95cd-8fe495139953	1709	9.585415	422	168.418	172.83425	signal_positive	False	False	True	
+sample	07aef943-ed14-4c5c-9495-e8bb20d32d4e	1152	11.662402	398	170.5655	173.7505	signal_positive	True	True	True	NC_001416.1
+sample	e3ba0248-dc5c-4e5c-9634-c8fcdfadd112	2269	11.166654	353	167.3365	173.04225	signal_positive	True	True	True	NC_001416.1
+sample	a94cf689-0c1c-4827-9740-14668b68df4a	313	11.170736	376	172.0645	173.774	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	c4657e53-8dcd-4ffd-a9dd-2d429f9ec2f7	457	10.215886	381	171.66125	173.0465	signal_negative	False	False	True	
+sample	d697f72c-b4a7-4fb5-a49e-d215521afc07	574	11.615235	291	171.9875	173.7665	signal_negative	True	False	True	
+sample	e4d24781-0fb7-4ec9-aa3d-5365490bf172	544	10.427489	285	171.78275	173.5245	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	f5af1904-d74b-44db-a1f8-5c0143f9bd5b	295	11.229006	229	171.212	172.809	data_service_unblock_mux_change	True	False	True	
+sample	8f71c688-4559-4a59-9080-d775f6a686ce	527	8.636993	121	171.119	173.774	data_service_unblock_mux_change	False	False	True	
+sample	d3d3b9f1-baec-4078-ae78-5b92951351fe	2023	8.591971	79	168.1195	173.28199999999998	signal_positive	False	False	True	
+sample	e0e1fcc2-d1d4-4fc4-abba-a3e891b1d92c	2465	9.207067	73	167.24325	173.54774999999998	signal_positive	False	False	True	
+sample	d261b1e0-8612-4610-a4d0-ba8443876e13	484	8.496669	507	172.48675	174.02075	data_service_unblock_mux_change	False	False	True	
+sample	f592cfa7-4cdb-4c8c-aac8-8c996a90cd46	279	9.615377	484	173.195	174.29874999999998	signal_positive	False	False	True	
+sample	3cf87742-0f72-4fe4-883e-486408a74dd9	1927	11.276052	448	169.765	174.68224999999998	signal_positive	True	True	True	NC_001416.1
+sample	71c57814-74c8-4a5f-869c-978248f8b4d5	481	10.358728	430	172.70675	174.24099999999999	data_service_unblock_mux_change	False	False	True	
+sample	b64067a8-5793-43c7-a261-f2cc9abe7bf9	9539	10.609374	421	150.1965	174.70725	signal_positive	True	True	True	NC_001416.1
+sample	345fd4f1-3c44-4500-ae08-cdb5071bff69	517	11.123821	413	172.62975	174.241	data_service_unblock_mux_change	False	False	True	
+sample	fc48808f-898e-47f1-b22f-b12d51d9badb	522	8.687225	348	172.9625	174.44225	data_service_unblock_mux_change	False	False	True	
+sample	f32cb74e-dc2f-4d27-9af8-b967598545f2	400	11.979212	213	172.50575	174.01625	signal_negative	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	eb77a50d-2c43-44a4-8c5c-3034d6894517	433	9.859925	189	173.17775	174.67575	data_service_unblock_mux_change	False	False	True	
+sample	075ded17-ff54-4714-9cf2-4890cd278e9d	2786	9.467544	98	167.744	174.70425	signal_positive	False	False	True	
+sample	aeb1e3c8-f41d-459d-816d-698bbd57b44f	8616	9.080688	62	156.09325	174.61800000000002	signal_positive	False	False	True	
+sample	b5d3b5e6-06fa-4911-abdd-208b968c50bc	401	11.200854	47	173.238	174.6625	signal_negative	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	a9c03dc5-85ef-4972-a77b-37d6f8f23e42	370	8.141789	23	172.66825	174.015	signal_negative	False	False	True	
+sample	3defa961-978a-4e31-8c3c-2169562cbc3b	506	12.182887	490	173.96475	175.71275	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	6311d6d8-244e-49da-894d-5ebe825e7685	648	9.252312	453	173.97725	175.70825	signal_negative	False	False	True	
+sample	21cafc6e-6841-4ef0-8bb0-0be164e4d670	443	10.083729	342	174.27625	175.70825	signal_negative	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	4b9d8c2e-ac05-4275-a67c-9263ecb50317	642	9.864058	341	173.1325	174.90275	data_service_unblock_mux_change	False	False	True	
+sample	279e298b-2f08-4b0f-b5f9-3c15350c2f6b	481	11.119512	340	173.568	175.12925	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	b9804215-a6a5-48e3-aa0c-2ebdad83becd	284	10.178395	35	174.737	175.652	signal_positive	True	True	True	NC_001416.1
+sample	c259c585-c202-49ec-b14f-c246b867faf2	492	8.286552	267	174.33875	175.70575	signal_negative	False	False	True	
+sample	8add0ca5-f01e-4e74-8bd0-2cd26cce74f3	535	9.840965	372	173.487	175.12924999999998	data_service_unblock_mux_change	False	False	True	
+sample	1a790bcc-e6bc-4b38-acfc-96d0ac8d4007	437	9.474092	53	173.94	175.7085	signal_negative	False	False	True	
+sample	b70553ea-9478-4a43-bccd-439fb0950a9b	510	10.405530	369	173.7035	175.459	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	a27ed153-80c6-4d73-a91f-64a0c7f51009	549	9.170373	258	174.223	175.70725000000002	signal_negative	False	False	True	
+sample	57af8dc3-03b5-4fa6-9dab-65aea7202188	532	9.769755	190	173.55825	175.12175	signal_negative	False	False	True	
+sample	ef877a4f-f36f-4449-8e7e-9be57ea7686c	453	10.686719	222	174.3685	175.705	signal_negative	True	False	True	
+sample	1092382f-1c92-478f-aa01-a3c1b00779f6	712	8.643532	171	172.584	175.1245	signal_negative	False	False	True	
+sample	0162ead8-275c-4be4-95bd-b48e5490eb95	379	8.748950	144	172.26	174.90275	data_service_unblock_mux_change	False	False	True	
+sample	8220f5e2-afbf-44b4-bf57-0276772330b6	348	12.038441	122	174.16025	175.2355	signal_positive	True	True	True	NC_001416.1
+sample	eb226c6b-a717-425a-b4ee-f8fdbb82e912	5077	9.168235	101	162.231	174.94424999999998	signal_positive	False	False	True	
+sample	2d8e9b24-32e6-4bfd-9daf-327b74581e7c	396	8.285734	63	173.461	174.8965	signal_negative	False	False	True	
+sample	11a5dad5-3056-45d8-8434-3dc18ed0d90a	477	10.802335	399	174.3845	175.89875	signal_negative	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	e728bcee-24c9-469d-af88-639f394b7059	462	9.636850	474	174.4555	175.8995	signal_negative	False	False	True	
+sample	49e15cb1-290b-4952-a876-8017d97c3e29	769	10.230696	471	174.615	176.732	data_service_unblock_mux_change	False	False	True	
+sample	f31d440f-160e-49da-86be-6f196320fc2f	545	9.669789	429	174.21175	175.90375	data_service_unblock_mux_change	False	False	True	
+sample	1e61d492-4b01-4270-a8ae-9bd455f31886	4794	11.053640	92	164.13725	176.74	signal_positive	True	True	True	NC_001416.1
+sample	5d3a7449-353a-4691-9781-22c45dc0ddbd	4061	10.951368	138	165.812	176.62300000000002	signal_positive	True	True	True	NC_001416.1
+sample	e9932396-27f4-4c32-be29-0079f7c1cd8e	523	9.610286	96	174.653	176.1815	data_service_unblock_mux_change	False	False	True	
+sample	cff76bdf-d2a2-4269-b45e-598c1fe40b31	538	9.149819	72	174.6195	176.1815	data_service_unblock_mux_change	False	False	True	
+sample	14ee9104-3c06-4cca-96d9-4c13d6856bbb	654	9.481367	14	174.7835	176.7255	signal_negative	False	False	True	
+sample	ff2a75f8-a713-4a2e-aac3-7149100fe29b	546	11.164722	395	175.948	177.62525	signal_negative	True	False	True	
+sample	789d461e-e4c5-412e-90c2-7d5f57c5ce75	742	8.580741	457	175.05275	176.98725000000002	data_service_unblock_mux_change	False	False	True	
+sample	f52a5f05-99bd-48d0-9202-5e53ba74c258	353	10.747690	456	176.2515	177.81074999999998	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	55f3c761-16db-47e2-ab78-1620767b8169	396	8.944159	424	176.2815	177.63375	data_service_unblock_mux_change	False	False	True	
+sample	c929f291-3726-4bfd-9e31-3d762b619a56	596	10.834826	420	175.7305	177.45125000000002	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	f8a2ef61-6f63-4615-a4cf-0d30e86e06d3	473	9.852228	113	175.217	176.98725000000002	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	1531bd68-0076-4605-b809-09f21cefb4a0	614	9.395788	377	174.52	177.03925	signal_positive	False	False	True	
+sample	9719d5a5-587f-4bb9-b002-fb7ff69c850c	887	8.784617	304	174.5365	177.06699999999998	signal_positive	False	False	True	
+sample	d6bdfca2-8c50-46fa-b13c-8837ea6b7969	653	9.705157	232	174.9415	176.98174999999998	signal_negative	False	False	True	
+sample	080c636c-c219-43e1-9e1a-e4ba6c34c48f	389	10.563356	127	175.61775	176.90075	signal_positive	True	True	True	NC_001416.1
+sample	c66fd005-2c4d-4a55-bb06-fe4549350e9a	563	9.145393	259	175.677	177.20575	signal_negative	False	False	True	
+sample	b87f7036-4314-42b8-83c6-920ae01261ef	512	8.917098	250	175.26325	176.98725	data_service_unblock_mux_change	False	False	True	
+sample	7334377c-08b6-4fc0-a549-674d2f7a3604	511	9.112244	189	175.3225	176.98	signal_negative	False	False	True	
+sample	2604a409-f89a-40e4-a87b-d36bb05b9f4e	3127	9.765688	119	169.574	177.62425000000002	signal_positive	False	False	True	
+sample	047575eb-e85e-4087-9d1c-74ab25b50e84	3028	9.182785	42	169.30925	177.43275	signal_positive	False	False	True	
+sample	f2ccf031-ac45-4dc5-be26-e01b15fddb52	580	8.854992	150	175.5665	177.21124999999998	data_service_unblock_mux_change	False	False	True	
+sample	3c18bd5c-dc6a-4159-8948-42b8fbe22df9	494	13.684484	148	175.356	176.98725	data_service_unblock_mux_change	True	False	True	
+sample	3e6c1ac8-fa2b-4a4f-80ae-8921b93eeca4	430	9.381643	142	176.26525	177.63375000000002	data_service_unblock_mux_change	False	False	True	
+sample	3c02b28d-4a72-446f-a069-c7a94516d3f9	611	8.490692	55	175.9365	177.4445	signal_negative	False	False	True	
+sample	35e0af7f-8b06-4783-bcb0-43f7f502620c	4133	8.447694	39	167.33575	177.85174999999998	signal_positive	False	False	True	
+sample	a35262e2-ab46-49c0-b8cc-8c516d345a11	340	8.359589	38	176.41175	177.80575000000002	signal_negative	False	False	True	
+sample	3bf64646-d185-47ab-ab45-12fe2109e222	344	9.463614	6	175.0765	176.98725000000002	data_service_unblock_mux_change	False	False	True	
+sample	3dfa99fa-9f1a-44dc-af7e-36f3f69bf165	3692	9.861554	504	170.56975	178.46574999999999	signal_positive	False	False	True	
+sample	f9b79ebd-6476-4bf5-a6f9-250ed5b9794d	416	9.290402	399	176.86725	178.25725	signal_positive	False	False	True	
+sample	02726dbb-b6de-435d-a815-d35210cfac4a	368	9.409664	397	176.59475	178.011	data_service_unblock_mux_change	False	False	True	
+sample	02594de7-06aa-4d05-a5ac-e99de5f38bc3	2652	9.383541	443	171.92425	178.8665	signal_positive	False	False	True	
+sample	866fc568-a581-4d75-8e33-994badaecbaa	378	10.252682	318	177.35775	178.8245	signal_positive	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	60d0f20e-e77d-4d03-9be1-bc6c50d74547	263	10.597949	308	177.61025	178.7235	signal_positive	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	4bf3e51d-ad2c-4626-ab66-cb0e60676224	5574	9.380805	305	163.50025	178.02375	signal_positive	False	False	True	
+sample	d82982cd-5791-45dc-b8d8-97931b444d6b	414	11.070414	301	176.67675	178.21225	data_service_unblock_mux_change	True	True	True	1_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon_pilon
+sample	c8e450e1-051f-4ae5-9508-c2ab497331c3	414	9.158214	110	176.68225	178.20350000000002	signal_negative	False	False	True	
+sample	69dce0b8-4f8f-4283-a4c4-2a4f2d269573	425	8.164562	160	176.9905	178.62449999999998	data_service_unblock_mux_change	False	False	True	
+sample	01337e2f-03da-4add-a4fc-ab993e61e4df	731	11.695317	191	176.04675	178.121	signal_positive	True	True	True	NC_001416.1
+sample	39ae8476-00fd-4c3a-8f82-c16c91ed3091	400	10.031591	24	176.56675	178.00525000000002	signal_negative	False	False	True	
+sample	79e321a7-bd00-4333-8f1e-415132d59a2f	749	9.800367	432	177.982	179.58875	data_service_unblock_mux_change	False	False	True	
+sample	a0b0006b-1dd1-45b0-b534-09ab9fb40ab5	2481	9.988255	476	173.178	179.3105	signal_positive	False	False	True	
+sample	e1fb8238-b2fe-41d2-84b8-6f52bb65237b	638	10.737964	422	177.173	178.8685	data_service_unblock_mux_change	True	False	True	
+sample	00e4d33b-a533-41e5-8ab7-423280dd06ec	638	9.756175	415	177.08825	178.86849999999998	data_service_unblock_mux_change	False	False	True	
+sample	750605b2-bda4-41c8-b7f4-3245d6b9a291	1668	10.917278	356	174.5645	179.18200000000002	signal_positive	True	True	True	NC_001416.1
+sample	762b1de5-616c-491b-b515-f3595ab6baff	544	10.216337	195	178.12275	179.58875	data_service_unblock_mux_change	False	False	True	
+sample	ea7a74fd-0163-440e-b5bf-5373fb1dc76a	298	8.948359	181	177.523	179.121	data_service_unblock_mux_change	False	False	True	
+sample	b08df2e9-26b5-4ffa-a039-1790d14ddfda	643	8.300138	144	178.0185	179.58249999999998	signal_negative	False	False	True	
+sample	b3a78c64-a571-4dc0-aac9-efd82e2720de	603	10.727227	302	176.96075	179.06	signal_positive	True	True	True	NC_001416.1
+sample	eb3d0d11-92a9-4598-828f-c31b309df00e	512	9.374879	271	177.93975	179.34225	data_service_unblock_mux_change	False	False	True	
